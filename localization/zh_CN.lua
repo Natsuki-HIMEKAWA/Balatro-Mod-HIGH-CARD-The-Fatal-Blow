@@ -7,6 +7,16 @@ local descriptions = {
             }
         },
 
+        XPC = {
+            name = 'X-扑克牌',
+            text = {
+            '出售此牌以将其{C:green}停用{}，',
+            '随后向牌组中加入一张',
+            '同{C:dark_edition}版本{}、带有原{C:dark_edition}增强{}',
+            '及{C:attention}蜡封{}的相应扑克牌'
+            }
+        },
+
         [mod_prefix ..'_clone'] = {
             name = '克隆',
             text = {'回合结束时{C:red}自毁{}'}
@@ -18,7 +28,7 @@ local descriptions = {
             name = 'X-扑克牌组',
             text = {
                 '使用{C:attention}单张牌{}打败任一',
-                '{C:attention}盲注{}以激发该牌的潜能'
+                '{C:attention}盲注{}以{C:green}激发{}该牌的潜能'
             }
         }
     },
@@ -125,12 +135,10 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_As'] = {
             name = '爱与和平',
             text = {
-                '{C:attention}完整牌组{}中的每张{C:attention}#1#{}在',
-                '计分时提供{C:white,X:mult}X#2#{}倍率；',
-                '每回合{C:attention}第一次{}出牌前，',
-                '迫使{C:attention}1{}张牌被选中，',
-                '若该牌被计分，',
-                '则计分后将其摧毁',
+                '{C:attention}完整牌组{}中的每张{C:attention}#1#{}给予',
+                '{C:white,X:mult}X#2#{}倍率；每回合{C:attention}第一次{}',
+                '出牌前，迫使{C:attention}1{}张牌被选中，',
+                '若该牌为计分牌则将其摧毁',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -145,9 +153,10 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_3h'] = {
             name = '坚如磐石',
             text = {
-                '每次出牌中{C:attention}第一张{}计分牌',
-                '变为{C:attention}#1#{}；计分时每张',
-                '{C:attention}#1#{}给予{C:white,X:mult}X#2#{}倍率'
+                '每次出牌中{C:attention}第一张{}',
+                '计分牌变为{C:attention}#1#{}；',
+                '计分时每张{C:attention}#1#{}',
+                '给予{C:white,X:mult}X#2#{}倍率'
             }
         },
         ['j_'.. mod_prefix ..'_4h'] = {
@@ -155,14 +164,14 @@ local descriptions = {
             text = {
                 '若本回合{C:attention}第一次出牌{}',
                 '只有{C:attention}1{}张牌，则向手牌',
-                '中加入其{C:attention}#1#{}个{C:attention}克隆{}'
+                '中加入该牌的{C:attention}#1#{}个{C:attention}克隆{}'
             }
         },
         ['j_'.. mod_prefix ..'_5h'] = {
             name = '高热量',
             text = {
                 '剩余的每次{C:blue}出牌{}',
-                '和{C:red}弃牌{}提供{C:white,X:mult}X#1#{}倍率',
+                '和{C:red}弃牌{}给予{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（下次出牌时{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
@@ -177,10 +186,10 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_7h'] = {
             name = '变色龙',
             text = {
-                '每回合{C:attention}第一次{}出牌中',
-                '的所有计分牌转化为',
-                '{C:attention}#1#{}；{C:attention}完整牌组{}中的',
-                '每张{C:attention}#1#{}提供{C:white,X:mult}X#2#{}倍率',
+                '每回合{C:attention}第一次{}出牌中的',
+                '所有计分牌转化为{C:attention}#1#{}；',
+                '{C:attention}完整牌组{}中的每张',
+                '{C:attention}#1#{}给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -212,8 +221,9 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Jh'] = {
             name = '苍穹舞者',
             text = {
-                '每使用一张{C:planet}星球牌{}，额外',
-                '提升{C:attention}#1#{}级相应牌型的等级'
+                '每使用一张{C:planet}星球牌{}，',
+                '额外提升{C:attention}#1#{}级',
+                '相应牌型的等级'
             }
         },
         ['j_'.. mod_prefix ..'_Qh'] = {
@@ -251,8 +261,9 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_3d'] = {
             name = '滚滚弹珠',
             text = {
-                '本回合{C:attention}第一次{}出牌中的',
-                '所有计分牌转化为{C:attention}#1#{}'
+                '本回合{C:attention}第一次{}出牌',
+                '中的所有计分牌',
+                '转化为{C:attention}#1#{}'
             }
         },
         ['j_'.. mod_prefix ..'_4d'] = {
@@ -266,7 +277,7 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_5d'] = {
             name = '最强人类',
             text = {
-                '打出的所有{C:attention}#1#{}',
+                '所有打出的{C:attention}#1#{}',
                 '和{C:attention}#2#{}在计分后',
                 '提高{C:attention}#3#{}级点数'
             }
@@ -284,7 +295,8 @@ local descriptions = {
             name = '等价交换',
             text = {
                 '每花费或失去{C:money}$1{}，',
-                '{C:legendary}等价交换{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:legendary}等价交换{}获得',
+                '{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
@@ -323,7 +335,7 @@ local descriptions = {
         },
         ['j_'.. mod_prefix ..'_Qd'] = {
             name = '邪眼魔王',
-            text = {'{C:dark_edition}预见{}牌堆的抽牌顺序'}
+            text = {'{C:dark_edition}预见{}牌堆的','抽牌顺序'}
         },
         ['j_'.. mod_prefix ..'_Kd'] = {
             name = '周而复始',
@@ -403,7 +415,7 @@ local descriptions = {
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
                 '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}多彩{}'
+                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}彩色{}'
             }
         },
         ['j_'.. mod_prefix ..'_Tc'] = {
@@ -417,8 +429,9 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Jc'] = {
             name = '归来',
             text = {
-                '计分结束后，将{C:attention}第一张{}',
-                '计分牌抽回手牌中'
+                '计分结束后，将',
+                '{C:attention}第一张{}计分牌',
+                '抽回手牌中'
             }
         },
         ['j_'.. mod_prefix ..'_Qc'] = {
@@ -432,15 +445,12 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Kc'] = {
             name = '死神之手',
             text = {
-                '每回合{C:attention}第一次{}出牌中的',
-                '所有计分牌将在计分后',
-                '被摧毁，同时{C:legendary}死神之手{}',
-                '获得这些牌相应{C:dark_edition}增强{}与',
-                '{C:dark_edition}版本{}提供的{C:chips}筹码{}，{C:mult}倍率{}，',
-                '{C:white,X:mult}X倍率{}，或返还相应{C:money}金钱{}',
-                '击败{C:attention}Boss盲注{}后重置',
-                '{C:inactive}（当前为{C:chips}+#1#{}{C:inactive}筹码，{}',
-                '{C:mult}+#2#{}{C:inactive}倍率，{}{X:mult,C:white}X#3#{}{C:inactive}倍率）{}'
+                '每回合{C:attention}第一次{}出牌中所有的计分牌',
+                '將在计分后被摧毁，同时{C:legendary}死神之手{}',
+                '获得这些牌相应{C:dark_edition}增强{}与{C:dark_edition}版本{}提供的',
+                '{C:chips}筹码{}，{C:mult}倍率{}，{C:white,X:mult}X倍率{}，或返还',
+                '相应{C:money}金钱{}，击败{C:attention}Boss盲注{}后重置',
+                '{C:inactive}（当前为{C:chips}+#1#{C:inactive}筹码，{C:mult}+#2#{C:inactive}倍率，{X:mult,C:white}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. mod_prefix ..'_Ac'] = {
@@ -463,19 +473,6 @@ local descriptions = {
         }
     }
 }
-
-for key, Joker in pairs(descriptions.Joker) do
-    if key:sub(-1,-1) ~= 'x' then
-        local add = {
-            '{C:green,s:0.8}出售此牌以将其停用，随后向{}',
-            '{C:green,s:0.8}牌组中加入一张同版本、带有{}',
-            '{C:green,s:0.8}原有增强及蜡封的相应扑克牌{}'
-        }
-        for _, string in ipairs(add) do
-            Joker.text[#Joker.text + 1] = string
-        end
-    end
-end
 
 local misc = {
     labels = {
