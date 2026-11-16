@@ -84,6 +84,6 @@ You may download, use, and redistribute the original, unmodified mod and related
 
 Redistribution of modified versions and commercial use require prior written permission from the copyright holder.
 
-See [LICENSE](LICENSE) for the full terms.
+See [LICENSE](LICENSE.md) for the full terms.
 
 This is an unofficial fan-made project. It is not affiliated with, endorsed by, or sponsored by the creators or rights holders of *High Card*.
