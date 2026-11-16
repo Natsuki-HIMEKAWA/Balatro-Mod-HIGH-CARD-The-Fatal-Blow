@@ -23,6 +23,7 @@
 - [Balatro](https://store.steampowered.com/app/2379780/Balatro/) — `v1.0.1o-full`
 - [Steamodded (SMODS)](https://github.com/Steamodded/smods) — `v26.1002.0`
 - [Lovely Injector](https://github.com/ethangreen-dev/lovely-injector) — `v0.10.0`
+
 安装本Mod前，请先安装Steamodded和Lovely并确保它们能正常运行。
 
 ## 安装方法
@@ -66,6 +67,7 @@ HighCard/
 - Lovely版本
 - 问题的复现步骤
 - 相关错误日志（如有）
+
 欢迎有关小丑牌平衡性调整和新增语言翻译的建议。
 
 ## 参与贡献

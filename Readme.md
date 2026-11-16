@@ -23,6 +23,7 @@ Other versions may work, but have not necessarily been tested.
 - [Balatro](https://store.steampowered.com/app/2379780/Balatro/) `v1.0.1o-full`
 - [Steamodded (SMODS)](https://github.com/Steamodded/smods) `v26.1002.0`
 - [Lovely Injector](https://github.com/ethangreen-dev/lovely-injector) `v0.10.0`
+
 Install Steamodded and Lovely separately before installing this mod.
 
 ## Installation
@@ -35,6 +36,7 @@ Install Steamodded and Lovely separately before installing this mod.
    - **macOS:** `~/Library/Application Support/Balatro/Mods/`
    - **Linux / Steam Deck:** The Mods directory depends on your installation method. For Proton installations, follow the [Steamodded Linux installation guide](https://github.com/Steamodded/smods/wiki/Installing-Steamodded-linux).
 5. Launch Balatro and verify that **High Card** appears in the Mods menu.
+
 If the `Mods` directory does not exist, create it at the appropriate location.
 
 ## Directory Structure
@@ -66,6 +68,7 @@ If you encounter a bug or compatibility issue, please [open an Issue](../../issu
 - Lovely version
 - Steps to reproduce the issue
 - Relevant error logs, if available
+
 Suggestions for Joker balancing and additional translations are also welcome.
 
 ## Contributing

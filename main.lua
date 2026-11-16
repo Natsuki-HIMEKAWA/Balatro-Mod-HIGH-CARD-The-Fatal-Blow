@@ -508,7 +508,6 @@ local XPC = {
             and context.before
             and context.scoring_name 
             and G.GAME.current_round.hands_played == 0 then
-
                 if SMODS.pseudorandom_probability(
                     card, 'Interceptor',
                     card.ability.extra.numerator,
