@@ -16,7 +16,7 @@ The following versions have been tested with this mod:
 - **Steamodded (SMODS):** `v26.1002.0`
 - **Lovely Injector:** `v0.10.0`
 - **Operating System:** Windows 11
-- 
+
 Other versions may work, but have not necessarily been tested.
 
 ## Requirements
