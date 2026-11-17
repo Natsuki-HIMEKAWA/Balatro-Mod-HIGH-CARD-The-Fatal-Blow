@@ -266,7 +266,7 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Kh'] = {
             name = 'Masculine Parfait',
             text = {
-                'Add a {C:attention}#1#{} to all',
+                'Add {C:attention}#1#s{} to all',
                 'played {C:attention}#2#{}',
                 'when scored'
             }
