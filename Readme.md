@@ -1,8 +1,6 @@
 # HIGH CARD: The Fatal Blow
 [简体中文](Readme.zh_CN.md) | English
 
-**1 Card, 1 Hand, 1 Joker**
-
 ## Introduction
 **HIGH CARD: The Fatal Blow** is a mod for *Balatro*, inspired by the Japanese multimedia franchise [*HIGH CARD*](https://en.wikipedia.org/wiki/High_Card). It introduces 52 unique Jokers and related mechanisms based on the series.
 
@@ -13,7 +11,7 @@
 - **Vanilla Game Fix** — The included `lovely.toml` file fixes a vanilla game bug that prevents *Mr. Bones* from working when a Game Over is caused by running out of cards in your deck.
 
 ## Download
-**GitHub:** https://github.com/Natsuki-HIMEKAWA/High-Card-Balatro-Mod
+**GitHub:** https://github.com/Natsuki-HIMEKAWA/High-Card-Balatro-Mod/releases
 
 ## FAQ
 **Q:** What's the relationship between this mod and Ken Shi's [High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod) released on 2024?
