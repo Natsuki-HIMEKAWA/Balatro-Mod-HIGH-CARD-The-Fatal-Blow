@@ -3620,6 +3620,13 @@ local XPC = {
                     }
                 end
 
+                if context.remove_playing_cards and context.cardarea == G.jokers then
+                    if card.ability.extra.message then
+                        card.ability.extra.message = false
+                        return {message = localize('k_reaped'), colour = G.C.RED}
+                    end     
+                end
+
                 if context.end_of_round and G.GAME.blind.boss and context.main_eval then
                     card.ability.extra.x_mult = 1
                     return {message = localize('k_reset')}
@@ -3632,16 +3639,6 @@ local XPC = {
                     mult = card.ability.extra.mult,
                     x_mult = card.ability.extra.x_mult,
                 }
-            end
-
-            if context.remove_playing_cards and context.cardarea == G.jokers then
-                if card.ability.extra.message then
-                    card.ability.extra.message = false
-                    return {
-                        message = localize('k_reaped'),
-                        colour = G.C.RED
-                    }
-                end     
             end
         end
     },
