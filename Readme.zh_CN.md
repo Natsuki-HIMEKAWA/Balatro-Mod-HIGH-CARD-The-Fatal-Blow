@@ -59,7 +59,7 @@
 1. 安装Balatro、Steamodded和Lovely。
 2. 下载Release中的ZIP压缩包并解压。
 3. 找到包含`main.lua`、`main.json`、`challenges.lua`和`lovely.toml`的Mod文件夹。
-4. 将Mod文件夹直接放入Balatro的`Mods`目录中，若名称不同则将文件夹重命名为`HIGH_CARRD`，并确保Mod文件没有被额外的文件夹层级包裹。
+4. 将Mod文件夹直接放入Balatro的`Mods`目录中，若名称不同则将文件夹重命名为`HIGH_CARD`，并确保Mod文件没有被额外的文件夹层级包裹。
    - **Windows：** `%AppData%/Balatro/Mods/`
    - **macOS：** `~/Library/Application Support/Balatro/Mods/`
    - **Linux / Steam Deck：** Mods文件夹的具体位置取决于安装方式，通过Proton运行的安装方式请参阅[Steamodded Linux安装指南](https://github.com/Steamodded/smods/wiki/Installing-Steamodded-linux)。
