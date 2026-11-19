@@ -2,7 +2,7 @@
 简体中文 | [English](Readme.md)
 
 ## 简介
-**至高之牌：致命一击**是一款适用于Balatro的Mod，灵感来自日本多媒体企划[《至高之牌》](https://zh.wikipedia.org/wiki/HIGH_CARD_%E8%87%B3%E9%AB%98%E4%B9%8B%E7%89%8C)，加入了52张参考该企划相关设定设计的独特小丑牌及相应机制。
+**至高之牌：致命一击**是一款适用于Balatro的Mod，灵感来自日本多媒体企划《[至高之牌](https://zh.wikipedia.org/wiki/HIGH_CARD_%E8%87%B3%E9%AB%98%E4%B9%8B%E7%89%8C)》，加入了52张参考该企划相关设定设计的独特小丑牌及相应机制。
 
 ## 功能特色
 - **新小丑牌** — 新增52张以《至高之牌》的X-扑克牌为原型的小丑牌。
@@ -12,14 +12,14 @@
 - **原版游戏补丁** — 目录中的文件`lovely.toml`修复了原版Balatro游戏中“骷髅先生”无法在牌堆耗尽时挽救游戏的bug。
 
 ## 下载方式
-**GitHub:** https://github.com/Natsuki-HIMEKAWA/High-Card-Balatro-Mod/releases
+**GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Final-Blow/releases
 
 ## 常见问题
 **问：** 本Mod与Ken-Shi于2024年发布的[High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod)有什么关系？
 
 **答：**
 
-尽管两个Mod均以《至高之牌》为创作题材并包含52张X-扑克牌，但**至高之牌：致命一击**是一个与Ken-Shi的High Card Mod**完全不同**、**独立开发**的项目，**既不是后者的更新，也不是后者的续作**。
+尽管两个Mod均以《至高之牌》为创作题材并都包含52张X-扑克牌，但**至高之牌：致命一击**是一个与Ken-Shi的High Card Mod**完全不同**、**独立开发**的项目，**既不是后者的更新，也不是后者的续作**。
 
 **问：** 本Mod与Ken-Shi的High Card Mod有什么区别？
 

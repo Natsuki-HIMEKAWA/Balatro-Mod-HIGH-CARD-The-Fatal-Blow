@@ -12,7 +12,7 @@
 - **Vanilla Game Fix** - The included `lovely.toml` file fixes a vanilla game bug that prevents *Mr. Bones* from working when a Game Over is caused by running out of cards in your deck.
 
 ## Download
-**GitHub:** https://github.com/Natsuki-HIMEKAWA/High-Card-Balatro-Mod/releases
+**GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Final-Blow/releases
 
 ## FAQ
 **Q:** What's the relationship between this mod and Ken Shi's [High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod) released on 2024?
