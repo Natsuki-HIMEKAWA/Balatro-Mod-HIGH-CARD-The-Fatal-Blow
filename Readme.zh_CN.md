@@ -12,7 +12,7 @@
 - **原版游戏补丁** — 目录中的文件`lovely.toml`修复了原版Balatro游戏中“骷髅先生”无法在牌堆耗尽时挽救游戏的bug。
 
 ## 下载方式
-**GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Final-Blow/releases
+**GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/releases
 
 ## 常见问题
 **问：** 本Mod与Ken-Shi于2024年发布的[High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod)有什么关系？
