@@ -2,9 +2,7 @@ local descriptions = {
     Other = {
         hidden_base = {
             name = 'Hidden Base',
-            text = {
-                '#1# of {V:1}#2#{}'
-            }
+            text = {'#1# of {V:1}#2#{}'}
         },
 
         XPC = {
@@ -15,6 +13,11 @@ local descriptions = {
                 'with its {C:dark_edition}edition{}, original',
                 '{C:dark_edition}enhancement{} and {C:attention}seal{}'
             }
+        },
+
+        original = {
+            name = 'Original Configures',
+            text = {'{V:1}#1#{}, {V:2}#2#{}'}
         },
 
         [mod_prefix ..'_clone'] = {
@@ -45,7 +48,7 @@ local descriptions = {
                 'Sets {C:attention}Hands{} to {C:blue}#1#{} when the',
                 '{C:attention}first hand{} is drawn, and',
                 'gives {C:white,X:mult}X#2#{} Mult for each',
-                'card remaining in {C:attention}deck{}',
+                'remaining card in {C:attention}deck{}',
                 '{C:inactive}(Currently {X:mult,C:white}X#3#{}{C:inactive} Mult){}'
             }
         },
@@ -337,7 +340,7 @@ local descriptions = {
             }
         },
         ['j_'.. mod_prefix ..'_8d'] = {
-            name = "Red Labyrinth",
+            name = 'Red Labyrinth',
             text = {
                 'Swap {C:blue}Chips{} and {C:mult}Mult{}',
                 'before scoring',
@@ -503,15 +506,17 @@ local descriptions = {
                 "{C:attention}hand{} of round, and the {C:legendary}Reaper's Hand{}",
                 'gains corresponding {C:chips}Chips{}, {C:mult}Mult{}, {C:white,X:mult}XMult{},',
                 'or returns {C:money}money{} from their {C:dark_edition}Editions{}',
-                'and {C:enhanced}Enhancements{} after scoring',
-                'Resets when {C:attention}Boss Blind{} is defeated',
+                'and {C:enhanced}Enhancements{} after scoring, {C:white,X:mult}XMult{}',
+                'resets when {C:attention}Boss Blind{} is defeated',
                 '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips, {C:mult}+#2#{C:inactive} Mult, {X:mult,C:white}X#3#{C:inactive} Mult){}'
             }
         },
         ['j_'.. mod_prefix ..'_Ac'] = {
             name = 'Another Lives',
             text = {
-                'Create a {C:spectral}Spectral{} Card',
+                'Destroy the {C:attention}leftmost{}',
+                'consumable card, then',
+                'create a {C:spectral}Spectral{} Card',
                 'when {C:attention}Blind{} is selected',
                 '{C:inactive}(Must have room){}'
             }
@@ -534,6 +539,8 @@ local misc = {
         [mod_prefix ..'_clone'] = 'Clone',
     },
     dictionary = {
+        k_unenhanced = 'Unenhanced',
+        k_no_seal = 'No Seal',
         k_loaded = 'Loaded!',
         k_smashed = 'Smashed!',
         k_exploded = 'Exploded!',
@@ -570,7 +577,7 @@ local misc = {
         k_coming_home = 'Coming Home!',
         k_defeated = 'Defeated!',
         k_reaped = 'Reaped!',
-        k_summoned = 'Summoned!',
+        k_revived = 'Revived!',
         k_activated = 'Activated!',
         k_deactivated = 'Deactivated!'
     },

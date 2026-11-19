@@ -13,7 +13,7 @@ local jokers = {
     ['3K'] = {'5s','5h','5d','Kc','Tc'},
     ['2P'] = {'9h','9c','2s','2c','Qd'},
     ['1P'] = {'7s','7c','Jh','8s','4d'},
-    ['HC'] = {'Kd','Th','9s','8c','4c'}
+    ['HC'] = {'Kd','Th','9s','8c','4c'},
 }
 
 challenges = function(poker_hands, jokers)

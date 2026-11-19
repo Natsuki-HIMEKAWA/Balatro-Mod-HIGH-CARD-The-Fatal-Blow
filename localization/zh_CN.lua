@@ -2,9 +2,7 @@ local descriptions = {
     Other = {
         hidden_base = {
             name = '隐藏牌面',
-            text = {
-                '{V:1}#2#{} #1#'
-            }
+            text = {'{V:1}#2#{} #1#'}
         },
 
         XPC = {
@@ -15,6 +13,11 @@ local descriptions = {
             '同{C:dark_edition}版本{}、带有原{C:dark_edition}增强{}',
             '及{C:attention}蜡封{}的相应扑克牌'
             }
+        },
+
+        original = {
+            name = '原始配置',
+            text = {'{V:1}#1#{}、{V:2}#2#{}'}
         },
 
         [mod_prefix ..'_clone'] = {
@@ -38,8 +41,8 @@ local descriptions = {
             name = '新·新南部',
             text = {
                 '抽取{C:attention}第一手牌{}后，将{C:attention}出牌{}',
-                '设为{C:blue}#1#{}次；每张{C:attention}牌堆{}内',
-                '剩余的牌给予{C:white,X:mult}X#2#{}倍率',
+                '设为{C:blue}#1#{}次；{C:attention}牌堆{}中剩余的',
+                '每张牌给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -446,19 +449,20 @@ local descriptions = {
             name = '死神之手',
             text = {
                 '每回合{C:attention}第一次{}出牌中所有的计分牌',
-                '將在计分后被摧毁，同时{C:legendary}死神之手{}',
+                '将在计分后被摧毁，同时{C:legendary}死神之手{}',
                 '获得这些牌相应{C:dark_edition}增强{}与{C:dark_edition}版本{}提供的',
-                '{C:chips}筹码{}，{C:mult}倍率{}，{C:white,X:mult}X倍率{}，或返还',
-                '相应{C:money}金钱{}，击败{C:attention}Boss盲注{}后重置',
+                '{C:chips}筹码{}，{C:mult}倍率{}，{C:white,X:mult}X倍率{}，或返还相应',
+                '{C:money}金钱{}，击败{C:attention}Boss盲注{}后重置其{C:white,X:mult}X倍率{}',
                 '{C:inactive}（当前为{C:chips}+#1#{C:inactive}筹码，{C:mult}+#2#{C:inactive}倍率，{X:mult,C:white}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. mod_prefix ..'_Ac'] = {
             name = '行尸走肉',
             text = {
-                '在选择{C:attention}盲注{}时',
+                '在选择{C:attention}盲注{}时摧毁',
+                '{C:attention}最左侧{}的消耗牌，随后',
                 '生成一张{C:spectral}幻灵牌{}',
-                '{C:inactive}（必须有空位）{}'
+                '{C:inactive}必须有空间{}'
             }
         },
         ['j_'.. mod_prefix ..'_0x'] = {
@@ -479,6 +483,8 @@ local misc = {
         [mod_prefix ..'_clone'] = '克隆',
     },
     dictionary = {
+        k_unenhanced = '无增强',
+        k_no_seal = '无蜡封',
         k_loaded = '上膛！',
         k_smashed = '击碎！',
         k_exploded = '爆炸！',
@@ -515,7 +521,7 @@ local misc = {
         k_coming_home = '归来！',
         k_defeated = '击败！',
         k_reaped = '收割！',
-        k_summoned = '召唤！',
+        k_revived = '复苏！',
         k_activated = '激活！',
         k_deactivated = '停用！'
     },

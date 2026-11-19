@@ -1,7 +1,7 @@
 {
 "id": "HIGH_CARD",
-"name": "High Card",
-"display_name": "X-Playing Card",
+"name": "HIGH CARD",
+"display_name": "HIGH CARD",
 "no_marquee": true,
 "author": ["Natsuki HIMEKAWA"],
 "description": "Enjoy the supernatural abilities of 52 X-Playing Cards!",
@@ -10,6 +10,6 @@
 "priority": -1,
 "badge_colour": "404040",
 "badge_text_colour": "B4883C",
-"version": "0.6.6",
+"version": "0.7.0",
 "dependencies": []
 }

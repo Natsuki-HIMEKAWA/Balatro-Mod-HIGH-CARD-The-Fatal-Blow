@@ -2,9 +2,7 @@ local descriptions = {
     Other = {
         hidden_base = {
             name = '隱匿牌面',
-            text = {
-                '{V:1}#2#{} #1#'
-            }
+            text = {'{V:1}#2#{} #1#'}
         },
 
         XPC = {
@@ -12,9 +10,14 @@ local descriptions = {
             text = {
                 '出售此牌以將其{C:green}停用{}，',
                 '隨後向牌組中加入一張',
-                '同{C:dark_edition}版本{}、帶有原{C:dark_edition}增強{}',
+                '同{C:dark_edition}版本{}、帶有原{C:dark_edition}加強{}',
                 '及{C:attention}封蠟章{}的相應撲克牌'
             }
+        },
+
+        original = {
+            name = '原始設定',
+            text = {'{V:1}#1#{}、{V:2}#2#{}'}
         },
 
         [mod_prefix ..'_clone'] = {
@@ -38,8 +41,8 @@ local descriptions = {
             name = '新·新南部',
             text = {
                 '抽取{C:attention}第一手牌{}後，將{C:attention}出牌{}',
-                '設為{C:blue}#1#{}次；每張{C:attention}牌堆{}內',
-                '剩餘的牌給予{C:white,X:mult}X#2#{}倍數',
+                '設為{C:blue}#1#{}次；{C:attention}牌堆{}中剩餘的',
+                '每張牌給予{C:white,X:mult}X#2#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
@@ -180,8 +183,8 @@ local descriptions = {
             name = '動物園',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
-                '每張無增強的{C:attention}得分牌{}',
-                '隨機獲得一種{C:dark_edition}增強{}'
+                '每張無加強的{C:attention}得分牌{}',
+                '隨機獲得一種{C:dark_edition}加強{}'
             }
         },
         ['j_'.. mod_prefix ..'_7h'] = {
@@ -362,7 +365,7 @@ local descriptions = {
             text = {
                 '所有{C:attention}#1#{}和{C:attention}#2#{}',
                 '在手中同時具有',
-                '這兩種增強的效果'
+                '這兩種加強的效果'
             }
         },
         ['j_'.. mod_prefix ..'_3c'] = {
@@ -448,18 +451,19 @@ local descriptions = {
             text = {
                 '每回合{C:attention}第一次{}出牌中所有得分的牌',
                 '將在得分後被摧毀，同時{C:legendary}死神之手{}',
-                '獲得這些牌相應{C:dark_edition}增強{}與{C:dark_edition}版本{}提供的',
-                '{C:chips}籌碼{}，{C:mult}倍數{}，{C:white,X:mult}X倍數{}，或返還',
-                '相應{C:money}金錢{}，戰勝{C:attention}Boss盲注{}後重置',
+                '獲得這些牌相應{C:dark_edition}加強{}與{C:dark_edition}版本{}提供的',
+                '{C:chips}籌碼{}，{C:mult}倍數{}，{C:white,X:mult}X倍數{}，或返還相應',
+                '{C:money}金錢{}，戰勝{C:attention}Boss盲注{}後重置其{C:white,X:mult}X倍數{}',
                 '{C:inactive}（目前為{C:chips}+#1#{C:inactive}籌碼，{C:mult}+#2#{C:inactive}倍數，{X:mult,C:white}X#3#{C:inactive}倍數）{}'
             }
         },
         ['j_'.. mod_prefix ..'_Ac'] = {
             name = '行屍走肉',
             text = {
-                '在選擇{C:attention}盲注{}時',
-                '生成一張{C:spectral}幻靈牌{}',
-                '{C:inactive}（必須有空位）{}'
+                '在選擇{C:attention}盲注{}時摧毀',
+                '{C:attention}最左側{}的消耗牌，隨後',
+                '產生一張{C:spectral}幻靈牌{}'
+                '{C:inactive}（必須有空間）'
             }
         },
         ['j_'.. mod_prefix ..'_0x'] = {
@@ -480,6 +484,8 @@ local misc = {
         [mod_prefix ..'_clone'] = '克隆',
     },
     dictionary = {
+        k_unenhanced = '無加強',
+        k_no_seal = '無封蠟章',
         k_loaded = '裝彈！',
         k_smashed = '擊碎！',
         k_exploded = '爆炸！',
@@ -516,7 +522,7 @@ local misc = {
         k_coming_home = '歸來！',
         k_defeated = '戰勝！',
         k_reaped = '收割！',
-        k_summoned = '召喚！',
+        k_revived = '復甦！',
         k_activated = '啟用！',
         k_deactivated = '停用！'
     },

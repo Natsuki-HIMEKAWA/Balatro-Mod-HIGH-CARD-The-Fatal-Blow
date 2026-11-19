@@ -136,13 +136,10 @@ local adding_self = function(joker)
             local seal = original.seal
 
             if enhancement and G.P_CENTERS[enhancement] then
-                card:set_ability(
-                    G.P_CENTERS[enhancement],
-                    nil, true
-                )
+                card:set_ability(G.P_CENTERS[enhancement], false, false)
             end
 
-            if seal then card:set_seal(seal) end
+            if seal then card:set_seal(seal, true, true) end
 
             if joker.edition then
                 card:set_edition(copy_table(joker.edition), true, true)
@@ -164,6 +161,35 @@ local adding_self = function(joker)
     return
 end
 
+local XPC_tooltips = function(info_queue, joker)
+    info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+
+    local enhancement = joker.ability.original and joker.ability.original.enhancement
+    local seal = joker.ability.original and joker.ability.original.seal
+    local colours = {G.C.UI.TEXT_DARK, G.C.UI.TEXT_DARK}
+
+    if enhancement then colours[1] = G.C.FILTER end
+    if seal then colours[2] = G.C.FILTER end
+
+    info_queue[#info_queue + 1] = {
+        key = 'original',
+        set = 'Other',
+        vars = {
+            enhancement and localize({
+                type = 'name_text', set = 'Enhanced',
+                key = enhancement
+            }) or localize('k_unenhanced'),
+
+            seal and localize({
+                type = 'name_text',  set = 'Other',
+                key = seal:lower() ..'_seal'
+            }) or localize('k_no_seal'),
+
+            colours = colours
+        }
+    }
+end
+
 local XPC = {
     S2 = {
         key = '2s',
@@ -181,15 +207,15 @@ local XPC = {
         config = {extra = {hands = 5, x_mult_add = 0.02}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
 
             local remaining = G.deck and G.deck.cards and #G.deck.cards or 0
             local x_mult = 1 + remaining * card.ability.extra.x_mult_add
             return {vars = {
-                    card.ability.extra.hands,
-                    card.ability.extra.x_mult_add,
-                    x_mult
-                }}
+                card.ability.extra.hands,
+                card.ability.extra.x_mult_add,
+                x_mult
+            }}
         end,
 
         calculate = function(self,card,context)
@@ -248,7 +274,7 @@ local XPC = {
         config = {extra = {rank = 3, x_mult = 1.5}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 localize(rank_to_string(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult
@@ -296,7 +322,7 @@ local XPC = {
         },
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 localize(card.ability.extra.poker_hand, 'poker_hands'),
@@ -353,7 +379,7 @@ local XPC = {
         }},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 localize(rank_to_string(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult_add,
@@ -414,7 +440,7 @@ local XPC = {
         config = {extra = {rank = 6, x_mult_add = 0.5, x_mult = 1}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 localize(rank_to_string(card.ability.extra.rank),'ranks'),
@@ -481,8 +507,7 @@ local XPC = {
         }},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local numerator, denominator = SMODS.get_probability_vars(
                 card,
                 card.ability.extra.numerator,
@@ -546,7 +571,7 @@ local XPC = {
         config = {extra = {enhancement = 'm_mult', x_mult = 2, message = false}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {
                 vars = {
@@ -614,8 +639,7 @@ local XPC = {
         config = {extra = {ratio = 0.75, numerator = 1, denominator = 3}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local ratio = card.ability.extra.ratio
             local numerator, denominator = SMODS.get_probability_vars(
                 card, card.ability.extra.numerator,
@@ -704,7 +728,7 @@ local XPC = {
         },
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 localize(card.ability.extra.poker_hand, 'poker_hands'),
@@ -757,8 +781,7 @@ local XPC = {
         config = {extra = {enhancements = {'m_steel','m_gold'}, x_mult = 1.5}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local vars = {}
             for i = 1, #card.ability.extra.enhancements do
                 info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancements[i]]
@@ -810,7 +833,7 @@ local XPC = {
         config = {extra = {retrigger = 2, enhancement = 'm_stone'}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                 card.ability.extra.retrigger,
@@ -893,7 +916,7 @@ local XPC = {
         config = {extra = {rank = 11, enhancement = 'm_steel'}},
 
         loc_vars = function (self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement] 
             return {vars = {
                 localize(rank_to_string(card.ability.extra.rank),'ranks'),
@@ -954,9 +977,8 @@ local XPC = {
         }),
         config = {extra = {rank = 14, x_mult_add = 0.5}},
 
-        loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+        loc_vars = function(self, info_queue, card)
+            XPC_tooltips(info_queue, card)
             local ace = 0
             for _, playing_card in ipairs(G.playing_cards or {}) do
                 if playing_card:get_id() == 14 then
@@ -1066,8 +1088,7 @@ local XPC = {
         },
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local money = (G.GAME and G.GAME.dollars) or 0
             local target = math.min(
                 math.max(0, math.floor(money / card.ability.extra.money_per_size)),
@@ -1149,8 +1170,8 @@ local XPC = {
         }),
         config = {extra = {enhancement = 'm_stone', x_mult = 1.5}},
 
-        loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+        loc_vars = function(self, info_queue, card)
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                 localize({type = 'name_text', set = 'Enhanced',
@@ -1221,8 +1242,8 @@ local XPC = {
         }),
         config = {extra = {duplicates = 4}},
 
-        loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+        loc_vars = function(self, info_queue, card)
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {
                 key = mod_prefix ..'_clone',
                 set = 'Other',
@@ -1304,8 +1325,7 @@ local XPC = {
         config = {extra = {x_mult_add = 0.5, x_mult = 1, message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local remaining = 
             (G.GAME.current_round.hands_left or 0) + (G.GAME.current_round.discards_left or 0)
             if remaining > 1 then
@@ -1357,7 +1377,7 @@ local XPC = {
         config = {extra = {message = false}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
         end,
 
         calculate = function(self, card, context)
@@ -1408,9 +1428,8 @@ local XPC = {
         config = {extra = {enhancement = 'm_wild', x_mult_add = 0.1}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
-
             local count = 0
             for _, playing_card in ipairs(G.playing_cards or {}) do
                 if playing_card.config.center.key == card.ability.extra.enhancement then
@@ -1487,7 +1506,7 @@ local XPC = {
         config = {},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
         end,
 
         calculate = function(self, card, context)
@@ -1550,7 +1569,7 @@ local XPC = {
         }),
         config = {extra = {x_mult_add = 0.01, x_mult = 1}},
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
@@ -1605,7 +1624,7 @@ local XPC = {
         },
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 localize(card.ability.extra.poker_hand, 'poker_hands'),
@@ -1657,7 +1676,7 @@ local XPC = {
         config = {extra = {level = 1}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {card.ability.extra.level}}
         end,
 
@@ -1714,7 +1733,7 @@ local XPC = {
         config = {extra = {x_mult_add = 0.5, x_mult = 1}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
@@ -1763,7 +1782,7 @@ local XPC = {
         config = {extra = {seal = 'red_seal', cards = 'k_face_cards', message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {key = card.ability.extra.seal, set = 'Other'}
             return {vars = {
                 localize({
@@ -1818,7 +1837,7 @@ local XPC = {
         config = {extra = {rank = 'Ace', suit = 'Hearts'}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = { 
                 localize(card.ability.extra.rank,'ranks'),
                 localize(card.ability.extra.suit,'suits_plural'),
@@ -1926,7 +1945,7 @@ local XPC = {
         config = {extra = {x_mult_add = 0.5, x_mult = 1}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
@@ -1988,7 +2007,7 @@ local XPC = {
         config = {extra = {enhancement = 'm_glass'}},
 
         loc_vars = function (self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                 localize({
@@ -2043,7 +2062,7 @@ local XPC = {
         config = {extra = {retrigger = 3, message = false}},
         
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {card.ability.extra.retrigger}}
         end,
 
@@ -2100,7 +2119,7 @@ local XPC = {
         config = {extra = {rank = 1}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 localize('k_face_cards'),
                 localize('k_numbered_cards'),
@@ -2169,7 +2188,7 @@ local XPC = {
         }},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {
                 vars = {
                     card.ability.extra.x_mult_add,
@@ -2235,7 +2254,7 @@ local XPC = {
         config = {extra = {x_mult_add = 0.01, x_mult = 1}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
@@ -2287,7 +2306,7 @@ local XPC = {
         config = {},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
         end,
 
         calculate = function(self, card, context)
@@ -2320,7 +2339,7 @@ local XPC = {
         }),
         config = {extra = {x_mult = 1}},
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {card.ability.extra.x_mult}}
         end,
 
@@ -2380,7 +2399,7 @@ local XPC = {
         config = {extra = {enhancement = 'm_lucky', message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                 localize({
@@ -2443,13 +2462,11 @@ local XPC = {
         config = {},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-            return {
-                vars = {
-                    localize('Four of a Kind', 'poker_hands'),
-                    localize('Five of a Kind', 'poker_hands')
-                }
-            }
+            XPC_tooltips(info_queue, card)
+            return {vars = {
+                localize('Four of a Kind', 'poker_hands'),
+                localize('Five of a Kind', 'poker_hands')
+            }}
         end,
 
         calculate = function(self, card, context)
@@ -2650,7 +2667,7 @@ local XPC = {
             }),
             config = {},
             loc_vars = function(self, info_queue, card)
-                info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+                XPC_tooltips(info_queue, card)
             end,
             calculate = function(self, card, context)
                 if context.selling_self then
@@ -2678,7 +2695,7 @@ local XPC = {
         }),
         config = {},
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
         end,
         calculate = function(self, card, context)
             if context.selling_self then
@@ -2706,7 +2723,7 @@ local XPC = {
         config = {extra = {x_mult = 1, x_mult_add = 1}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
@@ -2766,8 +2783,7 @@ local XPC = {
         config = {extra = {enhancements = {'m_steel','m_gold'}}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local vars = {}
             for i = 1, #card.ability.extra.enhancements do
                 info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancements[i]]
@@ -2820,7 +2836,7 @@ local XPC = {
         config = {extra = {x_mult_add = 0.05}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {card.ability.extra.x_mult_add}}
         end,
 
@@ -2861,8 +2877,7 @@ local XPC = {
         config = {extra = {enhancements = {'m_steel','m_gold'}}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
-
+            XPC_tooltips(info_queue, card)
             local vars = {}
             for i = 1, #card.ability.extra.enhancements do
                 info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancements[i]]
@@ -2948,7 +2963,7 @@ local XPC = {
         config = {extra = {enhancement = 'm_stone', x_mult = 2, message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                 localize({
@@ -3014,7 +3029,7 @@ local XPC = {
         config = {extra = {numerator = 1, denominator = 6}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {
                 key = 'e_foil',
                 set = 'Edition',
@@ -3090,7 +3105,7 @@ local XPC = {
         config = {extra = {rank = 7, x_mult = 2, message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {
                 vars = {
                 localize(rank_to_string(card.ability.extra.rank),'ranks'),
@@ -3152,7 +3167,7 @@ local XPC = {
         config = {extra = {numerator = 1, denominator = 24}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {
                 key = 'e_negative_playing_card',
                 set = 'Edition',
@@ -3228,7 +3243,7 @@ local XPC = {
         config = {extra = {numerator = 1, denominator = 12}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {
                 key = 'e_polychrome',
                 set = 'Edition',
@@ -3304,7 +3319,7 @@ local XPC = {
         config = {extra = {numerator = 1, denominator = 8}},
 
         loc_vars = function(self,info_queue,card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = {
                 key = 'e_holo',
                 set = 'Edition',
@@ -3421,7 +3436,7 @@ local XPC = {
             config = {extra = {message = false}},
 
             loc_vars = function(self, info_queue, card)
-                info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+                XPC_tooltips(info_queue, card)
             end,
 
             calculate = function(self, card, context)
@@ -3462,7 +3477,7 @@ local XPC = {
         config = {extra = {enhancement = 'm_bonus', x_mult = 2, message = false} },
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
             return {vars = {
                     localize({
@@ -3527,7 +3542,7 @@ local XPC = {
         config = {extra = {chips = 0, mult = 0, x_mult = 1, message = false}},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.chips,
                 card.ability.extra.mult,
@@ -3563,13 +3578,12 @@ local XPC = {
                         elseif enhancement == 'm_mult' then
                             mult = mult + G.P_CENTERS.m_mult.config.mult
                         elseif enhancement == 'm_steel' then
-                            x_mult = x_mult + G.P_CENTERS.m_steel.config.h_x_mult
+                            x_mult = x_mult + G.P_CENTERS.m_steel.config.h_x_mult - 1
                         elseif enhancement == 'm_glass' then 
-                            x_mult = x_mult + G.P_CENTERS.m_glass.config.Xmult
+                            x_mult = x_mult + G.P_CENTERS.m_glass.config.Xmult - 1
                         elseif enhancement == 'm_gold' then
                             money = money + G.P_CENTERS.m_gold.config.h_dollars
                         elseif enhancement == 'm_lucky' then
-
                             if SMODS.pseudorandom_probability(
                                 card, "Reaper's Hand", 1, 5
                             ) then 
@@ -3585,7 +3599,7 @@ local XPC = {
                             local config = G.P_CENTERS[enhancement].config
                             chips = chips + (config.bonus or 0)
                             mult = mult + (config.mult or 0)
-                            x_mult = x_mult + (config.h_x_mult or config.Xmult or 0)
+                            x_mult = x_mult + ((config.h_x_mult or config.Xmult) - 1 or 0) 
                             money = money + (config.h_dollars or 0)
                         end
                     end
@@ -3607,8 +3621,6 @@ local XPC = {
                 end
 
                 if context.end_of_round and G.GAME.blind.boss and context.main_eval then
-                    card.ability.extra.chips = 0
-                    card.ability.extra.mult = 0
                     card.ability.extra.x_mult = 1
                     return {message = localize('k_reset')}
                 end
@@ -3650,7 +3662,7 @@ local XPC = {
         config = {},
 
         loc_vars = function(self, info_queue, card)
-            info_queue[#info_queue + 1] = {key = 'XPC',set = 'Other'}
+            XPC_tooltips(info_queue, card)
         end,
 
         calculate = function(self, card, context)
@@ -3660,33 +3672,32 @@ local XPC = {
                 end
             end
 
-            if context.setting_blind
-            and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit
-            then
+            if context.setting_blind and #G.consumeables.cards > 0 then
                 local blueprint_or_self = context.blueprint_card or card
                 G.GAME.consumeable_buffer = (G.GAME.consumeable_buffer or 0) + 1
-
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         G.E_MANAGER:add_event(Event({
                             func = function()
-                                local spectral = create_card(
-                                    'Spectral',
-                                    G.consumeables,
-                                    nil, nil, nil, nil, nil,
-                                    'Another Lives'
-                                ) 
-                                spectral:add_to_deck()
-                                G.consumeables:emplace(spectral)
-
+                                local negative = G.consumeables.cards[1].edition and G.consumeables.cards[1].edition.negative
+                                G.consumeables.cards[1]:start_dissolve()
+                                if #G.consumeables.cards < G.consumeables.config.card_limit or
+                                #G.consumeables.cards == G.consumeables.config.card_limit and not negative then
+                                    local spectral = create_card(
+                                        'Spectral', G.consumeables,
+                                        nil, nil, nil, nil, nil,
+                                        'Another Lives'
+                                    ) 
+                                    spectral:add_to_deck()
+                                    G.consumeables:emplace(spectral)
+                                end
                                 G.GAME.consumeable_buffer = math.max(0, G.GAME.consumeable_buffer - 1)
-
                                 return true
                             end
                         }))
                         card_eval_status_text(blueprint_or_self,
                             'extra', nil, nil, nil, 
-                            {message = localize('k_summoned'),
+                            {message = localize('k_revived'),
                             colour = G.C.SECONDARY_SET.Spectral}
                         )
                         return true

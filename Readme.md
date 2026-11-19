@@ -1,14 +1,40 @@
-# High Card Balatro Mod
+# HIGH CARD: The Fatal Blow
 [简体中文](Readme.zh_CN.md) | English
 
-**High Card** is a mod for *Balatro*, inspired by the homonymous Japanese multimedia franchise *High Card*. It introduces 52 unique Jokers based on the series.
+**1 Card, 1 Hand, 1 Joker**
+
+## Introduction
+**HIGH CARD: The Fatal Blow** is a mod for *Balatro*, inspired by the Japanese multimedia franchise [*HIGH CARD*](https://en.wikipedia.org/wiki/High_Card). It introduces 52 unique Jokers and related mechanisms based on the series.
 
 ## Features
 - **New Jokers** — Adds 52 custom Jokers modeled after the X-Playing Cards from *High Card*.
 - **New Challenges** - Adds 10 new challenges centered around the Jokers introduced above.
 - **Stone Card Logic** — Reveals the normally hidden base value of Stone Cards in a side tooltip.
 - **Vanilla Game Fix** — The included `lovely.toml` file fixes a vanilla game bug that prevents *Mr. Bones* from working when a Game Over is caused by running out of cards in your deck.
-- **Multilingual Support** — Includes English, Simplified Chinese, and Traditional Chinese translations.
+
+## Download
+**GitHub:** https://github.com/Natsuki-HIMEKAWA/High-Card-Balatro-Mod
+
+## FAQ
+**Q:** What's the relationship between this mod and Ken Shi's [High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod) released on 2024?
+
+**A:** Although both mods are inspired by *HIGH CARD* and feature 52 X-Playing Cards, **HIGH CARD: The Fatal Blow** is a **separate**, **independently developed** mod for Balatro. It is **neither an update nor a continuation** of Ken Shi's High Card Mod.
+
+**Q:** What's different between this mod and Ken Shi's *High Card Mod*?
+
+**A:** On the major mechanisms centered around X-Playing Cards,
+- **Ken Shi's High Card Mod:** The scored card is transformed into X-Playing Card and by playing a High Card hand for the first time in a round, and the card returns to playing card at the end of round. X-Playing Cards can also be obtained via purchasing special boost packs in the store.
+- **HIGH CARD: The Fatal Blow:** Playing a single playing card to defeat a Blind transformes that card into its corresponding X-Playing Card, and will not returns to the playing card unless it is sold. The X-Playing Card retains the enhancment and seal of the original card, in order to ensure the returning of the original card.
+
+**Q:** Why do several X-Playing Cards have overlapping effects to those in Ken Shi's High Card Mod?
+
+**A:** 
+Both mods are inspired by the same franchise and draw on the characteristics and abilities of its X-Playing Cards.
+For certain X-Playing Cards, their established names and abilities naturally suggest a limited range of suitable gameplay effects. As a result, some of them in the two mods may have overlapping effects.
+
+These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is Our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to Balatro's gameplay.
+
+Reference: [The X-Playing Cards](https://highcard.fandom.com/wiki/The_X-Playing_Cards)
 
 ## Compatibility
 The following versions have been tested with this mod:
@@ -80,10 +106,10 @@ Please note that submitting a Pull Request does not grant permission to redistri
 ## License
 This project is distributed under a custom non-commercial license.
 
-You may download, use, and redistribute the original, unmodified mod and related assets free of charge for personal, non-commercial purposes.
+You may download, use, and redistribute the original, unmodified mod free of charge for personal, non-commercial purposes.
 
 Redistribution of modified versions and commercial use require prior written permission from the copyright holder.
 
-See [LICENSE](LICENSE.md) for the full terms.
+See [LICENSE](LICENSE.md#English) for the full terms.
 
 This is an unofficial fan-made project. It is not affiliated with, endorsed by, or sponsored by the creators or rights holders of *High Card*.
