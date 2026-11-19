@@ -56,17 +56,17 @@ Install Steamodded and Lovely separately before installing this mod.
 2. Download the released ZIP file and extract it.
 3. Locate the mod folder containing `main.lua`, `main.json`, `challenges.lua`, and `lovely.toml`.
 4. Place that folder directly inside your Balatro `Mods` directory.
-   Rename the folder to `HighCard` if necessary, and make sure the mod files are not nested inside an extra directory level.
+   Rename the folder to `HIGH_CARD` if necessary, and make sure the mod files are not nested inside an extra directory level.
    - **Windows:** `%AppData%/Balatro/Mods/`
    - **macOS:** `~/Library/Application Support/Balatro/Mods/`
    - **Linux / Steam Deck:** The Mods directory depends on your installation method. For Proton installations, follow the [Steamodded Linux installation guide](https://github.com/Steamodded/smods/wiki/Installing-Steamodded-linux).
-5. Launch Balatro and verify that **High Card** appears in the Mods menu.
+5. Launch Balatro and verify that **HIGH CARD** appears in the Mods menu.
 
 If the `Mods` directory does not exist, create it at the appropriate location.
 
 ## Directory Structure
 ```text
-HighCard/
+HIGH_CARD/
 ├── assets/
 │   ├── 1x/
 │   └── 2x/
