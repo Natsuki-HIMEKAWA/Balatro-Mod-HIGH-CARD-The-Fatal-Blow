@@ -1,5 +1,5 @@
 # CUSTOM NON-COMMERCIAL LICENSE
-This license applies to the High Card: The Fatal Blow (the “Mod”). It is a custom license and is not an open-source license.
+This license applies to the High Card: The Fatal Blow (the “Mod”). It is a custom license and is **NOT** an open-source license.
 
 ## English
 1. Scope and Ownership
@@ -34,7 +34,7 @@ The copyright holder(s) shall not be liable for any claim, damages, or other lia
 
 Any permission granted under this license terminates automatically if you fail to comply with its terms. Upon termination, you must stop using and distributing the mod immediately.
 
-6. Other Permissions
+6. Others
 
 Any exception to these terms must be authorized in advance and in writing by the relevant copyright holder(s). A lack of enforcement in one instance does not waive the right to enforce these terms in another instance.
 
@@ -73,7 +73,7 @@ If the English and Simplified Chinese versions differ in interpretation, the Sim
 
 如果你未遵守本许可证的条款，本许可证授予你的权限将自动终止。终止后，你必须立即停止使用与分发本Mod。
 
-6. 其他许可
+6. 其他
 
 对本许可证任何条款的例外，均须事先取得相关版权持有人的书面授权。版权持有人在某一情形下未行使权利，不代表其放弃在其他情形下行使该权利。
 
