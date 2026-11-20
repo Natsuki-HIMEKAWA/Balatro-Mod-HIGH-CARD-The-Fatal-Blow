@@ -23,7 +23,7 @@
 
 **A:** On the major mechanisms centered around X-Playing Cards,
 - **Ken Shi's High Card Mod:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corrsponding X-Playing Card, and the card returns to playing card at the end of round. X-Playing Cards can also be obtained via purchasing special boost packs in the store.
-- **HIGH CARD: The Fatal Blow:** Playing a single playing card to defeat a Blind transforms that card into its corresponding X-Playing Card, and will not returns to the playing card unless it is sold. The X-Playing Card retains the enhancment and seal of the original card, in order to ensure the returning of the original card.
+- **HIGH CARD: The Fatal Blow:** Playing a **single** card to defeat a Blind transforms that card into its corresponding X-Playing Card, and **will not** returns to the playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be returned when selling the X-Playing Card.
 
 **Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's High Card Mod?
 
