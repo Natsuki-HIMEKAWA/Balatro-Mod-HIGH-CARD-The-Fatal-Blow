@@ -138,10 +138,9 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_As'] = {
             name = '愛與和平',
             text = {
-                '{C:attention}完整牌組{}中的每張{C:attention}#1#{}在',
-                '得分時給予{C:white,X:mult}X#2#{}倍數；',
-                '每回合{C:attention}第一次{}出牌前，',
-                '強制選定{C:attention}1{}張牌，',
+                '{C:attention}完整牌組{}中的每張{C:attention}#1#{}給予',
+                '{C:white,X:mult}X#2#{}倍數；每回合{C:attention}第一次{}',
+                '出牌前，強制選定{C:attention}1{}張牌，',
                 '若該牌得分則將其摧毀',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
@@ -461,9 +460,9 @@ local descriptions = {
             name = '行屍走肉',
             text = {
                 '在選擇{C:attention}盲注{}時摧毀',
-                '{C:attention}最左側{}的消耗牌，隨後',
-                '產生一張{C:spectral}幻靈牌{}'
-                '{C:inactive}（必須有空間）'
+                '{C:attention}最左側{}的消耗牌，',
+                '隨後產生一張{C:spectral}幻靈牌{}',
+                '{C:inactive}（必須有空間）{}'
             }
         },
         ['j_'.. mod_prefix ..'_0x'] = {
@@ -537,6 +536,21 @@ local misc = {
         ['c_'.. mod_prefix ..'_2P'] = '兩對',
         ['c_'.. mod_prefix ..'_1P'] = '一對',
         ['c_'.. mod_prefix ..'_HC'] = '高牌',
+
+        ['c_'.. mod_prefix ..'_Finn'] = "芬恩的轉輪手槍",
+        ['c_'.. mod_prefix ..'_Vijay'] = "維傑的花盆",
+        ['c_'.. mod_prefix ..'_Chris'] = "克里斯的治療術",
+        ['c_'.. mod_prefix ..'_Leo'] = "里奧的財富",
+        ['c_'.. mod_prefix ..'_Wendy'] = "温迪的武士刀",
+        ['c_'.. mod_prefix ..'_Chelsea'] = "切爾西的熱情",
+        ['c_'.. mod_prefix ..'_Chloe'] = "克洛怡的恐懼",
+        ['c_'.. mod_prefix ..'_Owen'] = "歐文的監牢",
+        ['c_'.. mod_prefix ..'_Burst'] = "布爾絲特的獻身",
+        ['c_'.. mod_prefix ..'_Brothers'] = "歐德曼兄弟",
+    },
+    v_text = {
+        ['ch_c_'..'Vijay'] = {'所有{C:attention}Boss盲注{}都是{C:attention}植物{}'},
+        ['ch_c_'..'Chelsea'] = {'所有{C:attention}Boss盲注{}都是{C:attention}鉤子{}'}
     }
 }
 

@@ -7,7 +7,7 @@
 ## Features
 - **New Jokers** - Adds 52 custom Jokers modeled after the X-Playing Cards from *High Card*.
 - **New Deck** - Adds a new deck, the only deck in which the Jokers introduced above can be obtained.
-- **New Challenges** - Adds 10 new challenges centered around the Jokers introduced above.
+- **New Challenges** - Adds 20 new challenges centered around the Jokers introduced above.
 - **Stone Card Logic** - Reveals the normally hidden base value of Stone Cards in a side tooltip.
 - **Vanilla Game Fix** - The included `lovely.toml` file fixes a vanilla game bug that prevents *Mr. Bones* from working when a Game Over is caused by running out of cards in your deck.
 
@@ -31,7 +31,7 @@
 Both mods are inspired by the same franchise and draw on the characteristics and abilities of its X-Playing Cards.
 For certain X-Playing Cards, their established names and abilities naturally suggest a limited range of suitable gameplay effects. As a result, some of them in the two mods may have overlapping effects.
 
-These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is Our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to Balatro's gameplay.
+These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to Balatro's gameplay.
 
 Reference: [The X-Playing Cards](https://highcard.fandom.com/wiki/The_X-Playing_Cards)
 

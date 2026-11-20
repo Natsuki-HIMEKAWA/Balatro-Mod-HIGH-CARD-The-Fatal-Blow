@@ -592,6 +592,21 @@ local misc = {
         ['c_'.. mod_prefix ..'_2P'] = 'Two Pair',
         ['c_'.. mod_prefix ..'_1P'] = 'One Pair',
         ['c_'.. mod_prefix ..'_HC'] = 'High Card',
+
+        ['c_'.. mod_prefix ..'_Finn'] = "Finn's Revolver",
+        ['c_'.. mod_prefix ..'_Vijay'] = "Vijay's Flowerpot",
+        ['c_'.. mod_prefix ..'_Chris'] = "Chris's Healing",
+        ['c_'.. mod_prefix ..'_Leo'] = "Leo's Wealth",
+        ['c_'.. mod_prefix ..'_Wendy'] = "Wendy's Sword",
+        ['c_'.. mod_prefix ..'_Chelsea'] = "Chelsea's Passion",
+        ['c_'.. mod_prefix ..'_Chloe'] = "Chloe's Fearness",
+        ['c_'.. mod_prefix ..'_Owen'] = "Owen's Prison",
+        ['c_'.. mod_prefix ..'_Burst'] = "Burst's Devotion",
+        ['c_'.. mod_prefix ..'_Brothers'] = "The OLDMAN Brothers",
+    },
+    v_text = {
+        ['ch_c_'..'Vijay'] = {'All {C:attention}Boss Blinds{} are {C:attention}The Plant{}'},
+        ['ch_c_'..'Chelsea'] = {'All {C:attention}Boss Blinds{} are {C:attention}The Hook{}'}
     }
 }
 

@@ -1,3 +1,219 @@
+do
+    local backup_get_new_blind = SMODS.get_new_blind
+    SMODS.get_new_blind = function(blind_type)
+        local forced = G.GAME and G.GAME.forced_boss
+        if blind_type == 'boss' and forced then
+            return forced
+        end
+        return backup_get_new_blind(blind_type)
+    end
+
+    SMODS.Challenge{
+        key = 'Finn',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_2s']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_2s', eternal = true}},
+        consumeables = {},
+        vouchers = {},
+        restrictions = {
+            banned_cards = {},
+            banned_tags = {},
+            banned_other = {}
+        }
+    }
+
+    SMODS.Challenge{
+        key = 'Vijay',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_3c']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {{id = 'Vijay'}},
+            modifiers = {}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_3c', eternal = true}},
+        apply = function(self)
+            G.GAME.forced_boss = 'bl_plant'
+        end
+    }
+
+    SMODS.Challenge{
+        key = 'Chris',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_5h']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {{id = 'hands', value = 3}, {id = 'discards', value = 2}}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_5h', eternal = true}},
+    }
+
+    SMODS.Challenge{
+        key = 'Leo',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_7d']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {{id = 'inflation'}},
+            modifiers = {{id = 'dollars', value = 20}}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_7d', eternal = true}},
+    }
+
+    SMODS.Challenge{
+        key = 'Wendy',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_As']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_As', eternal = true}},
+    }
+
+    SMODS.Challenge{
+        key = 'Chelsea',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_2d']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {{id = 'Chelsea'}},
+            modifiers = {}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_2d', eternal = true}},
+        apply = function(self)
+            G.GAME.forced_boss = 'bl_hook'
+        end
+    }
+
+    SMODS.Challenge{
+        key = 'Chloe',
+        unlocked = function()
+            local center = G.P_CENTERS['j_'.. mod_prefix ..'_Kc']
+            if not center or not center.discovered then
+                return false
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {{id = 'j_'.. mod_prefix ..'_Kc', eternal = true}},
+    }
+
+    SMODS.Challenge{
+        key = 'Owen',
+        unlocked = function()
+            local keys = {'8d','Jd','Ks'}
+            for _, key in ipairs(keys) do
+                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                if not center or not center.discovered then
+                    return false
+                end
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {
+            {id = 'j_'.. mod_prefix ..'_8d', eternal = true},
+            {id = 'j_'.. mod_prefix ..'_Jd', eternal = true, edition = 'negative'},
+            {id = 'j_'.. mod_prefix ..'_Ks', eternal = true, edition = 'negative'},
+        },
+    }
+
+    SMODS.Challenge{
+        key = 'Burst',
+        unlocked = function()
+            local keys = {'Ah','5h','4h','3h','2h'}
+            for _, key in ipairs(keys) do
+                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                if not center or not center.discovered then
+                    return false
+                end
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {
+            {id = 'j_'.. mod_prefix ..'_Ah', eternal = true, edition = 'negative'},
+            {id = 'j_'.. mod_prefix ..'_5h', eternal = true},
+            {id = 'j_'.. mod_prefix ..'_4h', eternal = true},
+            {id = 'j_'.. mod_prefix ..'_3h', eternal = true},
+            {id = 'j_'.. mod_prefix ..'_2h', eternal = true}
+        },
+    }
+
+    SMODS.Challenge{
+        key = 'Brothers',
+        unlocked = function()
+            local keys = {'2s','Ks'}
+            for _, key in ipairs(keys) do
+                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                if not center or not center.discovered then
+                    return false
+                end
+            end
+            return true
+        end,
+        deck = {type = 'Challenge Deck'},
+        rules = {
+            custom = {},
+            modifiers = {}
+        },
+        jokers = {
+            {id = 'j_'.. mod_prefix ..'_2s', eternal = true},
+            {id = 'j_'.. mod_prefix ..'_Ks', eternal = true}
+        },
+    }
+end
+
 local poker_hands = {
     'RF','SF','4K',
     'FH','FL','ST','3K',
@@ -72,7 +288,7 @@ challenges = function(poker_hands, jokers)
             consumables = {{id = 'c_fool'},{id = 'c_neptune'}}
         end
 
-        local challenge_jokers = jokers[hand] or {'j_joker'}
+        local challenge_jokers = jokers[hand] or {{id = 'j_joker'}}
         SMODS.Challenge{
             key = hand,
             unlocked = function()

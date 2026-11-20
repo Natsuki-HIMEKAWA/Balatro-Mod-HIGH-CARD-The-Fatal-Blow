@@ -460,9 +460,9 @@ local descriptions = {
             name = '行尸走肉',
             text = {
                 '在选择{C:attention}盲注{}时摧毁',
-                '{C:attention}最左侧{}的消耗牌，随后',
-                '生成一张{C:spectral}幻灵牌{}',
-                '{C:inactive}必须有空间{}'
+                '{C:attention}最左侧{}的消耗牌，',
+                '随后生成一张{C:spectral}幻灵牌{}',
+                '{C:inactive}（必须有空间）{}'
             }
         },
         ['j_'.. mod_prefix ..'_0x'] = {
@@ -536,6 +536,21 @@ local misc = {
         ['c_'.. mod_prefix ..'_2P'] = '两对',
         ['c_'.. mod_prefix ..'_1P'] = '一对',
         ['c_'.. mod_prefix ..'_HC'] = '高牌',
+
+        ['c_'.. mod_prefix ..'_Finn'] = "芬恩的左轮手枪",
+        ['c_'.. mod_prefix ..'_Vijay'] = "维杰的花盆",
+        ['c_'.. mod_prefix ..'_Chris'] = "克里斯的疗伤术",
+        ['c_'.. mod_prefix ..'_Leo'] = "里奥的财富",
+        ['c_'.. mod_prefix ..'_Wendy'] = "温蒂的武士刀",
+        ['c_'.. mod_prefix ..'_Chelsea'] = "切尔西的热情",
+        ['c_'.. mod_prefix ..'_Chloe'] = "克洛伊的恐惧",
+        ['c_'.. mod_prefix ..'_Owen'] = "欧文的监狱",
+        ['c_'.. mod_prefix ..'_Burst'] = "布尔丝特的献身",
+        ['c_'.. mod_prefix ..'_Brothers'] = "欧德曼兄弟",
+    },
+    v_text = {
+        ['ch_c_'..'Vijay'] = {'所有{C:attention}Boss盲注{}均为{C:attention}植物{}'},
+        ['ch_c_'..'Chelsea'] = {'所有{C:attention}Boss盲注{}均为{C:attention}钩子{}'}
     }
 }
 

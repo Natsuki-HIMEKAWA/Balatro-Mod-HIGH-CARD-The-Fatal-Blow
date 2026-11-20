@@ -166,7 +166,7 @@ local XPC_tooltips = function(info_queue, joker)
 
     local enhancement = joker.ability.original and joker.ability.original.enhancement
     local seal = joker.ability.original and joker.ability.original.seal
-    local colours = {G.C.UI.TEXT_DARK, G.C.UI.TEXT_DARK}
+    local colours = {G.C.UI.TEXT_INACTIVE, G.C.UI.TEXT_INACTIVE}
 
     if enhancement then colours[1] = G.C.FILTER end
     if seal then colours[2] = G.C.FILTER end
