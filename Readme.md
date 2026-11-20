@@ -22,14 +22,14 @@
 **Q:** What's different between this mod and Ken Shi's *High Card Mod*?
 
 **A:** On the major mechanisms centered around X-Playing Cards,
-- **Ken Shi's High Card Mod:** The scored card is transformed into X-Playing Card and by playing a High Card hand for the first time in a round, and the card returns to playing card at the end of round. X-Playing Cards can also be obtained via purchasing special boost packs in the store.
-- **HIGH CARD: The Fatal Blow:** Playing a single playing card to defeat a Blind transformes that card into its corresponding X-Playing Card, and will not returns to the playing card unless it is sold. The X-Playing Card retains the enhancment and seal of the original card, in order to ensure the returning of the original card.
+- **Ken Shi's High Card Mod:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corrsponding X-Playing Card, and the card returns to playing card at the end of round. X-Playing Cards can also be obtained via purchasing special boost packs in the store.
+- **HIGH CARD: The Fatal Blow:** Playing a single playing card to defeat a Blind transforms that card into its corresponding X-Playing Card, and will not returns to the playing card unless it is sold. The X-Playing Card retains the enhancment and seal of the original card, in order to ensure the returning of the original card.
 
-**Q:** Why do several X-Playing Cards have overlapping effects to those in Ken Shi's High Card Mod?
+**Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's High Card Mod?
 
 **A:** 
 Both mods are inspired by the same franchise and draw on the characteristics and abilities of its X-Playing Cards.
-For certain X-Playing Cards, their established names and abilities naturally suggest a limited range of suitable gameplay effects. As a result, some of them in the two mods may have overlapping effects.
+For certain X-Playing Cards, their established names and abilities naturally suggest a limited range of suitable gameplay effects. As a result, some of them in the two mods may have similar or overlapping effects.
 
 These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to Balatro's gameplay.
 
