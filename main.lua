@@ -1097,11 +1097,10 @@ local XPC = {
             if card.debuff then target = 0
             end
             return {vars = {
-                    card.ability.extra.money_per_size,
-                    card.ability.extra.max_bonus,
-                    target
-                }
-            }
+                card.ability.extra.money_per_size,
+                card.ability.extra.max_bonus,
+                target
+            }}
         end,
         
         add_to_deck = function(self, card, from_debuff)
@@ -1111,11 +1110,9 @@ local XPC = {
         remove_from_deck = function(self, card, from_debuff)
             local extra = card.ability.extra
             local applied = extra.applied or 0
-
             if G.hand and applied ~= 0 then
                 G.hand:change_size(-applied)
             end
-
             extra.applied = 0
         end,
 
@@ -1129,19 +1126,16 @@ local XPC = {
             local money = G.GAME.dollars or 0
             local money_per_size = extra.money_per_size
             local max_bonus = extra.max_bonus
-
             local target = math.min(
                 math.max(0, math.floor(money / money_per_size)),
                 max_bonus
             )
-
             if card.debuff then
                 target = 0
             end
 
             local applied = extra.applied or 0
             local diff = target - applied
-
             if diff ~= 0 then
                 G.hand:change_size(diff)
                 extra.applied = target
