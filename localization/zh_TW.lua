@@ -91,7 +91,7 @@ local descriptions = {
             text = {
                 '每張得分的{C:attention}#1#{}',
                 '給予{C:white,X:mult}X#2#{}倍數，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_9s'] = {
@@ -122,14 +122,14 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Qs'] = {
             name = '梅杜莎之鞭',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
+                '每回合{C:attention}第一次{}出牌中',
                 '所有得分牌額外觸發',
-                '{C:attention}#1#{}次，且於得分後將',
-                '其轉化為{C:attention}#2#{}'
+                '{C:attention}#1#{}次，隨後將其',
+                '轉化為{C:attention}#2#{}'
             }
         },
         ['j_'.. mod_prefix ..'_Ks'] = {
-            name = '石中劍騎士',
+            name = '聖徒騎士',
             text = {
                 '所有打出的{C:attention}#1#{}在',
                 '得分時轉化為{C:attention}#2#{}'
@@ -275,7 +275,7 @@ local descriptions = {
                 '每回合{C:attention}第一次{}出牌',
                 '中的所有得分牌',
                 '額外觸發{C:attention}#1#{}次，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_5d'] = {
@@ -314,11 +314,11 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_9d'] = {
             name = '無慈悲',
             text = {
-                '將每回合{C:attention}第一張{}得分牌',
-                '點數的{C:attention}四分之一{}賦予',
-                '{C:legendary}無慈悲{}的{C:white,X:mult}X倍數{}，',
-                '且隨後將其摧毀',
-                '回合結束後重置',
+                '將每回合{C:attention}第一張{}得分牌點數',
+                '的{C:attention}四分之一{}給予{C:legendary}無慈悲{}的',
+                '{C:white,X:mult}X倍數{}，若該牌為{C:attention}#2#{}',
+                '則給予{C:legendary}無慈悲{C:white,X:mult}X#3#{}，隨後',
+                '將其摧毀，回合結束後重置',
                 '{C:inactive}（目前為{C:white,X:mult}X#1#{C:inactive}倍數）{}'
             }
         },
@@ -327,7 +327,7 @@ local descriptions = {
             text = {
                 '所有得分的{C:attention}#1#{}',
                 '其兩種效果必然觸發，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_Jd'] = {
@@ -387,7 +387,7 @@ local descriptions = {
             text = {
                 '每張得分的{C:attention}#1#{}',
                 '給予{C:white,X:mult}X#2#{}倍數，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_6c'] = {
@@ -403,7 +403,7 @@ local descriptions = {
             text = {
                 '每張得分的{C:attention}#1#{}',
                 '給予{C:white,X:mult}X#2#{}倍數，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_8c'] = {
@@ -442,7 +442,7 @@ local descriptions = {
             text = {
                 '每張得分的{C:attention}#1#{}',
                 '給予{C:white,X:mult}X#2#{}倍數，',
-                '且隨後將其摧毀'
+                '隨後將其摧毀'
             }
         },
         ['j_'.. mod_prefix ..'_Kc'] = {

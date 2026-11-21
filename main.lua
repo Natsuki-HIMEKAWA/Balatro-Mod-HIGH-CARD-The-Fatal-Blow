@@ -2340,7 +2340,11 @@ local XPC = {
         config = {extra = {x_mult = 1}},
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
-            return {vars = {card.ability.extra.x_mult}}
+            return {vars = {
+                card.ability.extra.x_mult,
+                localize({type = 'name_text', set = 'Enhanced', key = 'm_stone'}),
+                1 /4
+            }}
         end,
 
         calculate = function(self, card, context)

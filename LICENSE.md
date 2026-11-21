@@ -1,12 +1,12 @@
 # CUSTOM NON-COMMERCIAL LICENSE
-This license applies to the High Card: The Fatal Blow (the “Mod”). It is a custom license and is **NOT** an open-source license.
+This license applies to the HIGH CARD: The Fatal Blow (the “Mod”). It is a custom license and is **NOT** an open-source license.
 
 ## English
 1. Scope and Ownership
 
 The “Mod” means the original files in this project that are created and provided by the Mod's copyright holder(s), including its code, assets, localization files, configuration files, and documentation. “Mod Assets” include, but are not limited to, sprites, textures, graphics, and other resources created for or included with the Mod, which are protected as part of the Mod, and all rights not expressly granted by this license are reserved by the relevant copyright holder(s).
 
-This license does not grant ownership of, or any license to, third-party intellectual property. Balatro, High Card, and any related names, characters, artwork, and other materials remain the property of their respective rights holders, where applicable.
+This license does not grant ownership of, or any license to, third-party intellectual property. Balatro, HIGH CARD, and any related names, characters, artwork, and other materials remain the property of their respective rights holders, where applicable.
 
 2. Permitted Use
 
@@ -22,11 +22,11 @@ Unless you have obtained prior written permission from the relevant copyright ho
 - Distribute, publish, sublicense, or otherwise make available a modified version of the Mod, whether in source-code form or compiled form, in whole or in part.
 - Extract, copy, reproduce, publish, redistribute, or reuse any Mod Assets separately from the complete, unmodified Mod, or incorporate Mod Assets into another mod, project, game, or work, unless you have obtained prior written permission from the relevant copyright holder(s). This restriction applies whether the assets are used unchanged or modified, and whether the intended use is commercial or non-commercial. Giving credit does not replace the requirement to obtain permission.
 - Remove or alter copyright notices, attribution, or this license from a copy of the Mod.
-- Present the Mod as an official product of, or imply affiliation with or endorsement by, the creators or rights holders of Balatro or High Card.
+- Present the Mod as an official product of, or imply affiliation with or endorsement by, the creators or rights holders of Balatro or HIGH CARD.
 
 4. Third-Party Rights and Disclaimer
 
-The Mod is an unofficial fan-made project and is not affiliated with, endorsed by, or sponsored by the creators or rights holders of Balatro or High Card. This statement does not grant permission to use any third-party intellectual property beyond what its rights holders independently allow.
+The Mod is an unofficial fan-made project and is not affiliated with, endorsed by, or sponsored by the creators or rights holders of Balatro or HIGH CARD. This statement does not grant permission to use any third-party intellectual property beyond what its rights holders independently allow.
 
 The copyright holder(s) shall not be liable for any claim, damages, or other liability arising from the use of, inability to use, or distribution of the Mod, except to the extent such liability cannot lawfully be excluded.
 
@@ -45,7 +45,7 @@ If the English and Simplified Chinese versions differ in interpretation, the Sim
 
 本许可证适用于“至高之牌：致命一击”（以下简称“本Mod”）。本Mod是指本项目中由本Mod版权持有人创作并提供的原始文件，包括代码、素材、语言文件、配置文件和文档等。“本Mod素材”包括但不限于为本Mod创作或随本Mod提供的图片素材及其他相关资源，作为本Mod的一部分受到保护；除本许可证明确授予的权限外，其余权利均由相应版权持有人保留。
 
-本许可证不转让任何第三方知识产权，也不授予使用第三方知识产权的许可。Balatro、《至高之牌》（High Card）及其相关名称、角色、美术作品以及其他素材（如适用）仍归各自的权利持有人所有。
+本许可证不转让任何第三方知识产权，也不授予使用第三方知识产权的许可。Balatro、《至高之牌》（HIGH CARD）及其相关名称、角色、美术作品以及其他素材（如适用）仍归各自的权利持有人所有。
 
 2. 使用方式
 

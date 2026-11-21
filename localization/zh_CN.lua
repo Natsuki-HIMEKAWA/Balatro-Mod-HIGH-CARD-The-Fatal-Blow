@@ -91,7 +91,7 @@ local descriptions = {
             text = {
                 '每张打出的{C:attention}#1#{}在',
                 '计分时给予{C:white,X:mult}X#2#{}倍率，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_9s'] = {
@@ -122,14 +122,14 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_Qs'] = {
             name = '美杜莎之鞭',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
+                '每回合{C:attention}第一次{}出牌中',
                 '所有计分牌额外触发',
-                '{C:attention}#1#{}次，且于计分后将',
-                '其转化为{C:attention}#2#{}'
+                '{C:attention}#1#{}次，计分后将其',
+                '转化为{C:attention}#2#{}'
             }
         },
         ['j_'.. mod_prefix ..'_Ks'] = {
-            name = '石中剑骑士',
+            name = '圣徒骑士',
             text = {
                 '所有打出的{C:attention}#1#{}在',
                 '计分时转化为{C:attention}#2#{}'
@@ -274,7 +274,7 @@ local descriptions = {
             text = {
                 '打出的{C:attention}第一手牌{}中所有',
                 '计分牌额外触发{C:attention}#1#{}次，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_5d'] = {
@@ -313,11 +313,11 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_9d'] = {
             name = '无慈悲',
             text = {
-                '将每回合{C:attention}第一张{}计分牌',
-                '点数的{C:attention}四分之一{}赋予',
-                '{C:legendary}无慈悲{}的{C:white,X:mult}X倍率{}，',
-                '且于计分后将其摧毁',
-                '回合结束后重置',
+                '将每回合{C:attention}第一张{}计分牌点数',
+                '的{C:attention}四分之一{}给予{C:legendary}无慈悲{}的',
+                '{C:white,X:mult}X倍率{}，若该牌为{C:attention}#2#{}则',
+                '给予{C:legendary}无慈悲{C:white,X:mult}X#3#{}，计分后',
+                '将其摧毁，回合结束后重置',
                 '{C:inactive}（当前为{C:white,X:mult}X#1#{C:inactive}倍率）{}'
             }
         },
@@ -326,7 +326,7 @@ local descriptions = {
             text = {
                 '所有计分的{C:attention}#1#{}',
                 '其两种效果必然触发，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_Jd'] = {
@@ -386,7 +386,7 @@ local descriptions = {
             text = {
                 '每张打出的{C:attention}#1#{}在',
                 '计分时给予{C:white,X:mult}X#2#{}倍率，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_6c'] = {
@@ -402,7 +402,7 @@ local descriptions = {
             text = {
                 '每张打出的{C:attention}#1#{}在',
                 '计分时给予{C:white,X:mult}X#2#{}倍率，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_8c'] = {
@@ -442,7 +442,7 @@ local descriptions = {
             text = {
                 '每张打出的{C:attention}#1#{}在',
                 '计分时给予{C:white,X:mult}X#2#{}倍率，',
-                '且于计分后将其摧毁'
+                '计分后将其摧毁'
             }
         },
         ['j_'.. mod_prefix ..'_Kc'] = {

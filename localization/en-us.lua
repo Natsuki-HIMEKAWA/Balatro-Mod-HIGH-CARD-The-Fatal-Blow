@@ -350,12 +350,12 @@ local descriptions = {
         ['j_'.. mod_prefix ..'_9d'] = {
             name = 'No Mercy',
             text = {
-                'The {C:legendary}No Mercy{} gains {C:white,X:mult}XMult{}',
-                'equal to {C:attention}quarter{} of the',
-                '{C:attention}rank{} of the {C:attention}first{} score',
-                'card of each round,',
-                'then destroy it, resets',
-                'at the end of round',
+                'The {C:legendary}No Mercy{} gains {C:white,X:mult}XMult{} equal',
+                'to {C:attention}quarter{} of the {C:attention}rank{} of the',
+                '{C:attention}first{} scored card of each',
+                'round, or {C:white,X:mult}X#3#{} Mult if it is a',
+                '{C:attention}#2#{}, then destroy it',
+                'Resets at the end of round',
                 '{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult){}'
             }
         },

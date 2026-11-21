@@ -5,7 +5,7 @@
 **HIGH CARD: The Fatal Blow** is a mod for *Balatro*, inspired by the Japanese multimedia franchise [*HIGH CARD*](https://en.wikipedia.org/wiki/High_Card). It introduces 52 unique Jokers and related mechanisms based on the series.
 
 ## Features
-- **New Jokers** - Adds 52 custom Jokers modeled after the X-Playing Cards from *High Card*.
+- **New Jokers** - Adds 52 custom Jokers modeled after the X-Playing Cards from *HIGH CARD*.
 - **New Deck** - Adds a new deck, the only deck in which the Jokers introduced above can be obtained.
 - **New Challenges** - Adds 20 new challenges centered around the Jokers introduced above.
 - **Stone Card Logic** - Reveals the normally hidden base value of Stone Cards in a side tooltip.
@@ -17,13 +17,13 @@
 ## FAQ
 **Q:** What's the relationship between this mod and Ken Shi's [High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod) released on 2024?
 
-**A:** Although both mods are inspired by *HIGH CARD* and feature 52 X-Playing Cards, **HIGH CARD: The Fatal Blow** is a **separate**, **independently developed** mod for Balatro. It is **neither an update nor a continuation** of Ken Shi's High Card Mod.
+**A:** Although both mods are inspired by *HIGH CARD* and feature 52 X-Playing Cards, **HIGH CARD: The Fatal Blow** is a **separate**, **independently developed** new mod for Balatro. It is **neither an update nor a continuation** of Ken Shi's High Card Mod.
 
 **Q:** What's different between this mod and Ken Shi's *High Card Mod*?
 
-**A:** On the major mechanisms centered around X-Playing Cards,
-- **Ken Shi's High Card Mod:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corrsponding X-Playing Card, and the card returns to playing card at the end of round. X-Playing Cards can also be obtained via purchasing special boost packs in the store.
-- **HIGH CARD: The Fatal Blow:** Playing a **single** card to defeat a Blind transforms that card into its corresponding X-Playing Card, and **will not** returns to the playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be returned when selling the X-Playing Card.
+**A:** On the major mechanisms centered around the generation and restoration of X-Playing Cards,
+- **Ken Shi's High Card Mod:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corrsponding X-Playing Card, and the card restores to playing card at the end of round.
+- **HIGH CARD: The Fatal Blow:** Playing a **single** card to defeat a Blind transforms that card into its corresponding X-Playing Card, and **will not** restore to the playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be restored when selling the X-Playing Card.
 
 **Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's High Card Mod?
 
@@ -111,4 +111,4 @@ Redistribution of modified versions and commercial use require prior written per
 
 See [LICENSE](LICENSE.md#English) for the full terms.
 
-This is an unofficial fan-made project. It is not affiliated with, endorsed by, or sponsored by the creators or rights holders of *High Card*.
+This is an unofficial fan-made project. It is not affiliated with, endorsed by, or sponsored by the creators or rights holders of *HIGH CARD*.
