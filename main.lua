@@ -232,15 +232,15 @@ local XPC = {
                 and G.GAME and G.GAME.current_round and G.GAME.current_round.hands_left
                 and G.GAME.current_round.Neo_New_Nambu == nil
                 then
-                    G.GAME.current_round.Neo_New_Nambu = 'Loaded'
-                    local diff =  card.ability.extra.hands - (G.GAME.current_round.hands_left or 0)
+                    local diff = card.ability.extra.hands - (G.GAME.current_round.hands_left or 0)
                     if diff ~= 0 then
-                        ease_hands_played(diff)
+                        ease_hands_played(diff, true)
                         card_eval_status_text(
                             card, 'extra', nil, nil, nil, 
                             {message = localize('k_loaded')}
                         )
                     end
+                    G.GAME.current_round.Neo_New_Nambu = 'Loaded'
                 end
             end
             
