@@ -1,5 +1,6 @@
 # CUSTOM NON-COMMERCIAL LICENSE
 This license applies to the HIGH CARD: The Fatal Blow (the “Mod”). It is a custom license and is **NOT** an open-source license.
+[简体中文](LICENSE.md#简体中文) | [English](LICENSE.md#english)
 
 ## English
 1. Scope and Ownership
@@ -39,11 +40,13 @@ Any permission granted under this license terminates automatically if you fail t
 Any exception to these terms must be authorized in advance and in writing by the relevant copyright holder(s). A lack of enforcement in one instance does not waive the right to enforce these terms in another instance.
 
 If the English and Simplified Chinese versions differ in interpretation, the Simplified Chinese version shall prevail.
-
+---
 ## 简体中文
+
+本许可证适用于“至高之牌：致命一击”（以下简称“本Mod”），为自定义**非开源**许可证。
 1. 适用范围与权利归属
 
-本许可证适用于“至高之牌：致命一击”（以下简称“本Mod”）。本Mod是指本项目中由本Mod版权持有人创作并提供的原始文件，包括代码、素材、语言文件、配置文件和文档等。“本Mod素材”包括但不限于为本Mod创作或随本Mod提供的图片素材及其他相关资源，作为本Mod的一部分受到保护；除本许可证明确授予的权限外，其余权利均由相应版权持有人保留。
+本Mod是指本项目中由本Mod版权持有人创作并提供的原始文件，包括代码、素材、语言文件、配置文件和文档等。“本Mod素材”包括但不限于为本Mod创作或随本Mod提供的图片素材及其他相关资源，作为本Mod的一部分受到保护；除本许可证明确授予的权限外，其余权利均由相应版权持有人保留。
 
 本许可证不转让任何第三方知识产权，也不授予使用第三方知识产权的许可。Balatro、《至高之牌》（HIGH CARD）及其相关名称、角色、美术作品以及其他素材（如适用）仍归各自的权利持有人所有。
 

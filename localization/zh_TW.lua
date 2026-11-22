@@ -256,7 +256,7 @@ local descriptions = {
             name = '心有靈犀',
             text = {
                 '每手得分牌中每種',
-                '不同的封蠟章給予',
+                '不同類型的封蠟章給予',
                 '{C:legendary}心有靈犀{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }

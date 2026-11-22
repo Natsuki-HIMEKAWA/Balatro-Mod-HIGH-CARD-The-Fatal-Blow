@@ -1936,7 +1936,7 @@ local XPC = {
             set = 'Joker',
             key = '2d'
         }),
-        config = {extra = {x_mult_add = 0.5, x_mult = 1}},
+        config = {extra = {x_mult_add = 0.25, x_mult = 1}},
 
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)

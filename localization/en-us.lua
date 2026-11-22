@@ -288,8 +288,8 @@ local descriptions = {
             text = {
                 'The {C:legendary}Love Connection{}',
                 'gains {C:white,X:mult}X#1#{} Mult for',
-                'each different {C:attention}Seal{}',
-                'in a scoring hand',
+                'each different type of',
+                '{C:attention}Seal{} in a scoring hand',
                 '{C:inactive}(Currently {C:white,X:mult}X#2#{}{C:inactive} Mult){}'
 
             }

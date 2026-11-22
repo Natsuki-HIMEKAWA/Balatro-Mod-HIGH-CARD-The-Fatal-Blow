@@ -22,14 +22,7 @@ do
             custom = {},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_2s', eternal = true}},
-        consumeables = {},
-        vouchers = {},
-        restrictions = {
-            banned_cards = {},
-            banned_tags = {},
-            banned_other = {}
-        }
+        jokers = {{id = 'j_'.. mod_prefix ..'_2s', eternal = true}}
     }
 
     SMODS.Challenge{
