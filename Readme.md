@@ -15,23 +15,23 @@
 **GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/releases
 
 ## FAQ
-**Q:** What's the relationship between this mod and Ken Shi's [High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod) released on 2024?
+**Q:** What's the relationship between this mod and Ken Shi's *[High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod)* released on 2024?
 
-**A:** Although both mods are inspired by *HIGH CARD* and feature 52 X-Playing Cards, **HIGH CARD: The Fatal Blow** is a **separate**, **independently developed** new mod for Balatro. It is **neither an update nor a continuation** of Ken Shi's High Card Mod.
+**A:** Although both mods are inspired by *HIGH CARD* and feature 52 X-Playing Cards, **HIGH CARD: The Fatal Blow** is a **separate**, **independently developed** new mod for *Balatro*. It is **neither an update nor a continuation** of Ken Shi's *High Card Mod*.
 
 **Q:** What's different between this mod and Ken Shi's *High Card Mod*?
 
 **A:** On the major mechanisms centered around the generation and restoration of X-Playing Cards,
-- **Ken Shi's High Card Mod:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corresponding X-Playing Card, and the card restores to playing card at the end of round.
-- **HIGH CARD: The Fatal Blow:** Playing a **single** card to defeat a Blind transforms that card into the corresponding X-Playing Card, and **will not** restore to the original playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be restored when selling the X-Playing Card.
+- **Ken Shi's *High Card Mod*:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corresponding X-Playing Card, and the card restores to playing card at the end of round.
+- ***HIGH CARD: The Fatal Blow*:** Playing a **single** card to defeat a Blind transforms that card into the corresponding X-Playing Card, and **will not** restore to the original playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be restored when selling the X-Playing Card.
 
-**Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's High Card Mod?
+**Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's *High Card Mod*?
 
 **A:** 
 Both mods are inspired by the same franchise and draw on the characteristics and abilities of its X-Playing Cards.
 For certain X-Playing Cards, their established names and abilities naturally suggest a limited range of suitable gameplay effects. As a result, some of them in the two mods may have similar or overlapping effects.
 
-These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to Balatro's gameplay.
+These similarities arise from our similar interpretations of these cards, both mods have their own gameplay mechanics and implementation. It is our same goal to represent the original X-Playing Cards and their abilities as faithfully as possible while adapting them to *Balatro*'s gameplay.
 
 Reference: [The X-Playing Cards](https://highcard.fandom.com/wiki/The_X-Playing_Cards)
 
@@ -52,15 +52,15 @@ Other versions may work, but have not necessarily been tested.
 Install Steamodded and Lovely separately before installing this mod.
 
 ## Installation
-1. Install Balatro, Steamodded, and Lovely.
+1. Install *Balatro*, Steamodded, and Lovely.
 2. Download the released ZIP file and extract it.
 3. Locate the mod folder containing `main.lua`, `main.json`, `challenges.lua`, and `lovely.toml`.
-4. Place that folder directly inside your Balatro `Mods` directory.
+4. Place that folder directly inside your *Balatro* `Mods` directory.
    Rename the folder to `HIGH_CARD` if necessary, and make sure the mod files are not nested inside an extra directory level.
    - **Windows:** `%AppData%/Balatro/Mods/`
    - **macOS:** `~/Library/Application Support/Balatro/Mods/`
    - **Linux / Steam Deck:** The Mods directory depends on your installation method. For Proton installations, follow the [Steamodded Linux installation guide](https://github.com/Steamodded/smods/wiki/Installing-Steamodded-linux).
-5. Launch Balatro and verify that **HIGH CARD** appears in the Mods menu.
+5. Launch *Balatro* and verify that **HIGH CARD** appears in the Mods menu.
 
 If the `Mods` directory does not exist, create it at the appropriate location.
 
@@ -88,7 +88,7 @@ Available languages:
 
 ## Bug Reports and Feedback
 If you encounter a bug or compatibility issue, please [open an Issue](../../issues). When reporting a problem, include:
-- Balatro version
+- *Balatro* version
 - Steamodded version
 - Lovely version
 - Steps to reproduce the issue
@@ -117,28 +117,28 @@ This is an unofficial fan-made project. It is not affiliated with, endorsed by, 
 __**简体中文**__ | [English](Readme.md#high-card-the-fatal-blow)
 
 ## 简介
-**至高之牌：致命一击**是一款适用于Balatro的Mod，灵感来自日本多媒体企划《[至高之牌](https://zh.wikipedia.org/wiki/HIGH_CARD_%E8%87%B3%E9%AB%98%E4%B9%8B%E7%89%8C)》，加入了52张参考该企划相关设定设计的独特小丑牌及相应机制。
+**至高之牌：致命一击**是一款适用于《Balatro》的Mod，灵感来自日本多媒体企划《[至高之牌](https://zh.wikipedia.org/wiki/HIGH_CARD_%E8%87%B3%E9%AB%98%E4%B9%8B%E7%89%8C)》，加入了52张参考该企划相关设定设计的独特小丑牌及相应机制。
 
 ## 功能特色
 - **新小丑牌** — 新增52张以《至高之牌》的X-扑克牌为原型的小丑牌。
 - **新牌组** — 新增1个牌组，上述新小丑牌只能在该牌组中获得。
 - **新挑战** — 新增20个基于上述新小丑牌的挑战。
 - **石头牌显示** — 在侧边提示框中显示石头牌隐藏的牌面花色与点数。
-- **原版游戏补丁** — 目录中的文件`lovely.toml`修复了原版Balatro游戏中“骷髅先生”无法在牌堆耗尽时挽救游戏的bug。
+- **原版游戏补丁** — 目录中的文件`lovely.toml`修复了原版《Balatro》游戏中“骷髅先生”无法在牌堆耗尽时挽救游戏的bug。
 
 ## 下载方式
 **GitHub:** https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/releases
 
 ## 常见问题
-**问：** 本Mod与Ken-Shi于2024年发布的[High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod)有什么关系？
+**问：** 本Mod与Ken-Shi于2024年发布的《[High Card Mod](https://github.com/Ken-Shi/Balatro_HighCardMod)》有什么关系？
 
-**答：** 尽管两个Mod均以《至高之牌》为创作题材并都包含52张X-扑克牌，但**至高之牌：致命一击**是一个与Ken-Shi的High Card Mod**完全不同、独立开发**的新项目，**既不是后者的更新，也不是后者的续作**。
+**答：** 尽管两个Mod均以《至高之牌》为创作题材并都包含52张X-扑克牌，但**至高之牌：致命一击**是一个与Ken-Shi的《High Card Mod》**完全不同、独立开发**的新项目，**既不是后者的更新，也不是后者的续作**。
 
-**问：** 本Mod与Ken-Shi的High Card Mod有什么区别？
+**问：** 本Mod与Ken-Shi的《High Card Mod》有什么区别？
 
 **答：** 在围绕X-扑克牌生成和还原的主要机制上，
-- **Ken-Shi的High Card Mod：** 每回合首次打出高牌牌型时，计分的那张扑克牌会转化为X-扑克牌，并在回合结束时恢复为普通扑克牌。
-- **至高之牌：致命一击：** 当打出单张扑克牌击败当前盲注时，该牌会转化为对应的X-扑克牌，且只有将其出售才能使之恢复为普通扑克牌；转化后的X-扑克牌会保留原扑克牌的增强和蜡封属性，确保该牌出售时可恢复为与原先完全一致的扑克牌。
+- **《High Card Mod》：** 每回合首次打出高牌牌型时，计分的那张扑克牌会转化为X-扑克牌，并在回合结束时恢复为普通扑克牌。
+- **《至高之牌：致命一击》：** 当打出单张扑克牌击败当前盲注时，该牌会转化为对应的X-扑克牌，且只有将其出售才能使之恢复为普通扑克牌；转化后的X-扑克牌会保留原扑克牌的增强和蜡封属性，确保该牌出售时可恢复为与原先完全一致的扑克牌。
 
 **问：** 为什么两个Mod中的部分X-扑克牌的效果相似或重合？
 
@@ -148,7 +148,7 @@ __**简体中文**__ | [English](Readme.md#high-card-the-fatal-blow)
 
 对其中部分X-扑克牌而言，其既定名称和能力设定本身就限制了适合转化为游戏效果的设计方向，故两个Mod中的部分卡牌会具有相似或重合的效果。
 
-这些相似之处源于双方对同一原作卡牌对象相似的理解与解释，两者拥有各自的核心玩法机制与具体实现方式，目标均是在适配Balatro游戏机制的同时尽可能忠实地还原原作X-扑克牌的设定与能力。
+这些相似之处源于双方对同一原作卡牌对象相似的理解与解释，两者拥有各自的核心玩法机制与具体实现方式，目标均是在适配《Balatro》游戏机制的同时尽可能忠实地还原原作X-扑克牌的设定与能力。
 
 参考：[The X-Playing Cards](https://highcard.fandom.com/wiki/The_X-Playing_Cards)
 
