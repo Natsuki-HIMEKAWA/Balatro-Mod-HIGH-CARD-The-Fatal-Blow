@@ -96,7 +96,7 @@ If you encounter a bug or compatibility issue, please [open an Issue](../../issu
 - Steps to reproduce the issue
 - Relevant error logs, if available
 
-Suggestions for Joker balancing and additional translations are also welcome.
+Suggestions for Joker balancing are also welcome.
 
 ## Contributing
 Bug reports, balancing suggestions, and additional language translations are welcome.
@@ -214,7 +214,7 @@ HIGH_CARD/
 - 问题的复现步骤
 - 相关错误日志（如有）
 
-欢迎有关小丑牌平衡性调整和新增语言翻译的建议。
+欢迎有关小丑牌平衡性调整的建议。
 
 ## 参与贡献
 欢迎提交Bug报告、平衡性调整建议和新增语言翻译。
