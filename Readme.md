@@ -22,10 +22,10 @@
 **Q:** What's different between this mod and Ken Shi's *High Card Mod*?
 
 **A:** On the major mechanisms centered around the generation and restoration of X-Playing Cards,
-- **Ken Shi's *High Card Mod*:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corresponding X-Playing Card, and the card restores to playing card at the end of round.
+- ***High Card Mod*:** When playing a High Card hand for the first hand in a round, the scored card transforms into the corresponding X-Playing Card, and the card restores to playing card at the end of round.
 - ***HIGH CARD: The Fatal Blow*:** Playing a **single** card to defeat a Blind transforms that card into the corresponding X-Playing Card, and **will not** restore to the original playing card unless it is sold. The X-Playing Card **retains the enhancment and seal** of the original card, ensuring the identical card can be restored when selling the X-Playing Card.
 
-**Q:** Why do several X-Playing Cards have similar or overlapping effects to those in Ken Shi's *High Card Mod*?
+**Q:** Why do several X-Playing Cards have similar or overlapping effects between two mods?
 
 **A:** 
 Both mods are inspired by the same franchise and draw on the characteristics and abilities of its X-Playing Cards.
@@ -85,6 +85,8 @@ Available languages:
 - English (`en-us`)
 - Simplified Chinese (`zh_CN`)
 - Traditional Chinese (`zh_TW`)
+
+Contributions of additional language translations are also welcome.
 
 ## Bug Reports and Feedback
 If you encounter a bug or compatibility issue, please [open an Issue](../../issues). When reporting a problem, include:
@@ -201,6 +203,8 @@ HIGH_CARD/
 - 英语（`en-us`）
 - 简体中文（`zh_CN`）
 - 繁体中文（`zh_TW`）
+
+欢迎参与贡献其他语言的本地化翻译。
 
 ## 问题反馈与建议
 如果你遇到Bug或兼容性问题，请[提交 Issue](../../issues)。反馈时请尽可能提供以下信息：
