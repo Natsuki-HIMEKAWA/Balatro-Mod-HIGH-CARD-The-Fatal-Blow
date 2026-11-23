@@ -1,6 +1,6 @@
 [manifest]
 version = "1.0.0"
-priority = -64
+priority = -2147483648
 
 [[patches]]
 [patches.pattern]
@@ -16,6 +16,28 @@ payload = '''
         self.STATE_COMPLETE = true
         end_round()
     end
+'''
+match_indent = false
+times = 1
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/ui.lua"]'
+pattern = '''    local loc_options = localize(_suit, 'collabs')
+    local conv_loc_options = {}
+    for k, v in pairs(loc_options) do
+      conv_loc_options[tonumber(k)] = v
+    end
+
+    loc_options = conv_loc_options'''
+position = "at"
+payload = '''    local loc_options = localize(_suit, 'collabs')
+    local conv_loc_options = {}
+    for k, v in ipairs(G.COLLABS.options[_suit]) do
+        conv_loc_options[k] = loc_options[v] or loc_options[tostring(k)] or loc_options[k] or v
+    end
+
+    loc_options = conv_loc_options
 '''
 match_indent = false
 times = 1

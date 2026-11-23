@@ -57,7 +57,7 @@ local descriptions = {
             name = '清冷長槍',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
-                '{C:legendary}清冷長槍{}獲得{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}清冷長槍{}獲得{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
@@ -65,7 +65,7 @@ local descriptions = {
             name = '緻密重錘',
             text = {
                 '摧毀所有得分的{C:attention}#1#{}，',
-                '每張給予{C:legendary}緻密重錘{}',
+                '每張給予{C:B4883C}緻密重錘{}',
                 '{C:white,X:mult}X#2#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
@@ -74,7 +74,7 @@ local descriptions = {
             name = '雜耍火銃',
             text = {
                 '每摧毀一張{C:attention}#2#{}，',
-                '{C:legendary}雜耍火銃{}獲得{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}雜耍火銃{}獲得{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
@@ -107,7 +107,7 @@ local descriptions = {
             name = '誠意之弓',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
-                '{C:legendary}誠意之弓{}獲得{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}誠意之弓{}獲得{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
@@ -209,7 +209,7 @@ local descriptions = {
             text = {
                 '回合結束時，{C:attention}牌堆{}',
                 '中剩餘的每張牌給予',
-                '{C:legendary}超凡天才{}{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}超凡天才{}{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
@@ -217,7 +217,7 @@ local descriptions = {
             name = '敏銳五感',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
-                '{C:legendary}敏銳五感{}獲得{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}敏銳五感{}獲得{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
@@ -233,15 +233,15 @@ local descriptions = {
             name = '音速行者',
             text = {
                 '若只出{C:attention}1{}手牌即戰勝{C:attention}盲注{}，',
-                '則{C:legendary}音速行者{}獲得{C:white,X:mult}X#1#{}倍數',
+                '則{C:B4883C}音速行者{}獲得{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Kh'] = {
             name = '完美雄性',
             text = {
-                '所有打出的{C:attention}#2#{}在',
-                '得分時獲得{C:attention}#1#{}'
+                '所有得分的{C:attention}#2#{}和{C:attention}#3#{}',
+                '獲得{C:attention}#1#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ah'] = {
@@ -257,7 +257,7 @@ local descriptions = {
             text = {
                 '每手得分牌中每種',
                 '不同類型的封蠟章給予',
-                '{C:legendary}心有靈犀{C:white,X:mult}X#1#{}倍數',
+                '{C:B4883C}心有靈犀{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
@@ -290,7 +290,7 @@ local descriptions = {
             name = '13級階梯',
             text = {
                 '每打出{C:attention}13{}{C:inactive}(#2#){}張牌，',
-                '{C:legendary}13級階梯{}獲得{C:white,X:mult}X#1#{}倍數，',
+                '{C:B4883C}13級階梯{}獲得{C:white,X:mult}X#1#{}倍數，',
                 '且摧毀每第{C:attention}13{}張打出的牌',
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
@@ -299,7 +299,7 @@ local descriptions = {
             name = '等價交換',
             text = {
                 '每花費或失去{C:money}$1{}，',
-                '{C:legendary}等價交換{}獲得',
+                '{C:B4883C}等價交換{}獲得',
                 '{C:white,X:mult}X#1#{}倍數',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
@@ -315,9 +315,9 @@ local descriptions = {
             name = '無慈悲',
             text = {
                 '將每回合{C:attention}第一張{}得分牌點數',
-                '的{C:attention}四分之一{}給予{C:legendary}無慈悲{}的',
+                '的{C:attention}四分之一{}給予{C:B4883C}無慈悲{}的',
                 '{C:white,X:mult}X倍數{}，若該牌為{C:attention}#2#{}',
-                '則給予{C:legendary}無慈悲{C:white,X:mult}X#3#{}，隨後',
+                '則給予{C:B4883C}無慈悲{C:white,X:mult}X#3#{}，隨後',
                 '將其摧毀，回合結束後重置',
                 '{C:inactive}（目前為{C:white,X:mult}X#1#{C:inactive}倍數）{}'
             }
@@ -354,7 +354,7 @@ local descriptions = {
                 '回合內賣出的{C:B4883C}X-撲克牌{}',
                 '立即進入{C:attention}手牌{}而非牌堆；',
                 '每賣出一張{C:B4883C}X-撲克牌{}，',
-                '{C:legendary}動態念力{}獲得{C:white,X:mult}X#1#{}倍數，',
+                '{C:B4883C}動態念力{}獲得{C:white,X:mult}X#1#{}倍數，',
                 '戰勝{C:attention}Boss{}盲注後重置',
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
@@ -449,7 +449,7 @@ local descriptions = {
             name = '死神之手',
             text = {
                 '每回合{C:attention}第一次{}出牌中所有得分的牌',
-                '將在得分後被摧毀，同時{C:legendary}死神之手{}',
+                '將在得分後被摧毀，同時{C:B4883C}死神之手{}',
                 '獲得這些牌相應{C:dark_edition}加強{}與{C:dark_edition}版本{}提供的',
                 '{C:chips}籌碼{}，{C:mult}倍數{}，{C:white,X:mult}X倍數{}，或返還相應',
                 '{C:money}金錢{}，戰勝{C:attention}Boss盲注{}後重置其{C:white,X:mult}X倍數{}',
@@ -481,8 +481,26 @@ local descriptions = {
 local misc = {
     labels = {
         [HIGH_CARD_prefix ..'_clone'] = '克隆',
+        [(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-撲克牌'
+    },
+    collabs = {
+        Spades = {
+            [HIGH_CARD_prefix ..'_Spades'] = '黑曜石'
+        },
+        Hearts = {
+            [HIGH_CARD_prefix ..'_Hearts'] = '紅寶石'
+        },
+        Diamonds = {
+            [HIGH_CARD_prefix ..'_Diamonds'] = '藍寳石'
+        },
+        Clubs = {
+            [HIGH_CARD_prefix ..'_Clubs'] = '綠寶石'
+        }
     },
     dictionary = {
+        ['k_'..(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-撲克牌',
+        k_clear_configures = '目前牌組會使這裡的所有變更都在返回主選單時清空',
+
         k_unenhanced = '無加強',
         k_no_seal = '無封蠟章',
         k_loaded = '裝彈！',

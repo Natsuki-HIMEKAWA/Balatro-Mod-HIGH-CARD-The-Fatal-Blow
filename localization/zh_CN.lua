@@ -57,7 +57,7 @@ local descriptions = {
             name = '清冷长枪',
             text = {
                 '若出牌包含{C:attention}#2#{}，则',
-                '{C:legendary}清冷长枪{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}清冷长枪{}获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -66,7 +66,7 @@ local descriptions = {
             text = {
                 '计分后摧毁所有被',
                 '计分的{C:attention}#1#{}，每张给予',
-                '{C:legendary}致密重锤{C:white,X:mult}X#2#{}倍率',
+                '{C:B4883C}致密重锤{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -74,7 +74,7 @@ local descriptions = {
             name = '杂耍火铳',
             text = {
                 '每摧毁一张{C:attention}#2#{}，',
-                '{C:legendary}杂耍火铳{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}杂耍火铳{}获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -107,7 +107,7 @@ local descriptions = {
             name = '诚意之弓',
             text = {
                 '若出牌包含{C:attention}#2#{}，则',
-                '{C:legendary}诚意之弓{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}诚意之弓{}获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -209,7 +209,7 @@ local descriptions = {
             text = {
                 '回合结束时，{C:attention}牌堆{}',
                 '中剩余的每张牌给予',
-                '{C:legendary}卓越天才{}{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}卓越天才{}{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
@@ -217,7 +217,7 @@ local descriptions = {
             name = '敏锐五感',
             text = {
                 '若出牌包含{C:attention}#2#{}，则',
-                '{C:legendary}敏锐五感{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}敏锐五感{}获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -233,15 +233,16 @@ local descriptions = {
             name = '音速行者',
             text = {
                 '若只出{C:attention}1{}手牌即击败{C:attention}盲注{}，',
-                '则{C:legendary}音速行者{}获得{C:white,X:mult}X#1#{}倍率',
+                '则{C:B4883C}音速行者{}获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Kh'] = {
             name = '完美雄性',
             text = {
-                '所有打出的{C:attention}#2#{}在',
-                '计分时获得{C:attention}#1#{}'
+                '所有打出的',
+                '{C:attention}#2#{}和{C:attention}#3#{}在计分时',
+                '获得{C:attention}#1#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ah'] = {
@@ -257,7 +258,7 @@ local descriptions = {
             text = {
                 '每手计分牌中每种',
                 '不同类型的蜡封给予',
-                '{C:legendary}心有灵犀{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}心有灵犀{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
@@ -289,7 +290,7 @@ local descriptions = {
             name = '13级阶梯',
             text = {
                 '每打出{C:attention}13{}{C:inactive}(#2#){}张牌，',
-                '{C:legendary}13级阶梯{}获得{C:white,X:mult}X#1#{}倍率，',
+                '{C:B4883C}13级阶梯{}获得{C:white,X:mult}X#1#{}倍率，',
                 '且摧毁每第{C:attention}13{}张打出的牌',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
@@ -298,7 +299,7 @@ local descriptions = {
             name = '等价交换',
             text = {
                 '每花费或失去{C:money}$1{}，',
-                '{C:legendary}等价交换{}获得',
+                '{C:B4883C}等价交换{}获得',
                 '{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
@@ -314,9 +315,9 @@ local descriptions = {
             name = '无慈悲',
             text = {
                 '将每回合{C:attention}第一张{}计分牌点数',
-                '的{C:attention}四分之一{}给予{C:legendary}无慈悲{}的',
+                '的{C:attention}四分之一{}给予{C:B4883C}无慈悲{}的',
                 '{C:white,X:mult}X倍率{}，若该牌为{C:attention}#2#{}则',
-                '给予{C:legendary}无慈悲{C:white,X:mult}X#3#{}，计分后',
+                '给予{C:B4883C}无慈悲{C:white,X:mult}X#3#{}，计分后',
                 '将其摧毁，回合结束后重置',
                 '{C:inactive}（当前为{C:white,X:mult}X#1#{C:inactive}倍率）{}'
             }
@@ -353,7 +354,7 @@ local descriptions = {
                 '回合内出售的{C:B4883C}X-扑克牌{}',
                 '立即进入{C:attention}手牌{}而非牌堆；',
                 '每出售一张{C:B4883C}X-扑克牌{}，',
-                '{C:legendary}动态念力{}获得{C:white,X:mult}X#1#{}倍率，',
+                '{C:B4883C}动态念力{}获得{C:white,X:mult}X#1#{}倍率，',
                 '击败{C:attention}Boss{}盲注后重置',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
@@ -449,7 +450,7 @@ local descriptions = {
             name = '死神之手',
             text = {
                 '每回合{C:attention}第一次{}出牌中所有的计分牌',
-                '将在计分后被摧毁，同时{C:legendary}死神之手{}',
+                '将在计分后被摧毁，同时{C:B4883C}死神之手{}',
                 '获得这些牌相应{C:dark_edition}增强{}与{C:dark_edition}版本{}提供的',
                 '{C:chips}筹码{}，{C:mult}倍率{}，{C:white,X:mult}X倍率{}，或返还相应',
                 '{C:money}金钱{}，击败{C:attention}Boss盲注{}后重置其{C:white,X:mult}X倍率{}',
@@ -481,8 +482,26 @@ local descriptions = {
 local misc = {
     labels = {
         [HIGH_CARD_prefix ..'_clone'] = '克隆',
+        [(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-扑克牌'
+    },
+    collabs = {
+        Spades = {
+            [HIGH_CARD_prefix ..'_Spades'] = '黑曜石'
+        },
+        Hearts = {
+            [HIGH_CARD_prefix ..'_Hearts'] = '红宝石'
+        },
+        Diamonds = {
+            [HIGH_CARD_prefix ..'_Diamonds'] = '蓝宝石'
+        },
+        Clubs = {
+            [HIGH_CARD_prefix ..'_Clubs'] = '绿宝石'
+        }
     },
     dictionary = {
+        ['k_'..(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-扑克牌',
+        k_clear_configures = '当前牌组下此处所有变更将于退回主菜单时清除',
+
         k_unenhanced = '无增强',
         k_no_seal = '无蜡封',
         k_loaded = '上膛！',

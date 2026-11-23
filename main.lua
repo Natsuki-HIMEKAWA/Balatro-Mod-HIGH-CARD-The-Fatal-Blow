@@ -74,7 +74,14 @@ SMODS.Sticker({
     rate = 0
 })
 
-local rank_to_string = function(rank)
+SMODS.Rarity({
+    key = 'XPC',
+    badge_colour = HEX('B4883C'),
+    pools = {Joker = true},
+    default_weight = 0
+})
+
+local rank_to_name = function(rank)
     if rank <= 10 then return tostring(rank)
     elseif rank == 11 then return 'Jack'
     elseif rank == 12 then return 'Queen'
@@ -275,7 +282,7 @@ local XPC = {
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
             return {vars = {
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult
             }}
         end,
@@ -380,7 +387,7 @@ local XPC = {
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
             return {vars = {
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult_add,
                 card.ability.extra.x_mult
             }}
@@ -442,7 +449,7 @@ local XPC = {
             XPC_tooltips(info_queue, card)
             return {vars = {
                 card.ability.extra.x_mult_add,
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult
             }
         }
@@ -678,8 +685,7 @@ local XPC = {
             if not blind or not blind.chips or blind.chips <= 0
             then return end
 
-            local ratio = card.ability.extra.ratio
-            if G.GAME.chips / blind.chips < ratio
+            if G.GAME.chips / blind.chips < card.ability.extra.ratio
             then return end
 
             G.E_MANAGER:add_event(Event({
@@ -918,7 +924,7 @@ local XPC = {
             XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement] 
             return {vars = {
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 localize({
                     type = 'name_text',
                     set = 'Enhanced',
@@ -986,7 +992,7 @@ local XPC = {
             end
             local x_mult = 1 + ace * card.ability.extra.x_mult_add
             return {vars = {
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult_add,
                 x_mult
             }}
@@ -1192,7 +1198,7 @@ local XPC = {
                     end
                     return {
                         message = localize('k_petrified'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         func = function()
                             G.E_MANAGER:add_event(Event({
                                 trigger = 'immediate',
@@ -1261,7 +1267,7 @@ local XPC = {
                         SMODS.destroy_cards(clones)
                         return {
                             message = localize('k_merged'),
-                            colour = G.C.RARITY[4],
+                            colour = G.C.EXTRA,
                             card = card
                         }
                     end
@@ -1294,7 +1300,7 @@ local XPC = {
                 end
                 return {
                     message = localize('k_copied_ex'),
-                    colour = G.C.RARITY[4],
+                    colour = G.C.EXTRA,
                     card = card,
                     playing_cards_created = {true}
                 }
@@ -1461,7 +1467,7 @@ local XPC = {
                             }))
                         end
                     end
-                    return {message = localize('k_chameleon'), colour = G.C.RARITY[4]}
+                    return {message = localize('k_chameleon'), colour = G.C.EXTRA}
                 end
             end
 
@@ -1529,7 +1535,7 @@ local XPC = {
                 if changed_cards and next(changed_cards) then
                     return {
                         message = localize('k_induce'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         func = function()
                             G.E_MANAGER:add_event(Event({
                                 trigger = 'immediate',
@@ -1745,7 +1751,7 @@ local XPC = {
                     card.ability.extra.x_mult + card.ability.extra.x_mult_add
                     return {
                         message = localize('k_sonic_boom'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         card = card
                     }
                 end
@@ -1772,7 +1778,7 @@ local XPC = {
             set = 'Joker',
             key = 'Kh'
         }),
-        config = {extra = {seal = 'red_seal', cards = 'k_face_cards', message = false}},
+        config = {extra = {seal = 'red_seal', ranks = {11, 13}, message = false}},
 
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -1783,7 +1789,8 @@ local XPC = {
                     set = 'Other',
                     key = card.ability.extra.seal
                 }),
-                localize(card.ability.extra.cards)
+                localize(rank_to_name(card.ability.extra.ranks[1]), 'ranks'),
+                localize(rank_to_name(card.ability.extra.ranks[2]), 'ranks'),
             }}
         end,
 
@@ -1794,7 +1801,9 @@ local XPC = {
 
             if context.initial_scoring_step and context.cardarea == G.jokers then
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card:is_face() and not scored_card.debuff then
+                    if contains(
+                        scored_card:get_id(), card.ability.extra.ranks
+                    ) and not scored_card.debuff then
                         scored_card:set_seal('Red', true, true)
                         G.E_MANAGER:add_event(Event({
                             func = function()
@@ -1895,7 +1904,7 @@ local XPC = {
                 if #changed_cards > 0 then
                     return {
                         message = localize('k_faceless'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         func = function ()
                             G.E_MANAGER:add_event(Event({
                                 trigger = 'immediate',
@@ -2128,7 +2137,8 @@ local XPC = {
             if context.after then
                 local changed_cards = {}
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.config.center.key ~= 'm_stone' and scored_card:get_id() < 14 then
+                    if scored_card.config.center.key ~= 'm_stone' and scored_card:get_id() < 14
+                    or scored_card:is_face() then
                         changed_cards[#changed_cards + 1] = scored_card
                     end
                 end
@@ -2136,7 +2146,7 @@ local XPC = {
                 if changed_cards and next(changed_cards) then
                     return {
                         message = localize('k_evolved'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         func = function()
                             G.E_MANAGER:add_event(Event({
                                 trigger = 'immediate',
@@ -2311,7 +2321,7 @@ local XPC = {
                 return{
                     swap = true,
                     message = localize('k_swapped'),
-                    colour = G.C.RARITY[4]
+                    colour = G.C.PURPLE
                 }
             end
         end
@@ -2699,7 +2709,7 @@ local XPC = {
                 restore(card)
             end
             if context.final_scoring_step then
-                return{balance = true, colour = G.C.RARITY[4]}
+                return{balance = true, colour = G.C.PURPLE}
             end
         end
     },
@@ -3078,7 +3088,7 @@ local XPC = {
                     message = false
                     return{
                         message = localize('k_submerged'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         card = scored_card
                     }
                 end
@@ -3105,7 +3115,7 @@ local XPC = {
             XPC_tooltips(info_queue, card)
             return {
                 vars = {
-                localize(rank_to_string(card.ability.extra.rank),'ranks'),
+                localize(rank_to_name(card.ability.extra.rank),'ranks'),
                 card.ability.extra.x_mult
             }}
         end,
@@ -3216,7 +3226,7 @@ local XPC = {
                     message = false
                     return{
                         message = localize('k_sunk'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         card = scored_card
                     }
                 end
@@ -3292,7 +3302,7 @@ local XPC = {
                     message = false
                     return{
                         message = localize('k_shone'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         card = scored_card
                     }
                 end
@@ -3368,7 +3378,7 @@ local XPC = {
                     message = false
                     return{
                         message = localize('k_charged'),
-                        colour = G.C.RARITY[4],
+                        colour = G.C.EXTRA,
                         card = scored_card
                     }
                 end
@@ -3451,7 +3461,7 @@ local XPC = {
                     massage = false
                     return {
                         message = localize('k_coming_home'),
-                        colour = G.C.RARITY[4]
+                        colour = G.C.EXTRA
                     }
                 end
             end
@@ -3694,7 +3704,7 @@ local XPC = {
 }
 
 for key, card in pairs(XPC) do
-    card.rarity = 4
+    card.rarity = HIGH_CARD_prefix ..'_XPC'
     card.cost = 1
     card.enhancment = nil
     card.seal = nil
@@ -3843,124 +3853,5 @@ local XPC_Back = SMODS.Back({
     end
 })
 
-do
-    local function isXPdeck()
-        local selected_back = G.GAME and G.GAME.selected_back
-        local center = selected_back and selected_back.effect
-        and selected_back.effect.center
-
-        if not center then
-            return false
-        end
-
-        if XPC_Back and center.key == XPC_Back.key then
-            return true
-        end
-        return center.key == XPC_deck_key
-    end
-
-    local function isHighContrast(suit)
-        local settings = G.SETTINGS
-        local palettes = settings and settings.colour_palettes
-
-        if palettes and palettes[suit] ~= nil then
-            return palettes[suit] == 'hc'
-        end
-
-        return settings and settings.colourblind_option == true or false
-    end
-
-    local backup_get_front_spriteinfo = get_front_spriteinfo
-    function get_front_spriteinfo(front)
-        local atlas, pos, sprite_args = backup_get_front_spriteinfo(front)
-        if not isXPdeck() or not front or not front.suit then
-            return atlas, pos, sprite_args
-        end
-
-        local atlas_key = isHighContrast(front.suit) and
-        HIGH_CARD_prefix ..'_XPdeckHC' or HIGH_CARD_prefix ..'_XPdeckLC'
-
-        local custom_atlas = SMODS.get_atlas(atlas_key)
-        if not custom_atlas then
-            return atlas, pos, sprite_args
-        end
-        return custom_atlas, front.pos, sprite_args
-    end
-
-
-    local suit_colours = {
-        lc = {
-            Hearts = HEX('AF2C32'),
-            Diamonds = HEX('00528C'),
-            Spades = HEX('3A0B6C'),
-            Clubs = HEX('19823F'),
-        },
-        hc = {
-            Hearts = HEX('D70C18'),
-            Diamonds = HEX('0066FF'),
-            Spades = HEX('4F0C8E'),
-            Clubs = HEX('1D9F3A'),
-        },
-    }
-
-    local function apply_suit_colour(card)
-        if not isXPdeck() or not card or not card.base or not card.base.suit
-        then return end
-
-        local suit = card.base.suit
-        local palette = isHighContrast(suit) and suit_colours.hc or suit_colours.lc
-
-        local colour = palette[suit]
-
-        if colour then
-            card.base.colour = colour
-        end
-    end
-
-    local backup_set_base = Card.set_base
-    function Card:set_base(card, initial, manual_sprites)
-        local result = backup_set_base(
-            self, card, initial,
-            manual_sprites
-        )
-        apply_suit_colour(self)
-        return result
-    end
-
-    local function effect_valid(back)
-        return type(back) == 'table' and type(back.effect) == 'table'
-        and type(back.effect.center) == 'table'
-    end
-
-    local backup_set_sprites = Card.set_sprites
-    function Card:set_sprites(center, front)
-        local game = G and G.GAME
-        local backup_viewed_back = game and game.viewed_back
-        if game then
-            local viewed_back = game.viewed_back
-            local selected_back = game.selected_back
-            if not effect_valid(viewed_back) then
-                if effect_valid(selected_back) then
-                    game.viewed_back = nil
-                else
-                    game.viewed_back = {effect = {center = {}}}
-                end
-            end
-        end
-
-        local done, result = pcall(backup_set_sprites, self, center, front)
-
-        if game then
-            game.viewed_back = backup_viewed_back
-        end
-
-        if not done then
-            error(result, 0)
-        end
-
-        apply_suit_colour(self)
-        return result
-    end
-end
-
+assert(SMODS.load_file('loadskin.lua'))()
 assert(SMODS.load_file('challenges.lua'))()

@@ -6,8 +6,9 @@
 
 ## Features
 - **New Jokers** - Adds 52 custom Jokers modeled after the X-Playing Cards from *HIGH CARD*.
-- **New Deck** - Adds a new deck, the only deck in which the Jokers introduced above can be obtained.
+- **New Deck** - Adds a new deck called X-Playing Deck, the only deck in which the Jokers introduced above can be obtained.
 - **New Challenges** - Adds 20 new challenges centered around the Jokers introduced above.
+- **New Face** - Adds a new set of card fronts as an option in Customize Deck.
 - **Stone Card Logic** - Reveals the normally hidden base value of Stone Cards in a side tooltip.
 - **Vanilla Game Fix** - The included `lovely.toml` file fixes a vanilla game bug that prevents *Mr. Bones* from working when a Game Over is caused by running out of cards in your deck.
 
@@ -54,7 +55,7 @@ Install Steamodded and Lovely separately before installing this mod.
 ## Installation
 1. Install *Balatro*, Steamodded, and Lovely.
 2. Download the released ZIP file and extract it.
-3. Locate the mod folder containing `main.lua`, `main.json`, `challenges.lua`, and `lovely.toml`.
+3. Locate the mod folder containing `main.json`, `main.lua`, `challenges.lua`, `loadskin.lua`, and `lovely.toml`.
 4. Place that folder directly inside your *Balatro* `Mods` directory.
    Rename the folder to `HIGH_CARD` if necessary, and make sure the mod files are not nested inside an extra directory level.
    - **Windows:** `%AppData%/Balatro/Mods/`
@@ -75,6 +76,7 @@ HIGH_CARD/
 │   ├── zh_CN.lua
 │   └── zh_TW.lua
 ├── challenges.lua
+├── loadskin.lua
 ├── lovely.toml
 ├── main.json
 └── main.lua
@@ -125,6 +127,7 @@ This is an unofficial fan-made project. It is not affiliated with, endorsed by, 
 - **新小丑牌** — 新增52张以《至高之牌》的X-扑克牌为原型的小丑牌。
 - **新牌组** — 新增1个牌组，上述新小丑牌只能在该牌组中获得。
 - **新挑战** — 新增20个基于上述新小丑牌的挑战。
+- **新牌面** — 新增一套可在“定制牌组”中选用的牌面。
 - **石头牌显示** — 在侧边提示框中显示石头牌隐藏的牌面花色与点数。
 - **原版游戏补丁** — 目录中的文件`lovely.toml`修复了原版《Balatro》游戏中“骷髅先生”无法在牌堆耗尽时挽救游戏的bug。
 
@@ -173,8 +176,8 @@ This is an unofficial fan-made project. It is not affiliated with, endorsed by, 
 ## 安装方法
 1. 安装Balatro、Steamodded和Lovely。
 2. 下载Release中的ZIP压缩包并解压。
-3. 找到包含`main.lua`、`main.json`、`challenges.lua`和`lovely.toml`的Mod文件夹。
-4. 将Mod文件夹直接放入Balatro的`Mods`目录中，若名称不同则将文件夹重命名为`HIGH_CARD`，并确保Mod文件没有被额外的文件夹层级包裹。
+3. 找到包含`main.json`、`main.lua`、`challenges.lua`、`loadskin.lua`和`lovely.toml`的Mod文件夹。
+4. 将该文件夹直接放入Balatro的`Mods`目录中，若名称不同则将文件夹重命名为`HIGH_CARD`，并确保Mod文件没有被额外的文件夹层级包裹。
    - **Windows：** `%AppData%/Balatro/Mods/`
    - **macOS：** `~/Library/Application Support/Balatro/Mods/`
    - **Linux / Steam Deck：** Mods文件夹的具体位置取决于安装方式，通过Proton运行的安装方式请参阅[Steamodded Linux安装指南](https://github.com/Steamodded/smods/wiki/Installing-Steamodded-linux)。
@@ -193,6 +196,7 @@ HIGH_CARD/
 │   ├── zh_CN.lua
 │   └── zh_TW.lua
 ├── challenges.lua
+├── loadskin.lua
 ├── lovely.toml
 ├── main.json
 └── main.lua

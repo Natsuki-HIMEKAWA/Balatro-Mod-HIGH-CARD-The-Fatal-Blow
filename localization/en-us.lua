@@ -62,7 +62,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
             name = 'Clear Lance',
             text = {
-                'The {C:legendary}Clear Lance{} gains {C:white,X:mult}X#1#{}',
+                'The {C:B4883C}Clear Lance{} gains {C:white,X:mult}X#1#{}',
                 'Mult when a played hand',
                 'contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
@@ -73,7 +73,7 @@ local descriptions = {
             text = {
                 'Destroy all played {C:attention}#1#s{}',
                 'after scoring, and the',
-                '{C:legendary}Brain Buster{} gains {X:mult,C:white}X#2#{}',
+                '{C:B4883C}Brain Buster{} gains {X:mult,C:white}X#2#{}',
                 'Mult for each of them',
                 '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
@@ -81,7 +81,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6s'] = {
             name = 'Juggling Gun',
             text = {
-                'The {C:legendary}Juggling Gun{}',
+                'The {C:B4883C}Juggling Gun{}',
                 'gains {C:white,X:mult}X#1#{} Mult when',
                 'a {C:attention}#2#{} is destroyed',
                 '{C:inactive}(Currently{} {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
@@ -120,7 +120,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
             name = 'Honest Straight',
             text = {
-                'The {C:legendary}Honest Straight{} gains',
+                'The {C:B4883C}Honest Straight{} gains',
                 '{C:white,X:mult}X#1#{} Mult when a played',
                 'hand contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {X:mult,C:white}X#3#{}{C:inactive} Mult){}'
@@ -175,8 +175,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3h'] = {
             name = "Rockin' Rock",
             text = {
-                'The {C:attention}first{} played card',
-                'in scoring becomes',
+                'The {C:attention}first{} scored card',
+                'of every hand becomes',
                 '{C:attention}#1#{}; played',
                 '{C:attention}#1#s{} gives {C:white,X:mult}X#2#{}',
                 'Mult each when scored'
@@ -232,7 +232,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_9h'] = {
             name = 'Marvelous Genius',
             text = {
-                'The {C:legendary}Marvelous Genius{}',
+                'The {C:B4883C}Marvelous Genius{}',
                 'gains {C:white,X:mult}X#1#{} Mult for each',
                 'remaining card in {C:attention}deck{}',
                 'at the end of round',
@@ -242,7 +242,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Th'] = {
             name = 'Sensitive Sense',
             text = {
-                'The {C:legendary}Sensitive Sense{} gains',
+                'The {C:B4883C}Sensitive Sense{} gains',
                 '{C:white,X:mult}X#1#{} Mult when a played',
                 'hand contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
@@ -260,7 +260,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Qh'] = {
             name = 'Sonic Move',
             text = {
-                'The {C:legendary}Sonic Move{} gains',
+                'The {C:B4883C}Sonic Move{} gains',
                 '{C:white,X:mult}X#1#{} Mult if {C:attention}Blind{} is',
                 'defeated in a {C:attention}single{} hand',
                 '{C:inactive}(Currently {C:white,X:mult}X#2#{}{C:inactive} Mult){}'
@@ -270,8 +270,8 @@ local descriptions = {
             name = 'Masculine Parfait',
             text = {
                 'Add {C:attention}#1#s{} to all',
-                'played {C:attention}#2#{}',
-                'when scored'
+                'played {C:attention}#2#s{} and',
+                '{C:attention}#3#s{} when scored'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ah'] = {
@@ -286,7 +286,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_2d'] = {
             name = 'Love Connection',
             text = {
-                'The {C:legendary}Love Connection{}',
+                'The {C:B4883C}Love Connection{}',
                 'gains {C:white,X:mult}X#1#{} Mult for',
                 'each different type of',
                 '{C:attention}Seals{} in a scoring hand',
@@ -323,7 +323,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6d'] = {
             name = '13 Stairs',
             text = {
-                'The {C:legendary}13 Stairs{} gains {C:white,X:mult}X#1#{}',
+                'The {C:B4883C}13 Stairs{} gains {C:white,X:mult}X#1#{}',
                 'Mult for every {C:attention}13{} {C:inactive}(#2#){}',
                 'cards played, and destroys',
                 'every {C:attention}13th{} card played',
@@ -333,7 +333,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7d'] = {
             name = 'Never No Dollars',
             text = {
-                'The {C:legendary}Never No Dollars{} gains',
+                'The {C:B4883C}Never No Dollars{} gains',
                 '{C:white,X:mult}X#1#{} Mult for each {C:money}$1{}',
                 'you have spent or lost',
                 '{C:inactive}(Currently {C:white,X:mult}X#2#{} {C:inactive}Mult){}'
@@ -350,7 +350,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_9d'] = {
             name = 'No Mercy',
             text = {
-                'The {C:legendary}No Mercy{} gains {C:white,X:mult}XMult{} equal',
+                'The {C:B4883C}No Mercy{} gains {C:white,X:mult}XMult{} equal',
                 'to {C:attention}quarter{} of the {C:attention}rank{} of the',
                 '{C:attention}first{} scored card of each',
                 'round, or {C:white,X:mult}X#3#{} Mult if it is a',
@@ -397,7 +397,7 @@ local descriptions = {
                 'Selling an {C:B4883C}X-Playing Card{}',
                 'during a round adds it to',
                 '{C:attention}hand{} instead of the deck,',
-                'and gives {C:legendary}Dynamic Kinesis{}',
+                'and gives {C:B4883C}Dynamic Kinesis{}',
                 '{C:white,X:mult}X#1#{} Mult, resets when',
                 '{C:attention}Boss Blind{} is defeated',
                 '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult){}'
@@ -504,7 +504,7 @@ local descriptions = {
             name = "Reaper's Hand",
             text = {
                 'Destroy all scored cards in the {C:attention}first{}',
-                "{C:attention}hand{} of round, and the {C:legendary}Reaper's Hand{}",
+                "{C:attention}hand{} of round, and the {C:B4883C}Reaper's Hand{}",
                 'gains corresponding {C:chips}Chips{}, {C:mult}Mult{}, {C:white,X:mult}XMult{},',
                 'or returns {C:money}money{} from their {C:dark_edition}Editions{}',
                 'and {C:enhanced}Enhancements{} after scoring, {C:white,X:mult}XMult{}',
@@ -538,9 +538,26 @@ local descriptions = {
 local misc = {
     labels = {
         [HIGH_CARD_prefix ..'_clone'] = 'Clone',
-        [HIGH_CARD_prefix ..'_XPC'] = 'X-Playing Card'
+        [(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-Playing Card'
+    },
+    collabs = {
+        Spades = {
+            [HIGH_CARD_prefix ..'_Spades'] = 'Obsidian'
+        },
+        Hearts = {
+            [HIGH_CARD_prefix ..'_Hearts'] = 'Ruby'
+        },
+        Diamonds = {
+            [HIGH_CARD_prefix ..'_Diamonds'] = 'Sapphire'
+        },
+        Clubs = {
+            [HIGH_CARD_prefix ..'_Clubs'] = 'Emerald'
+        }
     },
     dictionary = {
+        ['k_'..(HIGH_CARD_prefix ..'_XPC'):lower()] = 'X-Playing Card',
+        k_clear_configures = 'All changes made in this deck will be cleared when returning to the Main Menu',
+
         k_unenhanced = 'Unenhanced',
         k_no_seal = 'No Seal',
         k_loaded = 'Loaded!',
