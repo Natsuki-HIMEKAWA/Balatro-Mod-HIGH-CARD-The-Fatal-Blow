@@ -1,4 +1,4 @@
-[简体中文](LICENSE.md#简体中文) | [English](LICENSE.md#english)
+[English](LICENSE.md#english) | [简体中文](LICENSE.md#简体中文)
 
 # CUSTOM NON-COMMERCIAL LICENSE
 This license applies to the HIGH CARD: The Fatal Blow (the “Mod”). It is a custom license and is **NOT** an open-source license.
@@ -41,6 +41,7 @@ Any permission granted under this license terminates automatically if you fail t
 Any exception to these terms must be authorized in advance and in writing by the relevant copyright holder(s). A lack of enforcement in one instance does not waive the right to enforce these terms in another instance.
 
 If the English and Simplified Chinese versions differ in interpretation, the Simplified Chinese version shall prevail.
+
 ---
 ## 简体中文
 

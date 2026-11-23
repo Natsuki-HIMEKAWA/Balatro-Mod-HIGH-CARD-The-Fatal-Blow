@@ -1,5 +1,5 @@
 # HIGH CARD: The Fatal Blow
-[简体中文](Readme.md#至高之牌致命一击) | __**English**__
+**English** | [简体中文](Readme.md#至高之牌致命一击)
 
 ## Introduction
 **HIGH CARD: The Fatal Blow** is a mod for *Balatro*, inspired by the Japanese multimedia franchise [*HIGH CARD*](https://en.wikipedia.org/wiki/High_Card). It introduces 52 unique Jokers and related mechanisms based on the series.
@@ -116,7 +116,7 @@ See [LICENSE](LICENSE.md#English) for the full terms.
 This is an unofficial fan-made project. It is not affiliated with, endorsed by, or sponsored by the creators or rights holders of *HIGH CARD*.
 
 # 至高之牌：致命一击
-__**简体中文**__ | [English](Readme.md#high-card-the-fatal-blow)
+[English](Readme.md#high-card-the-fatal-blow) | **简体中文**
 
 ## 简介
 **至高之牌：致命一击**是一款适用于《Balatro》的Mod，灵感来自日本多媒体企划《[至高之牌](https://zh.wikipedia.org/wiki/HIGH_CARD_%E8%87%B3%E9%AB%98%E4%B9%8B%E7%89%8C)》，加入了52张参考该企划相关设定设计的独特小丑牌及相应机制。
