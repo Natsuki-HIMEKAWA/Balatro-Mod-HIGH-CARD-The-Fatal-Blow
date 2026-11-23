@@ -20,14 +20,14 @@ local descriptions = {
             text = {'{V:1}#1#{}、{V:2}#2#{}'}
         },
 
-        [mod_prefix ..'_clone'] = {
+        [HIGH_CARD_prefix ..'_clone'] = {
             name = '克隆',
             text = {'回合結束時{C:red}自毀{}'}
         }
     },
 
     Back = {
-        ['b_'.. mod_prefix ..'_'.. XPC_deck_key] = {
+        ['b_'.. HIGH_CARD_prefix ..'_'.. XPC_deck_key] = {
             name = 'X-撲克牌組',
             text = {
                 '使用{C:attention}單張牌{}打敗任一',
@@ -37,7 +37,7 @@ local descriptions = {
     },
 
     Joker = {
-        ['j_'.. mod_prefix ..'_2s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_2s'] = {
             name = '新·新南部',
             text = {
                 '抽取{C:attention}第一手牌{}後，將{C:attention}出牌{}',
@@ -46,14 +46,14 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_3s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_3s'] = {
             name = '無限棒',
             text = {
                 '每張得分的{C:attention}#1#{}',
                 '給予{C:white,X:mult}X#2#{}倍數'
             }
         },
-        ['j_'.. mod_prefix ..'_4s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
             name = '清冷長槍',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
@@ -61,7 +61,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_5s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_5s'] = {
             name = '緻密重錘',
             text = {
                 '摧毀所有得分的{C:attention}#1#{}，',
@@ -70,7 +70,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_6s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_6s'] = {
             name = '雜耍火銃',
             text = {
                 '每摧毀一張{C:attention}#2#{}，',
@@ -78,7 +78,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_7s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = '阻擊者',
             text = {
                 '將每回合{C:attention}第一手{}打出的',
@@ -86,7 +86,7 @@ local descriptions = {
                 '且有{C:green}#2#/#3#{}機率為提升{C:attention}#4#{}級'
             }
         },
-        ['j_'.. mod_prefix ..'_8s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
             name = '爆轟',
             text = {
                 '每張得分的{C:attention}#1#{}',
@@ -94,7 +94,7 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_9s'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_9s'] = {
             name = '墨家',
             text = {
                 '若最終{C:blue}籌碼{}分數達到所需',
@@ -103,7 +103,7 @@ local descriptions = {
                 '機率使其限制條件消失'
             }
         },
-        ['j_'.. mod_prefix ..'_Ts'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
             name = '誠意之弓',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
@@ -111,7 +111,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Js'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Js'] = {
             name = '方舟之械',
             text = {
                 '所有得分的{C:attention}#1#{}',
@@ -119,7 +119,7 @@ local descriptions = {
                 '{C:white,X:mult}X#3#{}倍數'
             }
         },
-        ['j_'.. mod_prefix ..'_Qs'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Qs'] = {
             name = '梅杜莎之鞭',
             text = {
                 '每回合{C:attention}第一次{}出牌中',
@@ -128,14 +128,14 @@ local descriptions = {
                 '轉化為{C:attention}#2#{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Ks'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Ks'] = {
             name = '聖徒騎士',
             text = {
                 '所有打出的{C:attention}#1#{}在',
                 '得分時轉化為{C:attention}#2#{}'
             }
         },
-        ['j_'.. mod_prefix ..'_As'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_As'] = {
             name = '愛與和平',
             text = {
                 '{C:attention}完整牌組{}中的每張{C:attention}#1#{}給予',
@@ -145,7 +145,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_2h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_2h'] = {
             name = '果凍爬蟲',
             text = {
                 '每持有{C:money}$#1#{}，',
@@ -153,7 +153,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:attention}+#3#{C:inactive}手牌數量）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_3h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_3h'] = {
             name = '堅如磐石',
             text = {
                 '每次出牌中{C:attention}第一張{}',
@@ -162,7 +162,7 @@ local descriptions = {
                 '給予{C:white,X:mult}X#2#{}倍數'
             }
         },
-        ['j_'.. mod_prefix ..'_4h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_4h'] = {
             name = '全能特工',
             text = {
                 '若本回合的{C:attention}第一次出牌{}',
@@ -170,7 +170,7 @@ local descriptions = {
                 '中加入該牌的{C:attention}#1#{}個{C:attention}克隆{}'
             }
         },
-        ['j_'.. mod_prefix ..'_5h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_5h'] = {
             name = '高熱量',
             text = {
                 '剩餘的每次{C:blue}出牌{}',
@@ -178,7 +178,7 @@ local descriptions = {
                 '{C:inactive}（下次出牌時{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_6h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_6h'] = {
             name = '動物園',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
@@ -186,7 +186,7 @@ local descriptions = {
                 '隨機獲得一種{C:dark_edition}加強{}'
             }
         },
-        ['j_'.. mod_prefix ..'_7h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_7h'] = {
             name = '變色龍',
             text = {
                 '每回合{C:attention}第一次{}出牌中所有',
@@ -196,7 +196,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_8h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_8h'] = {
             name = '費洛蒙',
             text = {
                 '將所有得分牌的花色',
@@ -204,7 +204,7 @@ local descriptions = {
                 '{C:attention}第一張{}得分牌的花色'
             }
         },
-        ['j_'.. mod_prefix ..'_9h'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_9h'] = {
             name = '超凡天才',
             text = {
                 '回合結束時，{C:attention}牌堆{}',
@@ -213,7 +213,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Th'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Th'] = {
             name = '敏銳五感',
             text = {
                 '若出牌包含{C:attention}#2#{}，則',
@@ -221,7 +221,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Jh'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Jh'] = {
             name = '蒼穹舞者',
             text = {
                 '每使用一張{C:planet}行星牌{}，',
@@ -229,7 +229,7 @@ local descriptions = {
                 '相應牌型的等級'
             }
         },
-        ['j_'.. mod_prefix ..'_Qh'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Qh'] = {
             name = '音速行者',
             text = {
                 '若只出{C:attention}1{}手牌即戰勝{C:attention}盲注{}，',
@@ -237,14 +237,14 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Kh'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Kh'] = {
             name = '完美雄性',
             text = {
                 '所有打出的{C:attention}#2#{}在',
                 '得分時獲得{C:attention}#1#{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Ah'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Ah'] = {
             name = '千人千面',
             text = {
                 '所有打出的牌在',
@@ -252,7 +252,7 @@ local descriptions = {
                 '{s:0.8}每個回合牌都會變'
             }
         },
-        ['j_'.. mod_prefix ..'_2d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_2d'] = {
             name = '心有靈犀',
             text = {
                 '每手得分牌中每種',
@@ -261,7 +261,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_3d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_3d'] = {
             name = '滾滾彈珠',
             text = {
                 '每回合{C:attention}第一次{}出牌',
@@ -269,7 +269,7 @@ local descriptions = {
                 '轉化為{C:attention}#1#{}'
             }
         },
-        ['j_'.. mod_prefix ..'_4d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_4d'] = {
             name = '時間默劇',
             text = {
                 '每回合{C:attention}第一次{}出牌',
@@ -278,7 +278,7 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_5d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_5d'] = {
             name = '最強人類',
             text = {
                 '所有打出的{C:attention}#1#{}',
@@ -286,7 +286,7 @@ local descriptions = {
                 '提高{C:attention}#3#{}級點數'
             }
         },
-        ['j_'.. mod_prefix ..'_6d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_6d'] = {
             name = '13級階梯',
             text = {
                 '每打出{C:attention}13{}{C:inactive}(#2#){}張牌，',
@@ -295,7 +295,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_7d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_7d'] = {
             name = '等價交換',
             text = {
                 '每花費或失去{C:money}$1{}，',
@@ -304,14 +304,14 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_8d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_8d'] = {
             name = '紅色迷宮',
             text = {
                 '每手牌得分前',
                 '互換{C:blue}籌碼{}和{C:mult}倍數{}'
             }
         },
-        ['j_'.. mod_prefix ..'_9d'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_9d'] = {
             name = '無慈悲',
             text = {
                 '將每回合{C:attention}第一張{}得分牌點數',
@@ -322,7 +322,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#1#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Td'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Td'] = {
             name = '倒楣鬼',
             text = {
                 '所有得分的{C:attention}#1#{}',
@@ -330,25 +330,25 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_Jd'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Jd'] = {
             name = '五感之外',
             text = {
                 '所有打出{C:attention}5{}張牌的',
                 '{C:attention}#1#{}牌型均視為{C:attention}#2#{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Qd'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Qd'] = {
             name = '邪眼魔王',
             text = {'{C:dark_edition}預見{}牌堆的','抽牌順序'}
         },
-        ['j_'.. mod_prefix ..'_Kd'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Kd'] = {
             name = '周而復始',
             text = {
                 '每手牌得分後',
                 '平衡{C:blue}籌碼{}和{C:mult}倍數{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Ad'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Ad'] = {
             name = '動態念力',
             text = {
                 '回合內賣出的{C:B4883C}X-撲克牌{}',
@@ -359,7 +359,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:white,X:mult}X#2#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_2c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_2c'] = {
             name = '剛韌金屬',
             text = {
                 '所有{C:attention}#1#{}和{C:attention}#2#{}',
@@ -367,14 +367,14 @@ local descriptions = {
                 '這兩種加強的效果'
             }
         },
-        ['j_'.. mod_prefix ..'_3c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_3c'] = {
             name = '青翠藤蔓',
             text = {
                 '每張得分牌',
                 '永久獲得{C:white,X:mult}X#1#{}倍數'
             }
         },
-        ['j_'.. mod_prefix ..'_4c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_4c'] = {
             name = '振翼疾風',
             text = {
                 '每手牌得分後，將剩餘',
@@ -382,7 +382,7 @@ local descriptions = {
                 '所有手牌{C:attention}洗入{}牌堆'
             }
         },
-        ['j_'.. mod_prefix ..'_5c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_5c'] = {
             name = '飛揚塵土',
             text = {
                 '每張得分的{C:attention}#1#{}',
@@ -390,7 +390,7 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_6c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_6c'] = {
             name = '淡藍波濤',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
@@ -398,7 +398,7 @@ local descriptions = {
                 '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}銀箔{}'
             }
         },
-        ['j_'.. mod_prefix ..'_7c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_7c'] = {
             name = '致命辣度',
             text = {
                 '每張得分的{C:attention}#1#{}',
@@ -406,7 +406,7 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_8c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_8c'] = {
             name = '沈淪暗影',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
@@ -414,7 +414,7 @@ local descriptions = {
                 '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}負片{}'
             }
         },
-        ['j_'.. mod_prefix ..'_9c'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_9c'] = {
             name = '初升光明',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
@@ -422,7 +422,7 @@ local descriptions = {
                 '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}多彩{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Tc'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Tc'] = {
             name = '百萬伏特',
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
@@ -430,14 +430,14 @@ local descriptions = {
                 '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}全像{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Jc'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Jc'] = {
             name = '歸來',
             text = {
                 '得分後將{C:attention}第一張{}',
                 '得分牌抽回手牌中'
             }
         },
-        ['j_'.. mod_prefix ..'_Qc'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Qc'] = {
             name = '角鬥士',
             text = {
                 '每張得分的{C:attention}#1#{}',
@@ -445,7 +445,7 @@ local descriptions = {
                 '隨後將其摧毀'
             }
         },
-        ['j_'.. mod_prefix ..'_Kc'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Kc'] = {
             name = '死神之手',
             text = {
                 '每回合{C:attention}第一次{}出牌中所有得分的牌',
@@ -456,7 +456,7 @@ local descriptions = {
                 '{C:inactive}（目前為{C:chips}+#1#{C:inactive}籌碼，{C:mult}+#2#{C:inactive}倍數，{X:mult,C:white}X#3#{C:inactive}倍數）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_Ac'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_Ac'] = {
             name = '行屍走肉',
             text = {
                 '在選擇{C:attention}盲注{}時摧毀',
@@ -465,12 +465,12 @@ local descriptions = {
                 '{C:inactive}（必須有空間）{}'
             }
         },
-        ['j_'.. mod_prefix ..'_0x'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_0x'] = {
             name = '',
             text = {},
             unlock = {'敬請期待！'}
         },
-        ['j_'.. mod_prefix ..'_1x'] = {
+        ['j_'.. HIGH_CARD_prefix ..'_1x'] = {
             name = '',
             text = {},
             unlock = {'敬請期待！'}
@@ -480,7 +480,7 @@ local descriptions = {
 
 local misc = {
     labels = {
-        [mod_prefix ..'_clone'] = '克隆',
+        [HIGH_CARD_prefix ..'_clone'] = '克隆',
     },
     dictionary = {
         k_unenhanced = '無加強',
@@ -526,27 +526,27 @@ local misc = {
         k_deactivated = '停用！'
     },
     challenge_names = {
-        ['c_'.. mod_prefix ..'_RF'] = '同花大順',
-        ['c_'.. mod_prefix ..'_SF'] = '同花順',
-        ['c_'.. mod_prefix ..'_4K'] = '金剛',
-        ['c_'.. mod_prefix ..'_FH'] = '滿堂紅',
-        ['c_'.. mod_prefix ..'_FL'] = '同花',
-        ['c_'.. mod_prefix ..'_ST'] = '順子',
-        ['c_'.. mod_prefix ..'_3K'] = '三條',
-        ['c_'.. mod_prefix ..'_2P'] = '兩對',
-        ['c_'.. mod_prefix ..'_1P'] = '一對',
-        ['c_'.. mod_prefix ..'_HC'] = '高牌',
+        ['c_'.. HIGH_CARD_prefix ..'_RF'] = '同花大順',
+        ['c_'.. HIGH_CARD_prefix ..'_SF'] = '同花順',
+        ['c_'.. HIGH_CARD_prefix ..'_4K'] = '金剛',
+        ['c_'.. HIGH_CARD_prefix ..'_FH'] = '滿堂紅',
+        ['c_'.. HIGH_CARD_prefix ..'_FL'] = '同花',
+        ['c_'.. HIGH_CARD_prefix ..'_ST'] = '順子',
+        ['c_'.. HIGH_CARD_prefix ..'_3K'] = '三條',
+        ['c_'.. HIGH_CARD_prefix ..'_2P'] = '兩對',
+        ['c_'.. HIGH_CARD_prefix ..'_1P'] = '一對',
+        ['c_'.. HIGH_CARD_prefix ..'_HC'] = '高牌',
 
-        ['c_'.. mod_prefix ..'_Finn'] = "芬恩的轉輪手槍",
-        ['c_'.. mod_prefix ..'_Vijay'] = "維傑的花盆",
-        ['c_'.. mod_prefix ..'_Chris'] = "克里斯的治療術",
-        ['c_'.. mod_prefix ..'_Leo'] = "里奧的財富",
-        ['c_'.. mod_prefix ..'_Wendy'] = "温迪的武士刀",
-        ['c_'.. mod_prefix ..'_Chelsea'] = "切爾西的熱情",
-        ['c_'.. mod_prefix ..'_Chloe'] = "克洛怡的恐懼",
-        ['c_'.. mod_prefix ..'_Owen'] = "歐文的監牢",
-        ['c_'.. mod_prefix ..'_Burst'] = "布爾絲特的獻身",
-        ['c_'.. mod_prefix ..'_Brothers'] = "歐德曼兄弟",
+        ['c_'.. HIGH_CARD_prefix ..'_Finn'] = "芬恩的轉輪手槍",
+        ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "維傑的盆栽",
+        ['c_'.. HIGH_CARD_prefix ..'_Chris'] = "克里斯的治療術",
+        ['c_'.. HIGH_CARD_prefix ..'_Leo'] = "里奧的財富",
+        ['c_'.. HIGH_CARD_prefix ..'_Wendy'] = "温迪的武士刀",
+        ['c_'.. HIGH_CARD_prefix ..'_Chelsea'] = "切爾西的熱情",
+        ['c_'.. HIGH_CARD_prefix ..'_Chloe'] = "克洛怡的恐懼",
+        ['c_'.. HIGH_CARD_prefix ..'_Owen'] = "歐文的監牢",
+        ['c_'.. HIGH_CARD_prefix ..'_Burst'] = "布爾絲特的獻身",
+        ['c_'.. HIGH_CARD_prefix ..'_Brothers'] = "歐德曼兄弟",
     },
     v_text = {
         ['ch_c_'..'Vijay'] = {'所有{C:attention}Boss盲注{}都是{C:attention}植物{}'},

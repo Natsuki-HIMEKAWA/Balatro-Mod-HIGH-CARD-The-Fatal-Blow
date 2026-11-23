@@ -11,7 +11,7 @@ do
     SMODS.Challenge{
         key = 'Finn',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_2s']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_2s']
             if not center or not center.discovered then
                 return false
             end
@@ -22,13 +22,13 @@ do
             custom = {},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_2s', eternal = true}}
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_2s', eternal = true}}
     }
 
     SMODS.Challenge{
         key = 'Vijay',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_3c']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_3c']
             if not center or not center.discovered then
                 return false
             end
@@ -39,7 +39,7 @@ do
             custom = {{id = 'Vijay'}},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_3c', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_3c', eternal = true}},
         apply = function(self)
             G.GAME.forced_boss = 'bl_plant'
         end
@@ -48,7 +48,7 @@ do
     SMODS.Challenge{
         key = 'Chris',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_5h']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_5h']
             if not center or not center.discovered then
                 return false
             end
@@ -59,13 +59,13 @@ do
             custom = {},
             modifiers = {{id = 'hands', value = 3}, {id = 'discards', value = 2}}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_5h', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_5h', eternal = true}},
     }
 
     SMODS.Challenge{
         key = 'Leo',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_7d']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_7d']
             if not center or not center.discovered then
                 return false
             end
@@ -76,13 +76,13 @@ do
             custom = {{id = 'inflation'}},
             modifiers = {{id = 'dollars', value = 20}}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_7d', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_7d', eternal = true}},
     }
 
     SMODS.Challenge{
         key = 'Wendy',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_As']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_As']
             if not center or not center.discovered then
                 return false
             end
@@ -93,13 +93,13 @@ do
             custom = {},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_As', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_As', eternal = true}},
     }
 
     SMODS.Challenge{
         key = 'Chelsea',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_2d']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_2d']
             if not center or not center.discovered then
                 return false
             end
@@ -110,7 +110,7 @@ do
             custom = {{id = 'Chelsea'}},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_2d', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_2d', eternal = true}},
         apply = function(self)
             G.GAME.forced_boss = 'bl_hook'
         end
@@ -119,7 +119,7 @@ do
     SMODS.Challenge{
         key = 'Chloe',
         unlocked = function()
-            local center = G.P_CENTERS['j_'.. mod_prefix ..'_Kc']
+            local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_Kc']
             if not center or not center.discovered then
                 return false
             end
@@ -130,7 +130,7 @@ do
             custom = {},
             modifiers = {}
         },
-        jokers = {{id = 'j_'.. mod_prefix ..'_Kc', eternal = true}},
+        jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_Kc', eternal = true}},
     }
 
     SMODS.Challenge{
@@ -138,7 +138,7 @@ do
         unlocked = function()
             local keys = {'8d','Jd','Ks'}
             for _, key in ipairs(keys) do
-                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_'.. key]
                 if not center or not center.discovered then
                     return false
                 end
@@ -151,9 +151,9 @@ do
             modifiers = {}
         },
         jokers = {
-            {id = 'j_'.. mod_prefix ..'_8d', eternal = true},
-            {id = 'j_'.. mod_prefix ..'_Jd', eternal = true, edition = 'negative'},
-            {id = 'j_'.. mod_prefix ..'_Ks', eternal = true, edition = 'negative'},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_8d', eternal = true},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_Jd', eternal = true, edition = 'negative'},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_Ks', eternal = true, edition = 'negative'},
         },
     }
 
@@ -162,7 +162,7 @@ do
         unlocked = function()
             local keys = {'Ah','5h','4h','3h','2h'}
             for _, key in ipairs(keys) do
-                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_'.. key]
                 if not center or not center.discovered then
                     return false
                 end
@@ -175,11 +175,11 @@ do
             modifiers = {}
         },
         jokers = {
-            {id = 'j_'.. mod_prefix ..'_Ah', eternal = true, edition = 'negative'},
-            {id = 'j_'.. mod_prefix ..'_5h', eternal = true},
-            {id = 'j_'.. mod_prefix ..'_4h', eternal = true},
-            {id = 'j_'.. mod_prefix ..'_3h', eternal = true},
-            {id = 'j_'.. mod_prefix ..'_2h', eternal = true}
+            {id = 'j_'.. HIGH_CARD_prefix ..'_Ah', eternal = true, edition = 'negative'},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_5h', eternal = true},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_4h', eternal = true},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_3h', eternal = true},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_2h', eternal = true}
         },
     }
 
@@ -188,7 +188,7 @@ do
         unlocked = function()
             local keys = {'2s','Ks'}
             for _, key in ipairs(keys) do
-                local center = G.P_CENTERS['j_'.. mod_prefix ..'_'.. key]
+                local center = G.P_CENTERS['j_'.. HIGH_CARD_prefix ..'_'.. key]
                 if not center or not center.discovered then
                     return false
                 end
@@ -201,8 +201,8 @@ do
             modifiers = {}
         },
         jokers = {
-            {id = 'j_'.. mod_prefix ..'_2s', eternal = true},
-            {id = 'j_'.. mod_prefix ..'_Ks', eternal = true}
+            {id = 'j_'.. HIGH_CARD_prefix ..'_2s', eternal = true},
+            {id = 'j_'.. HIGH_CARD_prefix ..'_Ks', eternal = true}
         },
     }
 end
@@ -228,7 +228,7 @@ local jokers = {
 challenges = function(poker_hands, jokers)
     for h, j in pairs(jokers) do
         for i = 1, #j do
-            j[i] = {id = 'j_'.. mod_prefix ..'_'.. j[i]}
+            j[i] = {id = 'j_'.. HIGH_CARD_prefix ..'_'.. j[i]}
         end
     end
 

@@ -5,11 +5,12 @@
 "no_marquee": true,
 "author": ["Natsuki HIMEKAWA"],
 "description": "Enjoy the supernatural abilities of 52 X-Playing Cards!",
+"icon_path": "icon.png",
 "prefix": "HIGH_CARD",
 "main_file": "main.lua",
 "priority": -1,
 "badge_colour": "404040",
 "badge_text_colour": "B4883C",
-"version": "0.8.2",
+"version": "0.8.3",
 "dependencies": []
 }
