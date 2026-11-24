@@ -369,7 +369,7 @@ local descriptions = {
             text = {
                 '所有{C:attention}#1#{}和{C:attention}#2#{}',
                 '在手中同时具有',
-                '这两种增强的效果'
+                '这两种{C:dark_edition}增强{}的效果'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_3c'] = {
