@@ -562,7 +562,7 @@ local misc = {
         ['c_'.. HIGH_CARD_prefix ..'_HC'] = '高牌',
 
         ['c_'.. HIGH_CARD_prefix ..'_Finn'] = "芬恩的左轮手枪",
-        ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "维杰的盆栽",
+        ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "维杰的藤蔓",
         ['c_'.. HIGH_CARD_prefix ..'_Chris'] = "克里斯的疗伤术",
         ['c_'.. HIGH_CARD_prefix ..'_Leo'] = "里奥的财富",
         ['c_'.. HIGH_CARD_prefix ..'_Wendy'] = "温蒂的武士刀",

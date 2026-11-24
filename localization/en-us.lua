@@ -614,7 +614,7 @@ local misc = {
         ['c_'.. HIGH_CARD_prefix ..'_HC'] = 'High Card',
 
         ['c_'.. HIGH_CARD_prefix ..'_Finn'] = "Finn's Revolver",
-        ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "Vijay's Flowerpot",
+        ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "Vijay's Vine",
         ['c_'.. HIGH_CARD_prefix ..'_Chris'] = "Chris's Healing",
         ['c_'.. HIGH_CARD_prefix ..'_Leo'] = "Leo's Wealth",
         ['c_'.. HIGH_CARD_prefix ..'_Wendy'] = "Wendy's Sword",
