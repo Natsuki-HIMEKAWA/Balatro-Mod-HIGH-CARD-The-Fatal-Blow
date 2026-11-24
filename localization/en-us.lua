@@ -9,8 +9,9 @@ local descriptions = {
             name = 'X-Playing Card',
             text = {
                 'Sell to {C:green}deactivate{} this',
-                'card and add it to deck',
-                'with its {C:dark_edition}edition{}, original',
+                'card, then {C:attention}shuffle{} it',
+                'into the deck with',
+                'its {C:dark_edition}edition{}, original',
                 '{C:dark_edition}enhancement{} and {C:attention}seal{}'
             }
         },
@@ -393,11 +394,12 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ad'] = {
             name = 'Dynamic Kinesis',
             text = {
-                'Selling an {C:B4883C}X-Playing Card{}',
-                'during a round adds it to',
-                '{C:attention}hand{} instead of the deck,',
-                'and gives {C:B4883C}Dynamic Kinesis{}',
-                '{C:white,X:mult}X#1#{} Mult, resets when',
+                '{C:B4883C}X-Playing Cards{} sold during',
+                'a round are {C:attention}drawn{} into {C:attention}hand{}',
+                'instead of shuffled into the',
+                'deck, and the {C:B4883C}Dynamic Kinesis{}',
+                'gains {C:white,X:mult}X#1#{} Mult for each sold',
+                '{C:B4883C}X-Playing Card{}, resets when',
                 '{C:attention}Boss Blind{} is defeated',
                 '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult){}'
             }

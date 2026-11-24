@@ -9,7 +9,7 @@ local descriptions = {
             name = 'X-扑克牌',
             text = {
             '出售此牌以将其{C:green}停用{}，',
-            '随后向牌组中加入一张',
+            '随后向牌组中{C:attention}洗入{}一张',
             '同{C:dark_edition}版本{}、带有原{C:dark_edition}增强{}',
             '及{C:attention}蜡封{}的相应扑克牌'
             }
@@ -357,7 +357,7 @@ local descriptions = {
             name = '动态念力',
             text = {
                 '回合内出售的{C:B4883C}X-扑克牌{}',
-                '立即进入{C:attention}手牌{}而非牌堆；',
+                '进入{C:attention}手牌{}而非洗入牌堆；',
                 '每出售一张{C:B4883C}X-扑克牌{}，',
                 '{C:B4883C}动态念力{}获得{C:white,X:mult}X#1#{}倍率，',
                 '击败{C:attention}Boss{}盲注后重置',

@@ -92,10 +92,7 @@ end
 
 local restore = function(joker)
     card_eval_status_text(joker, 'extra', nil, nil, nil, 
-        {
-            message = localize('k_deactivated'),
-            colour = G.C.GREEN
-        }
+        {message = localize('k_deactivated'), colour = G.C.GREEN}
     )
     G.E_MANAGER:add_event(Event({
         func = function()
@@ -200,16 +197,6 @@ local XPC = {
     S2 = {
         key = '2s',
         pos = {x=0,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '2s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '2s'
-        }),
         config = {extra = {hands = 5, x_mult_add = 0.02}},
 
         loc_vars = function(self, info_queue, card)
@@ -267,16 +254,6 @@ local XPC = {
     S3 = {
         key = '3s',
         pos = {x=1,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '3s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '3s'
-        }),
         config = {extra = {rank = 3, x_mult = 1.5}},
 
         loc_vars = function(self, info_queue, card)
@@ -309,16 +286,6 @@ local XPC = {
     S4 = {
         key = '4s',
         pos = {x=2,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '4s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '4s'
-        }),
         config = {
             extra = {
                 x_mult = 1.0,                
@@ -367,16 +334,6 @@ local XPC = {
     S5 = {
         key = '5s',
         pos = {x=3,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '5s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '5s'
-        }),
         config = {extra = {
             rank = 5,
             x_mult_add = 0.5,
@@ -433,16 +390,6 @@ local XPC = {
     S6 = {
         key = '6s',
         pos = {x=4,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '6s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '6s'
-        }),
         config = {extra = {rank = 6, x_mult_add = 0.5, x_mult = 1}},
 
         loc_vars = function(self,info_queue,card)
@@ -495,16 +442,6 @@ local XPC = {
     S7 = {
         key = '7s',
         pos = {x=5,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '7s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '7s'
-        }),
         config = {extra = {
             numerator = 1,
             denominator = 7,
@@ -564,16 +501,6 @@ local XPC = {
     S8 = {
         key = '8s',
         pos = {x=6,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '8s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '8s'
-        }),
         config = {extra = {enhancement = 'm_mult', x_mult = 2, message = false}},
 
         loc_vars = function(self,info_queue,card)
@@ -632,16 +559,6 @@ local XPC = {
 
         key = '9s',
         pos = {x=7,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '9s'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '9s'
-        }),
         config = {extra = {ratio = 0.75, numerator = 1, denominator = 3}},
 
         loc_vars = function(self, info_queue, card)
@@ -714,16 +631,6 @@ local XPC = {
     ST = {
         key = 'Ts',
         pos = {x=8,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Ts'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Ts'
-        }),
         config = {
             extra = {
                 x_mult = 1.0,
@@ -773,16 +680,6 @@ local XPC = {
     SJ = {
         key = 'Js',
         pos = {x=9,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Js'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Js'
-        }),
         config = {extra = {enhancements = {'m_steel','m_gold'}, x_mult = 1.5}},
 
         loc_vars = function(self, info_queue, card)
@@ -825,16 +722,6 @@ local XPC = {
     SQ = {
         key = 'Qs',
         pos = {x=10,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Qs'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Qs'
-        }),
         config = {extra = {retrigger = 2, enhancement = 'm_stone'}},
 
         loc_vars = function(self,info_queue,card)
@@ -907,17 +794,7 @@ local XPC = {
         blueprint_compat = false,
 
         key = 'Ks',
-        pos  = {x=11,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Ks'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Ks'
-        }),
+        pos = {x=11,y=3},
         config = {extra = {rank = 11, enhancement = 'm_steel'}},
 
         loc_vars = function (self, info_queue, card)
@@ -970,16 +847,6 @@ local XPC = {
     SA = {
         key = 'As',
         pos = {x=12,y=3},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'As'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'As'
-        }),
         config = {extra = {rank = 14, x_mult_add = 0.5}},
 
         loc_vars = function(self, info_queue, card)
@@ -1073,17 +940,6 @@ local XPC = {
 
         key = '2h',
         pos = {x=0,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '2h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '2h'
-        }),
-
         config = {
             extra = {
                 money_per_size = 10,
@@ -1149,16 +1005,6 @@ local XPC = {
     H3 = {
         key = '3h',
         pos = {x=1,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '3h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '3h'
-        }),
         config = {extra = {enhancement = 'm_stone', x_mult = 1.5}},
 
         loc_vars = function(self, info_queue, card)
@@ -1221,16 +1067,6 @@ local XPC = {
     H4 = {
         key = '4h',
         pos = {x=2,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '4h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '4h'
-        }),
         config = {extra = {duplicates = 4}},
 
         loc_vars = function(self, info_queue, card)
@@ -1303,16 +1139,6 @@ local XPC = {
     H5 = { 
         key = '5h',
         pos = {x=3,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '5h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '5h'
-        }),
         config = {extra = {x_mult_add = 0.5, x_mult = 1, message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -1355,16 +1181,6 @@ local XPC = {
 
         key = '6h',
         pos = {x=4,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '6h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '6h'
-        }),
         config = {extra = {message = false}},
 
         loc_vars = function(self,info_queue,card)
@@ -1406,16 +1222,6 @@ local XPC = {
     H7 = {
         key = '7h',
         pos = {x=5,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '7h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '7h'
-        }),
         config = {extra = {enhancement = 'm_wild', x_mult_add = 0.1}},
 
         loc_vars = function(self, info_queue, card)
@@ -1484,16 +1290,6 @@ local XPC = {
 
         key = '8h',
         pos = {x=6,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '8h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '8h'
-        }),
         config = {},
 
         loc_vars = function(self,info_queue,card)
@@ -1548,16 +1344,6 @@ local XPC = {
     H9 = {
         key = '9h',
         pos = {x=7,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '9h'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '9h'
-        }),
         config = {extra = {x_mult_add = 0.01, x_mult = 1}},
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -1596,16 +1382,6 @@ local XPC = {
     HT = {
         key = 'Th',
         pos = {x=8,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Th'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Th'
-        }),
         config = {
             extra = {
                 x_mult = 1.0,                
@@ -1654,16 +1430,6 @@ local XPC = {
     HJ = {
         key = 'Jh',
         pos = {x=9,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Jh'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Jh'
-        }),
         config = {extra = {level = 1}},
 
         loc_vars = function(self, info_queue, card)
@@ -1711,16 +1477,6 @@ local XPC = {
     HQ = {
         key = 'Qh',
         pos = {x=10,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Qh'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Qh'
-        }),
         config = {extra = {x_mult_add = 0.5, x_mult = 1}},
 
         loc_vars = function(self, info_queue, card)
@@ -1760,16 +1516,6 @@ local XPC = {
 
         key = 'Kh',
         pos = {x=11,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Kh'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Kh'
-        }),
         config = {extra = {seal = 'red_seal', ranks = {11, 13}, message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -1818,16 +1564,6 @@ local XPC = {
 
         key = 'Ah',
         pos = {x=12,y=0},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Ah'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Ah'
-        }),
         config = {extra = {rank = 'Ace', suit = 'Hearts'}},
 
         loc_vars = function(self, info_queue, card)
@@ -1877,8 +1613,7 @@ local XPC = {
 
                 if #full_deck > 0 then
                     local playing_card = pseudorandom_element(
-                        full_deck,
-                        pseudoseed('Faceless')
+                        full_deck, pseudoseed('Faceless')
                     )
                     card.ability.extra.rank = playing_card.base.value
                     card.ability.extra.suit = playing_card.base.suit
@@ -1926,16 +1661,6 @@ local XPC = {
     D2 = {
         key = '2d',
         pos = {x=0,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '2d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '2d'
-        }),
         config = {extra = {x_mult_add = 0.25, x_mult = 1}},
 
         loc_vars = function(self, info_queue, card)
@@ -1967,7 +1692,6 @@ local XPC = {
                     if #seals > 0 then
                         card.ability.extra.x_mult =
                         card.ability.extra.x_mult + card.ability.extra.x_mult_add * #seals
-
                         return {
                             message = localize('k_upgrade_ex'),
                             colour = G.C.MULT,
@@ -1988,16 +1712,6 @@ local XPC = {
 
         key = '3d',
         pos = {x=1,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '3d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '3d'
-        }),
         config = {extra = {enhancement = 'm_glass'}},
 
         loc_vars = function (self, info_queue, card)
@@ -2043,16 +1757,6 @@ local XPC = {
     D4 = {
         key = '4d',
         pos = {x=2,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '4d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '4d'
-        }),
         config = {extra = {retrigger = 3, message = false}},
         
         loc_vars = function(self,info_queue,card)
@@ -2100,16 +1804,6 @@ local XPC = {
 
         key = '5d',
         pos = {x=3,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '5d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '5d'
-        }),
         config = {extra = {rank = 1}},
 
         loc_vars = function(self,info_queue,card)
@@ -2117,8 +1811,8 @@ local XPC = {
             return {vars = {
                 localize('k_face_cards'),
                 localize('k_numbered_cards'),
-                card.ability.extra.rank}
-            }
+                card.ability.extra.rank
+            }}
         end,
 
         calculate = function(self, card, context)
@@ -2135,7 +1829,7 @@ local XPC = {
                     end
                 end
 
-                if changed_cards and next(changed_cards) then
+                if next(changed_cards) then
                     return {
                         message = localize('k_evolved'),
                         colour = G.C.EXTRA,
@@ -2165,16 +1859,6 @@ local XPC = {
     D6 = {
         key = '6d',
         pos = {x=4,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '6d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '6d'
-        }),
         config = {extra = {
             x_mult_add = 0.5,
             count = 0,
@@ -2187,7 +1871,7 @@ local XPC = {
             return {
                 vars = {
                     card.ability.extra.x_mult_add,
-                    13 - card.ability.extra.count % 13,
+                    13 - card.ability.extra.count,
                     card.ability.extra.x_mult
                 }
             }
@@ -2200,11 +1884,11 @@ local XPC = {
                     for _, playing_card in ipairs(context.full_hand) do
                         card.ability.extra.count = card.ability.extra.count + 1
 
-                        if card.ability.extra.count % 13 == 0 then
+                        if card.ability.extra.count == 13 then
                             card_eval_status_text(card, 'extra', nil, nil, nil, {
                                 message = localize('k_upgrade_ex')
                             })
-
+                            card.ability.extra.count = 0
                             card.ability.extra.x_mult =
                             card.ability.extra.x_mult + card.ability.extra.x_mult_add
                             card.ability.extra.destroy_card = playing_card
@@ -2236,16 +1920,6 @@ local XPC = {
     D7 = {
         key = '7d',
         pos = {x=5,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '7d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '7d'
-        }),
         config = {extra = {x_mult_add = 0.01, x_mult = 1}},
 
         loc_vars = function(self,info_queue,card)
@@ -2288,16 +1962,6 @@ local XPC = {
 
         key = '8d',
         pos = {x=6,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '8d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '8d'
-        }),
         config = {},
 
         loc_vars = function(self, info_queue, card)
@@ -2322,16 +1986,6 @@ local XPC = {
     D9 = {
         key = '9d',
         pos = {x=7,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '9d'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '9d'
-        }),
         config = {extra = {x_mult = 1}},
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -2385,16 +2039,6 @@ local XPC = {
 
         key = 'Td',
         pos = {x=8,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Td'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Td'
-        }),
         config = {extra = {enhancement = 'm_lucky', message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -2448,16 +2092,6 @@ local XPC = {
 
         key = 'Jd',
         pos = {x=9,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Jd'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Jd'
-        }),
         config = {},
 
         loc_vars = function(self, info_queue, card)
@@ -2654,16 +2288,6 @@ local XPC = {
 
             key = 'Qd',
             pos = {x=10,y=2},
-            name = localize({
-                type = 'name_text',
-                set = 'Joker',
-                key = 'Qd'
-            }),
-            text = localize({
-                type = 'raw_descriptions',
-                set = 'Joker',
-                key = 'Qd'
-            }),
             config = {},
             loc_vars = function(self, info_queue, card)
                 XPC_tooltips(info_queue, card)
@@ -2682,16 +2306,6 @@ local XPC = {
         
         key = 'Kd',
         pos = {x=11,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Kd'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Kd'
-        }),
         config = {},
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -2709,16 +2323,6 @@ local XPC = {
     DA = {
         key = 'Ad',
         pos = {x=12,y=2},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Ad'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Ad'
-        }),
         config = {extra = {x_mult = 1, x_mult_add = 1}},
 
         loc_vars = function(self, info_queue, card)
@@ -2769,16 +2373,6 @@ local XPC = {
 
         key = '2c',
         pos = {x=0,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '2c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '2c'
-        }),
         config = {extra = {enhancements = {'m_steel','m_gold'}}},
 
         loc_vars = function(self, info_queue, card)
@@ -2822,16 +2416,6 @@ local XPC = {
     C3 = {
         key = '3c',
         pos = {x=1,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '3c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '3c'
-        }),
         config = {extra = {x_mult_add = 0.05}},
 
         loc_vars = function(self,info_queue,card)
@@ -2863,16 +2447,6 @@ local XPC = {
 
         key = '4c',
         pos = {x=2,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '4c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '4c'
-        }),
         config = {extra = {enhancements = {'m_steel','m_gold'}}},
 
         loc_vars = function(self, info_queue, card)
@@ -2949,16 +2523,6 @@ local XPC = {
     C5 = {
         key = '5c',
         pos = {x=3,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '5c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '5c'
-        }),
         config = {extra = {enhancement = 'm_stone', x_mult = 2, message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -3015,16 +2579,6 @@ local XPC = {
     C6 = {
         key = '6c',
         pos = {x=4,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '6c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '6c'
-        }),
         config = {extra = {numerator = 1, denominator = 6}},
 
         loc_vars = function(self,info_queue,card)
@@ -3091,16 +2645,6 @@ local XPC = {
     C7 = {
         key = '7c',
         pos = {x=5,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '7c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '7c'
-        }),
         config = {extra = {rank = 7, x_mult = 2, message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -3153,16 +2697,6 @@ local XPC = {
     C8 = {
         key = '8c',
         pos = {x=6,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '8c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '8c'
-        }),
         config = {extra = {numerator = 1, denominator = 24}},
 
         loc_vars = function(self,info_queue,card)
@@ -3229,16 +2763,6 @@ local XPC = {
     C9 = {
         key = '9c',
         pos ={x=7,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = '9c'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = '9c'
-        }),
         config = {extra = {numerator = 1, denominator = 12}},
 
         loc_vars = function(self,info_queue,card)
@@ -3305,16 +2829,6 @@ local XPC = {
     CT = {
         key = 'Tc',
         pos = {x=8,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Tc'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Tc'
-        }),
         config = {extra = {numerator = 1, denominator = 8}},
 
         loc_vars = function(self,info_queue,card)
@@ -3421,17 +2935,7 @@ local XPC = {
             blueprint_compat = false,
 
             key = 'Jc',
-            pos = {x=9, y=1},
-            name = localize({
-                type = 'name_text',
-                set = 'Joker',
-                key = 'Jc'
-            }),
-            text = localize({
-                type = 'raw_descriptions',
-                set = 'Joker',
-                key = 'Jc'
-            }),
+            pos = {x=9,y=1},
             config = {extra = {message = false}},
 
             loc_vars = function(self, info_queue, card)
@@ -3463,16 +2967,6 @@ local XPC = {
     CQ = {
         key = 'Qc',
         pos = {x=10,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Qc'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Qc'
-        }),
         config = {extra = {enhancement = 'm_bonus', x_mult = 2, message = false} },
 
         loc_vars = function(self, info_queue, card)
@@ -3528,16 +3022,6 @@ local XPC = {
     CK = {
         key = 'Kc',
         pos = {x=11,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Kc'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Kc'
-        }),
         config = {extra = {chips = 0, mult = 0, x_mult = 1, message = false}},
 
         loc_vars = function(self, info_queue, card)
@@ -3633,16 +3117,6 @@ local XPC = {
     CA = {
         key = 'Ac',
         pos = {x=12,y=1},
-        name = localize({
-            type = 'name_text',
-            set = 'Joker',
-            key = 'Ac'
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Joker',
-            key = 'Ac'
-        }),
         config = {},
 
         loc_vars = function(self, info_queue, card)
