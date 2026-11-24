@@ -91,7 +91,7 @@ Available languages:
 Contributions of additional language translations are also welcome.
 
 ## Bug Reports and Feedback
-If you encounter a bug or compatibility issue, please [open an Issue](../../issues). When reporting a problem, include:
+If you encounter a bug or compatibility issue, please [open an Issue](https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/issues). When reporting a problem, include:
 - *Balatro* version
 - Steamodded version
 - Lovely version
@@ -103,7 +103,7 @@ Suggestions for Joker balancing are also welcome.
 ## Contributing
 Bug reports, balancing suggestions, and additional language translations are welcome.
 
-You may [submit a Pull Request](../../pulls) to propose changes for review.
+You may [submit a Pull Request](https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/pulls) to propose changes for review.
 Please note that submitting a Pull Request does not grant permission to redistribute modified versions of this mod.
 
 ## License
@@ -211,7 +211,7 @@ HIGH_CARD/
 欢迎参与贡献其他语言的本地化翻译。
 
 ## 问题反馈与建议
-如果你遇到Bug或兼容性问题，请[提交 Issue](../../issues)。反馈时请尽可能提供以下信息：
+如果你遇到Bug或兼容性问题，请[提交Issue](https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/issues)。反馈时请尽可能提供以下信息：
 - Balatro版本
 - Steamodded版本
 - Lovely版本
@@ -223,7 +223,7 @@ HIGH_CARD/
 ## 参与贡献
 欢迎提交Bug报告、平衡性调整建议和新增语言翻译。
 
-你可以[提交Pull Request](../../pulls)以供项目维护者审查，但不代表如若此做将获得修改本Mod并重新发布的许可。
+你可以[提交Pull Request](https://github.com/Natsuki-HIMEKAWA/Balatro-Mod-HIGH-CARD-The-Fatal-Blow/pulls)以供项目维护者审查，但不代表如若此做将获得修改本Mod并重新发布的许可。
 
 ## 许可证
 本项目采用自定义非商业使用许可证。

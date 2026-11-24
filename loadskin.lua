@@ -128,7 +128,6 @@ do
     end
 
     local backup_refresh_contrast_mode = G.FUNCS.refresh_contrast_mode
-
     if type(backup_refresh_contrast_mode) == 'function' then
         G.FUNCS.refresh_contrast_mode = function(...)
             local result = backup_refresh_contrast_mode(...)

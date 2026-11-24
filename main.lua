@@ -1094,17 +1094,9 @@ local XPC = {
 
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
-            local money = (G.GAME and G.GAME.dollars) or 0
-            local target = math.min(
-                math.max(0, math.floor(money / card.ability.extra.money_per_size)),
-                card.ability.extra.max_bonus
-            )
-            if card.debuff then target = 0
-            end
             return {vars = {
                 card.ability.extra.money_per_size,
-                card.ability.extra.max_bonus,
-                target
+                card.ability.extra.max_bonus
             }}
         end,
         

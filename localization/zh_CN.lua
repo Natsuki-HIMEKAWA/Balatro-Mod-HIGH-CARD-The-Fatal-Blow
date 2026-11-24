@@ -56,8 +56,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
             name = '清冷长枪',
             text = {
-                '若出牌包含{C:attention}#2#{}，则',
-                '{C:B4883C}清冷长枪{}获得{C:white,X:mult}X#1#{}倍率',
+                '若出牌包含{C:attention}#2#{}，',
+                '则{C:B4883C}清冷长枪{}',
+                '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -74,7 +75,8 @@ local descriptions = {
             name = '杂耍火铳',
             text = {
                 '每摧毁一张{C:attention}#2#{}，',
-                '{C:B4883C}杂耍火铳{}获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}杂耍火铳{}',
+                '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -106,8 +108,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
             name = '诚意之弓',
             text = {
-                '若出牌包含{C:attention}#2#{}，则',
-                '{C:B4883C}诚意之弓{}获得{C:white,X:mult}X#1#{}倍率',
+                '若出牌包含{C:attention}#2#{}，',
+                '则{C:B4883C}诚意之弓{}',
+                '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -149,8 +152,8 @@ local descriptions = {
             name = '软体蠕虫',
             text = {
                 '每拥有{C:money}$#1#{}，',
-                '手牌上限{C:attention}+1{}，至多{C:attention}+#2#{}',
-                '{C:inactive}（当前为{C:attention}+#3#{C:inactive}手牌上限）{}'
+                '手牌上限{C:attention}+1{}，',
+                '至多{C:attention}+#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_3h'] = {
@@ -216,8 +219,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Th'] = {
             name = '敏锐五感',
             text = {
-                '若出牌包含{C:attention}#2#{}，则',
-                '{C:B4883C}敏锐五感{}获得{C:white,X:mult}X#1#{}倍率',
+                '若出牌包含{C:attention}#2#{}，',
+                '则{C:B4883C}敏锐五感{}',
+                '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -232,8 +236,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Qh'] = {
             name = '音速行者',
             text = {
-                '若只出{C:attention}1{}手牌即击败{C:attention}盲注{}，',
-                '则{C:B4883C}音速行者{}获得{C:white,X:mult}X#1#{}倍率',
+                '若只出{C:attention}1{}手牌即击败',
+                '{C:attention}盲注{}，则{C:B4883C}音速行者{}',
+                '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
@@ -419,7 +424,7 @@ local descriptions = {
             text = {
                 '每回合{C:attention}第一次{}出牌中，',
                 '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}彩色{}'
+                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}多彩{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Tc'] = {

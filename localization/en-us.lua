@@ -71,7 +71,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_5s'] = {
             name = 'Brain Buster',
             text = {
-                'Destroy all played {C:attention}#1#s{}',
+                'Destroy each played {C:attention}#1#{}',
                 'after scoring, and the',
                 '{C:B4883C}Brain Buster{} gains {X:mult,C:white}X#2#{}',
                 'Mult for each of them',
@@ -168,8 +168,7 @@ local descriptions = {
             name = 'Jelly Crawler',
             text = {
                 '{C:attention}+1{} hand size for every',
-                '{C:money}$#1#{} you have, up to {C:attention}+#2#{}',
-                '{C:inactive}(Currently {C:attention}+#3#{}{C:inactive} hand size){}'
+                '{C:money}$#1#{} you have, up to {C:attention}+#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_3h'] = {
