@@ -2967,7 +2967,12 @@ local XPC = {
     CQ = {
         key = 'Qc',
         pos = {x=10,y=1},
-        config = {extra = {enhancement = 'm_bonus', x_mult = 2, message = false} },
+        config = {extra = {
+            enhancement = 'm_bonus',
+            x_mult_add = 0.5,
+            x_mult = 1,
+            message = false
+        }},
 
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -2978,7 +2983,8 @@ local XPC = {
                         set = 'Enhanced',
                         key = card.ability.extra.enhancement
                     }),
-                    card.ability.extra.x_mult
+                    card.ability.extra.x_mult_add,
+                    card.ability.extra.x_mult,
                 }}
         end,
 
@@ -2988,33 +2994,33 @@ local XPC = {
                     restore(card)
                 end
 
-                if context.setting_blind then
-                    card.ability.extra.message = true
-                end
-
-                if context.destroy_card and context.cardarea == G.play
+                if context.destroying_card and context.cardarea == G.play
+                and context.destroy_card
                 and context.destroy_card.config.center.key == card.ability.extra.enhancement
                 and not context.destroy_card.debuff
                 then
+                    card.ability.extra.x_mult =
+                    card.ability.extra.x_mult + card.ability.extra.x_mult_add
+
                     if card.ability.extra.message then
                         card.ability.extra.message = false
-                        card_eval_status_text(card, 'extra', nil, nil, nil, {
+                        return {
+                            remove = true,
                             message = localize('k_defeated'),
                             colour = G.C.RED
-                        })
+                        }
+                    else
+                        return {remove = true}
                     end
-                    return {remove = true}
+                end
+
+                if context.before then
+                    card.ability.extra.message = true
                 end
             end
 
-            if context.individual and context.cardarea == G.play
-                and context.other_card
-                and context.other_card.config.center == G.P_CENTERS.m_bonus
-            then
-                return {
-                    x_mult = card.ability.extra.x_mult,
-                    card = card
-                }
+            if context.joker_main then
+                return {x_mult = card.ability.extra.x_mult}
             end
         end
     },

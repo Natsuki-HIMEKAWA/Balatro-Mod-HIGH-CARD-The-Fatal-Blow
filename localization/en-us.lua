@@ -63,8 +63,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
             name = 'Clear Lance',
             text = {
-                'The {C:B4883C}Clear Lance{} gains {C:white,X:mult}X#1#{}',
-                'Mult when a played hand',
+                'The {C:B4883C}Clear Lance{} gains',
+                '{C:white,X:mult}X#1#{} Mult if played hand',
                 'contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
@@ -121,8 +121,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
             name = 'Honest Straight',
             text = {
-                'The {C:B4883C}Honest Straight{} gains',
-                '{C:white,X:mult}X#1#{} Mult when a played',
+                'The {C:B4883C}Honest Straight{}',
+                'gains {C:white,X:mult}X#1#{} Mult if played',
                 'hand contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {X:mult,C:white}X#3#{}{C:inactive} Mult){}'
             }
@@ -242,8 +242,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Th'] = {
             name = 'Sensitive Sense',
             text = {
-                'The {C:B4883C}Sensitive Sense{} gains',
-                '{C:white,X:mult}X#1#{} Mult when a played',
+                'The {C:B4883C}Sensitive Sense{}',
+                'gains {C:white,X:mult}X#1#{} Mult if played',
                 'hand contains {C:attention}#2#{}',
                 '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
@@ -251,8 +251,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Jh'] = {
             name = 'Sky Dancer',
             text = {
-                'Upgrade a poker hand {C:attention}#1#{}',
-                'additional level after',
+                'Upgrade a poker hand',
+                '{C:attention}#1#{} additional level after',
                 'using the corresponding',
                 '{C:planet}Planet{} Card'
             }
@@ -298,8 +298,9 @@ local descriptions = {
             name = 'Marble Rumble',
             text = {
                 'All played cards in the',
-                '{C:attention}first hand{} of round become',
-                '{C:attention}#1#s{} when scored'
+                '{C:attention}first hand{} of round',
+                'become {C:attention}#1#s{}',
+                'when scored'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4d'] = {
@@ -495,10 +496,11 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Qc'] = {
             name = 'Gladiator',
             text = {
-                'All {C:attention}#1#s{}',
-                'played give {C:white,X:mult}X#2#{}',
-                'Mult when scored,',
-                'then destroy them'
+                'Destroy each {C:attention}#1#{}',
+                'played after scoring, and',
+                'the {C:B4883C}Gladiator{} gains {X:mult,C:white}X#2#{}',
+                'Mult for each of them',
+                '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Kc'] = {
@@ -517,7 +519,7 @@ local descriptions = {
             name = 'Another Lives',
             text = {
                 'Destroy the {C:attention}leftmost{}',
-                'consumable card, then',
+                'consumable card to',
                 'create a {C:spectral}Spectral{} Card',
                 'when {C:attention}Blind{} is selected',
                 '{C:inactive}(Must have room){}'

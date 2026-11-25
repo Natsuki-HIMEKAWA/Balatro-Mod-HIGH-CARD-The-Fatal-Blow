@@ -40,9 +40,10 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_2s'] = {
             name = '新·新南部',
             text = {
-                '抽取{C:attention}第一手牌{}后，将{C:attention}出牌{}',
-                '设为{C:blue}#1#{}次；{C:attention}牌堆{}中剩余的',
-                '每张牌给予{C:white,X:mult}X#2#{}倍率',
+                '抽取{C:attention}第一手牌{}后，',
+                '将{C:attention}出牌{}设为{C:blue}#1#{}次；',
+                '每张{C:attention}牌堆{}中剩余的',
+                '牌给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
@@ -56,8 +57,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
             name = '清冷长枪',
             text = {
-                '若出牌包含{C:attention}#2#{}，',
-                '则{C:B4883C}清冷长枪{}',
+                '若打出的牌包含',
+                '{C:attention}#2#{}，则{C:B4883C}清冷长枪{}',
                 '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
@@ -75,17 +76,18 @@ local descriptions = {
             name = '杂耍火铳',
             text = {
                 '每摧毁一张{C:attention}#2#{}，',
-                '{C:B4883C}杂耍火铳{}',
-                '获得{C:white,X:mult}X#1#{}倍率',
+                '{C:B4883C}杂耍火铳{}获得',
+                '{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = '拦截者',
             text = {
-                '将每回合{C:attention}第一手{}打出的',
-                '{C:attention}牌型{}等级提升{C:attention}#1#{}级，',
-                '且有{C:green}#2#/#3#{}概率为提升{C:attention}#4#{}级'
+                '将每回合{C:attention}第一手{}',
+                '打出的{C:attention}牌型{}等级',
+                '提升{C:attention}#1#{}级，且有',
+                '{C:green}#2#/#3#{}概率为提升{C:attention}#4#{}级'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
@@ -108,8 +110,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
             name = '诚意之弓',
             text = {
-                '若出牌包含{C:attention}#2#{}，',
-                '则{C:B4883C}诚意之弓{}',
+                '若打出的牌包含',
+                '{C:attention}#2#{}，则{C:B4883C}诚意之弓{}',
                 '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
@@ -125,17 +127,17 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Qs'] = {
             name = '美杜莎之鞭',
             text = {
-                '每回合{C:attention}第一次{}出牌中',
-                '所有计分牌额外触发',
-                '{C:attention}#1#{}次，计分后将其',
-                '转化为{C:attention}#2#{}'
+                '每回合{C:attention}第一次{}出牌',
+                '中所有计分牌额外',
+                '触发{C:attention}#1#{}次，计分后',
+                '将其变为{C:attention}#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ks'] = {
             name = '圣徒骑士',
             text = {
                 '所有打出的{C:attention}#1#{}在',
-                '计分时转化为{C:attention}#2#{}'
+                '计分时变为{C:attention}#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_As'] = {
@@ -168,7 +170,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4h'] = {
             name = '超级特工',
             text = {
-                '若本回合{C:attention}第一次出牌{}',
+                '若回合的{C:attention}第一次出牌{}',
                 '只有{C:attention}1{}张牌，则向手牌',
                 '中加入该牌的{C:attention}#1#{}个{C:attention}克隆{}'
             }
@@ -192,8 +194,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7h'] = {
             name = '变色龙',
             text = {
-                '每回合{C:attention}第一次{}出牌中的',
-                '所有计分牌转化为{C:attention}#1#{}；',
+                '每回合{C:attention}第一次{}出牌中',
+                '所有计分牌变为{C:attention}#1#{}；',
                 '{C:attention}完整牌组{}中的每张',
                 '{C:attention}#1#{}给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
@@ -210,8 +212,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_9h'] = {
             name = '卓越天才',
             text = {
-                '回合结束时，{C:attention}牌堆{}',
-                '中剩余的每张牌给予',
+                '回合结束时，每张',
+                '{C:attention}牌堆{}中剩余的牌给予',
                 '{C:B4883C}卓越天才{}{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
@@ -219,8 +221,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Th'] = {
             name = '敏锐五感',
             text = {
-                '若出牌包含{C:attention}#2#{}，',
-                '则{C:B4883C}敏锐五感{}',
+                '若打出的牌包含',
+                '{C:attention}#2#{}，则{C:B4883C}敏锐五感{}',
                 '获得{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
@@ -228,7 +230,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Jh'] = {
             name = '苍穹舞者',
             text = {
-                '每使用一张{C:planet}星球牌{}，',
+                '使用{C:planet}星球牌{}之后',
                 '额外提升{C:attention}#1#{}级',
                 '相应牌型的等级'
             }
@@ -270,9 +272,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3d'] = {
             name = '滚滚弹珠',
             text = {
-                '本回合{C:attention}第一次{}出牌',
+                '每回合{C:attention}第一次{}出牌',
                 '中的所有计分牌',
-                '转化为{C:attention}#1#{}'
+                '变为{C:attention}#1#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4d'] = {
@@ -438,17 +440,17 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Jc'] = {
             name = '归来',
             text = {
-                '计分结束后，将',
-                '{C:attention}第一张{}计分牌',
-                '抽回手牌中'
+                '计分后将{C:attention}第一张{}',
+                '计分牌抽回手牌中'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Qc'] = {
             name = '角斗士',
             text = {
-                '每张打出的{C:attention}#1#{}在',
-                '计分时给予{C:white,X:mult}X#2#{}倍率，',
-                '计分后将其摧毁'
+                '计分后摧毁所有被',
+                '计分的{C:attention}#1#{}，每张',
+                '给予{C:B4883C}角斗士{C:white,X:mult}X#2#{}倍率',
+                '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Kc'] = {
@@ -466,8 +468,8 @@ local descriptions = {
             name = '行尸走肉',
             text = {
                 '在选择{C:attention}盲注{}时摧毁',
-                '{C:attention}最左侧{}的消耗牌，',
-                '随后生成一张{C:spectral}幻灵牌{}',
+                '{C:attention}最左侧{}的消耗牌以',
+                '生成一张{C:spectral}幻灵牌{}',
                 '{C:inactive}（必须有空间）{}'
             }
         },
