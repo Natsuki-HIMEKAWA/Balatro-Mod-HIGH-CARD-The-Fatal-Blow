@@ -1,3 +1,15 @@
+SMODS.Atlas({
+    key = 'Standard_LC',
+    path = 'face_Standard_LC.png',
+    px = 71, py = 95,
+})
+
+SMODS.Atlas({
+    key = 'Standard_HC',
+    path = 'face_Standard_HC.png',
+    px = 71, py = 95,
+})
+
 do
     local suits = {'Hearts', 'Diamonds', 'Clubs', 'Spades'}
     local ranks = {'Ace', 'King', 'Queen', 'Jack', '10', '9', '8', '7', '6', '5', '4', '3', '2'}
@@ -31,7 +43,7 @@ do
                     key = 'lc',
                     ranks = ranks,
                     display_ranks = ranks,
-                    atlas = HIGH_CARD_prefix ..'_XPdeckLC',
+                    atlas = HIGH_CARD_prefix ..'_Standard_LC',
                     pos_style = 'deck',
                     colour = suit_colours.lc[suit],
                 },
@@ -39,7 +51,7 @@ do
                     key = 'hc',
                     ranks = ranks,
                     display_ranks = ranks,
-                    atlas = HIGH_CARD_prefix ..'_XPdeckHC',
+                    atlas = HIGH_CARD_prefix ..'_Standard_HC',
                     pos_style = 'deck',
                     colour = suit_colours.hc[suit],
                 }

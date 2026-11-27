@@ -85,17 +85,16 @@ local descriptions = {
                 'The {C:B4883C}Juggling Gun{}',
                 'gains {C:white,X:mult}X#1#{} Mult when',
                 'a {C:attention}#2#{} is destroyed',
-                '{C:inactive}(Currently{} {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
+                '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = 'Interceptor',
             text = {
-                'Upgrade the {C:attention}first{}',
-                '{C:attention}poker hand{} played each',
-                'round by {C:attention}#1#{} level, with',
-                'a {C:green}#2# in #3#{} chance to',
-                'upgrade it by {C:attention}#4#{} levels'
+                '{C:green}#1# in #2#{} chance to',
+                'upgrade the {C:attention}first{}',
+                '{C:attention}poker hand{} played',
+                'each round by {C:attention}#3#{} levels'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
@@ -111,11 +110,11 @@ local descriptions = {
             name = 'Mohism',
             text = {
                 'Prevent {C:red}Death{} if scored',
-                '{C:chips}Chips{} are at least {C:attention}#1#%{} of',
-                'the required amount, and',
-                'have {C:green}#2# in #3#{} chance to',
-                'disable the effects of',
-                '{C:attention}Boss Blinds{} when facing it'
+                '{C:chips}Chips{} are at least {C:attention}#1#%{}',
+                'of the required amount,',
+                'and have {C:green}#2# in #3#{} chance',
+                'to disable the effect',
+                'of each {C:attention}Boss Blind{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
@@ -156,20 +155,20 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_As'] = {
             name = 'Love and Peace',
             text = {
-                'Each {C:attention}#1#{} in your {C:attention}full deck{} gives',
-                '{C:white,X:mult}X#2#{} Mult; always forces {C:attention}1{} card',
-                'in hand to be selected if {C:attention}no{}',
-                '{C:attention}hands{} have been {C:attention}played{} yet this',
-                'round, and destroys the {C:attention}selected{}',
-                'card if it has been scored',
+                'Each {C:attention}#1#{} in your {C:attention}full{}',
+                'deck gives {C:white,X:mult}X#2#{} Mult;',
+                'always forces {C:attention}1{} card',
+                'in hand to be {C:attention}selected{},',
+                'and destroy it if scored',
                 '{C:inactive}(Currently {X:mult,C:white}X#3#{}{C:inactive} Mult){}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_2h'] = {
             name = 'Jelly Crawler',
             text = {
-                '{C:attention}+1{} hand size for every',
-                '{C:money}$#1#{} you have, up to {C:attention}+#2#{}'
+                '{C:attention}+1{} hand size for',
+                'every {C:money}$#1#{} you',
+                'have, up to {C:attention}+#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_3h'] = {
@@ -251,7 +250,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Jh'] = {
             name = 'Sky Dancer',
             text = {
-                'Upgrade a poker hand',
+                'Upgrade a {C:attention}poker hand{}',
                 '{C:attention}#1#{} additional level after',
                 'using the corresponding',
                 '{C:planet}Planet{} Card'
@@ -277,7 +276,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Ah'] = {
             name = 'Faceless',
             text = {
-                'All scored cards become',
+                'All played cards become',
                 '{C:attention}#1#{} of {V:1}#2#{}',
                 'after scoring',
                 '{s:0.8}Card changes every round{}'
@@ -297,9 +296,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3d'] = {
             name = 'Marble Rumble',
             text = {
-                'All played cards in the',
-                '{C:attention}first hand{} of round',
-                'become {C:attention}#1#s{}',
+                '{C:green}#1# in #2#{} chance to',
+                'enhance every played',
+                'card to {C:attention}#3#{}',
                 'when scored'
             }
         },
@@ -328,7 +327,7 @@ local descriptions = {
                 'Mult for every {C:attention}13{} {C:inactive}(#2#){}',
                 'cards played, and destroys',
                 'every {C:attention}13th{} card played',
-                '{C:inactive}(Currently{} {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
+                '{C:inactive}(Currently {C:white,X:mult}X#3#{} {C:inactive}Mult){}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7d'] = {
@@ -372,9 +371,10 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Jd'] = {
             name = 'Out of 5',
             text = {
-                'All played {C:attention}#1#{}',
-                'with exactly {C:attention}5{} cards are',
-                'treated as {C:attention}#2#{}'
+                'All {C:attention}#1#{}',
+                'played with exactly',
+                '{C:attention}5{} cards are treated',
+                'as {C:attention}#2#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Qd'] = {
@@ -445,9 +445,9 @@ local descriptions = {
             name = 'Shallow Blue',
             text = {
                 '{C:green}#1# in #2#{} chance to add',
-                '{C:dark_edition}Foil{} to every scored card',
-                'in the {C:attention}first hand{} of',
-                'round if it has no edition'
+                '{C:dark_edition}Foil{} to every played',
+                'card when scored if',
+                'it has no edition'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7c'] = {
@@ -462,27 +462,27 @@ local descriptions = {
             name = 'Sinking Shadow',
             text = {
                 '{C:green}#1# in #2#{} chance to add',
-                '{C:dark_edition}Negative{} to every scored',
-                'card in the {C:attention}first hand{} of',
-                'round if it has no edition'
+                '{C:dark_edition}Negative{} to every played',
+                'card when scored if it',
+                'has no edition'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_9c'] = {
             name = 'Rising Light',
             text = {
                 '{C:green}#1# in #2#{} chance to add',
-                '{C:dark_edition}Polychrome{} to every scored',
-                'card in the {C:attention}first hand{} of',
-                'round if it has no edition'
+                '{C:dark_edition}Polychrome{} to every',
+                'played card when scored',
+                'if it has no edition'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Tc'] = {
             name = 'Million Volt',
             text = {
                 '{C:green}#1# in #2#{} chance to add',
-                '{C:dark_edition}Holographic{} to every scored',
-                'card in the {C:attention}first hand{} of',
-                'round if it has no edition'
+                '{C:dark_edition}Holographic{} to every',
+                'played card when scored',
+                'if it has no edition'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Jc'] = {
@@ -526,12 +526,12 @@ local descriptions = {
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_0x'] = {
-            name = 'Red Joker',
+            name = '',
             text = {},
             unlock = {'Stay tuned!'}
         },
         ['j_'.. HIGH_CARD_prefix ..'_1x'] = {
-            name = 'Black Joker',
+            name = '',
             text = {},
             unlock = {'Stay tuned!'}
         }

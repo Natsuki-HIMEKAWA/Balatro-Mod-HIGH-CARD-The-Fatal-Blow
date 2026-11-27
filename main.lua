@@ -1,15 +1,6 @@
 HIGH_CARD_prefix = SMODS.current_mod.prefix
 XPC_deck_key = 'X-Playing_Deck'
 
-local contains = function(element, list)
-    for _, e in ipairs(list) do
-        if e == element then
-            return true
-        end
-    end
-    return false
-end
-
 --Stone Viewer: Reveal the hidden base of Stone Cards--
 SMODS.Enhancement:take_ownership('stone', {
     loc_vars = function(self, info_queue, card)
@@ -52,20 +43,6 @@ SMODS.Atlas({
     px = 71, py = 95
 })
 
-SMODS.Atlas({
-    key = 'XPdeckLC',
-    path = 'face_Caro_LC.png',
-    px = 71,
-    py = 95,
-})
-
-SMODS.Atlas({
-    key = 'XPdeckHC',
-    path = 'face_Caro_HC.png',
-    px = 71,
-    py = 95,
-})
-
 SMODS.Sticker({
     key = 'clone',
     atlas = 'clone',
@@ -80,6 +57,15 @@ SMODS.Rarity({
     pools = {Joker = true},
     default_weight = 0
 })
+
+local contains = function(element, list)
+    for _, e in ipairs(list) do
+        if e == element then
+            return true
+        end
+    end
+    return false
+end
 
 local rank_to_name = function(rank)
     if rank <= 10 then return tostring(rank)
@@ -101,11 +87,11 @@ local restore = function(joker)
                     return false
                 end
 
-                for _, joker in ipairs(G.jokers.cards) do
-                    local center = joker.config and joker.config.center
+                for _, J in ipairs(G.jokers.cards) do
+                    local center = J.config and J.config.center
                     local key = center and center.key
 
-                    if not joker.debuff and key == 'j_'.. HIGH_CARD_prefix ..'_Ad'
+                    if not J.debuff and key == 'j_'.. HIGH_CARD_prefix ..'_Ad'
                     then
                         return true
                     end
@@ -184,7 +170,7 @@ local XPC_tooltips = function(info_queue, joker)
             }) or localize('k_unenhanced'),
 
             seal and localize({
-                type = 'name_text',  set = 'Other',
+                type = 'name_text', set = 'Other',
                 key = seal:lower() ..'_seal'
             }) or localize('k_no_seal'),
 
@@ -240,7 +226,6 @@ local XPC = {
             if context.joker_main then
                 local remaining = G.deck and G.deck.cards and #G.deck.cards or 0
                 local x_mult = 1 + remaining * card.ability.extra.x_mult_add
-
                 if x_mult > 1 then
                     return{
                         x_mult = x_mult,
@@ -444,9 +429,8 @@ local XPC = {
         pos = {x=5,y=3},
         config = {extra = {
             numerator = 1,
-            denominator = 7,
-            basic_level = 1,
-            bonus_level = 2
+            denominator = 3,
+            level = 2
         }},
 
         loc_vars = function(self, info_queue, card)
@@ -458,10 +442,9 @@ local XPC = {
                 'Interceptor'
             )
             return {vars = {
-                card.ability.extra.basic_level,
                 numerator,
                 denominator,
-                card.ability.extra.bonus_level
+                card.ability.extra.level
             }}
         end,
 
@@ -472,9 +455,7 @@ local XPC = {
                 end
             end
 
-            if context.cardarea == G.jokers
-            and context.before
-            and context.scoring_name 
+            if context.cardarea == G.jokers and context.before and context.scoring_name 
             and G.GAME.current_round.hands_played == 0 then
                 if SMODS.pseudorandom_probability(
                     card, 'Interceptor',
@@ -483,15 +464,8 @@ local XPC = {
                 ) then
                     return {
                         card = card,
-                        level_up = card.ability.extra.bonus_level,
+                        level_up = card.ability.extra.level,
                         message = localize('k_level_up_ex'),
-                        colour = G.C.RED
-                    }
-                else
-                    return {
-                        card = card,
-                        level_up = card.ability.extra.basic_level,
-                        message = localize('k_level_up_ex')
                     }
                 end
             end
@@ -569,7 +543,7 @@ local XPC = {
                 card.ability.extra.denominator, 'Mohism'
             )
             return {vars = {
-                string.format('%.2f',100 * card.ability.extra.ratio
+                string.format('%.2f', 100 * card.ability.extra.ratio
                 ):gsub('0+$', ''):gsub('%.$', ''),
                 numerator, denominator
             }}
@@ -819,8 +793,8 @@ local XPC = {
                 local enhancing_cards = {}
 
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card:get_id() == card.ability.extra.rank
-                    and not scored_card.debuff
+                    if not scored_card.debuff
+                    and scored_card:get_id() == card.ability.extra.rank
                     then
                         scored_card:set_ability(
                             G.P_CENTERS[card.ability.extra.enhancement],
@@ -847,7 +821,7 @@ local XPC = {
     SA = {
         key = 'As',
         pos = {x=12,y=3},
-        config = {extra = {rank = 14, x_mult_add = 0.5}},
+        config = {extra = {rank = 14, x_mult_add = 0.75}},
 
         loc_vars = function(self, info_queue, card)
             XPC_tooltips(info_queue, card)
@@ -876,34 +850,31 @@ local XPC = {
                         playing_card.ability.slain = nil
                     end
 
-                    if G.GAME.current_round.hands_played == 0 then
-                        if G.GAME.blind.config.blind.key == 'bl_cerulean_bell' then
-                            for _, playing_card in ipairs(G.hand.cards) do
-                                if playing_card.ability.forced_selection then
-                                    playing_card.ability.slain = true
-                                    break
-                                end
+                    if G.GAME.blind.config.blind.key == 'bl_cerulean_bell' then
+                        for _, playing_card in ipairs(G.hand.cards) do
+                            if playing_card.ability.forced_selection then
+                                playing_card.ability.slain = true
+                                break
                             end
-                        else
-                            G.hand:unhighlight_all()
+                        end
+                    else
+                        G.hand:unhighlight_all()
 
-                            local forced_card = pseudorandom_element(
-                                G.hand.cards, pseudoseed('Love and Peace')
-                            )
-
-                            for _, playing_card in ipairs(G.hand.cards) do
-                                if playing_card.ability.forced_selection then
-                                    forced_card = playing_card
-                                    break
-                                end
+                        local forced_card = pseudorandom_element(
+                            G.hand.cards, pseudoseed('Love and Peace')
+                        )
+                        for _, playing_card in ipairs(G.hand.cards) do
+                            if playing_card.ability.forced_selection then
+                                forced_card = playing_card
+                                break
                             end
+                        end
 
-                            forced_card.ability.forced_selection = true
-                            forced_card.ability.slain = true
+                        forced_card.ability.forced_selection = true
+                        forced_card.ability.slain = true
 
-                            if not forced_card.highlighted then
-                                G.hand:add_to_highlighted(forced_card)
-                            end
+                        if not forced_card.highlighted then
+                            G.hand:add_to_highlighted(forced_card)
                         end
                     end
                 end
@@ -1181,7 +1152,7 @@ local XPC = {
 
         key = '6h',
         pos = {x=4,y=0},
-        config = {extra = {message = false}},
+        config = {extra = {}},
 
         loc_vars = function(self,info_queue,card)
             XPC_tooltips(info_queue, card)
@@ -1193,10 +1164,11 @@ local XPC = {
             end
 
             if context.before and G.GAME.current_round.hands_played == 0 then
+                local message = false
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.config.center.key == 'c_base'
-                    and not scored_card.debuff then
-                        card.ability.extra.message = true
+                    if not scored_card.debuff
+                    and scored_card.config.center.key == 'c_base' then
+                        message = true
                         local enhancement = pseudorandom_element(
                             G.P_CENTER_POOLS['Enhanced'],
                             pseudoseed('The Zoo')
@@ -1211,8 +1183,8 @@ local XPC = {
                     end
                 end
 
-                if card.ability.extra.message then
-                    card.ability.extra.message = false
+                if message then
+                    message = false
                     return {message = localize('k_transform'), colour = G.C.EXTRA}
                 end
             end
@@ -1312,7 +1284,7 @@ local XPC = {
 
                 for index = 2, #context.scoring_hand do
                     local scored_card = context.scoring_hand[index]
-                    if scored_card.config.center.key ~= 'm_stone' then
+                    if not scored_card.debuff and scored_card.config.center.key ~= 'm_stone' then
                         local converts = SMODS.change_base(scored_card, suit, nil, true)
                         if converts then
                             table.insert(changed_cards, scored_card)
@@ -1333,7 +1305,8 @@ local XPC = {
                                         scored_card:juice_up()
                                     end
                                     return true
-                                end}))
+                                end
+                            }))
                         end
                     }
                 end
@@ -1623,7 +1596,8 @@ local XPC = {
             if context.after then
                 local changed_cards = {}
                 for _, scored_card in pairs(context.scoring_hand) do
-                    if scored_card.config.center.key ~= 'm_stone' then
+                    if not scored_card.REMOVED and not scored_card.debuff
+                    and scored_card.config.center.key ~= 'm_stone' then
                         changed_cards[#changed_cards + 1] = scored_card
                     end
                 end
@@ -1637,7 +1611,7 @@ local XPC = {
                                 trigger = 'immediate',
                                 func = function()
                                     for _, scored_card in ipairs(changed_cards) do
-                                        if not scored_card.REMOVED then
+                                        if not scored_card.REMOVED or scored_card.debuff then
                                             SMODS.change_base(
                                                 scored_card,
                                                 card.ability.extra.suit,
@@ -1708,16 +1682,20 @@ local XPC = {
     },
     
     D3 = {
-        blueprint_compat = false,
-
         key = '3d',
         pos = {x=1,y=2},
-        config = {extra = {enhancement = 'm_glass'}},
+        config = {extra = {numerator = 1, denominator = 3, enhancement = 'm_glass'}},
 
         loc_vars = function (self, info_queue, card)
             XPC_tooltips(info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.enhancement]
+
+            local numerator, denominator = SMODS.get_probability_vars(
+                card, card.ability.extra.numerator,
+                card.ability.extra.denominator, 'Marble Rumble'
+            )
             return {vars = {
+                numerator, denominator,
                 localize({
                     type = 'name_text', set = 'Enhanced',
                     key = card.ability.extra.enhancement
@@ -1726,18 +1704,25 @@ local XPC = {
         end,
 
         calculate = function(self, card, context)
-            if context.selling_self then
-                restore(card)
+            if not context.blueprint then
+                if context.selling_self then
+                    restore(card)
+                end
             end
 
-            if context.before and G.GAME.current_round.hands_played == 0 then
+            if context.before and context.scoring_hand and #context.scoring_hand > 0 then
+                local message = false
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if not scored_card.debuff then
+                    if not scored_card.debuff and SMODS.pseudorandom_probability(
+                        card, 'Marble Rumble',
+                        card.ability.extra.numerator,
+                        card.ability.extra.denominator
+                    ) then
                         scored_card:set_ability(
-                            G.P_CENTERS[card.ability.extra.enhancement],
+                            card.ability.extra.enhancement,
                             nil, true
                         )
-
+                        message = true
                         G.E_MANAGER:add_event(Event({
                             func = function()
                                 scored_card:juice_up()
@@ -1746,10 +1731,10 @@ local XPC = {
                         }))
                     end
                 end
-                return {
-                    message = localize('k_vitrified'),
-                    colour = G.C.EXTRA
-                }
+                if message then
+                    message = false
+                    return {message = localize('k_vitrified'), colour = G.C.EXTRA}
+                end
             end
         end
     },
@@ -1800,8 +1785,6 @@ local XPC = {
     },
 
     D5 = {
-        blueprint_compat = false,
-
         key = '5d',
         pos = {x=3,y=2},
         config = {extra = {rank = 1}},
@@ -1816,41 +1799,88 @@ local XPC = {
         end,
 
         calculate = function(self, card, context)
-            if context.selling_self then
-                restore(card)
+            if not context.blueprint then
+                if context.selling_self then
+                    restore(card)
+                end
             end
 
+            local qualify = function(card)
+                return card:is_face() or card:get_id() >=2 and card:get_id() <= 10
+            end
             if context.after then
                 local changed_cards = {}
+
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.config.center.key ~= 'm_stone' and scored_card:get_id() < 14
-                    or scored_card:is_face() then
+                    if not scored_card.REMOVED and not scored_card.debuff and qualify(scored_card)
+                    then
                         changed_cards[#changed_cards + 1] = scored_card
+                        if scored_card.Greatest_Man == nil then
+                            scored_card.Greatest_Man = card.ability.extra.rank
+                        else
+                            local flag = false
+                            if scored_card.config.center.key == 'm_stone'
+                            or scored_card:get_id() + scored_card.Greatest_Man ~= 14 then
+                                flag = true
+                            else
+                                local ace = {
+                                    debuff = false,
+                                    ability = {effect = nil},
+                                    base = {id = 14},
+                                    get_id = Card.get_id,
+                                    is_face = Card.is_face
+                                }
+                                if ace:is_face() then flag = true end
+                            end
+                            if flag then
+                                scored_card.Greatest_Man =
+                                scored_card.Greatest_Man + card.ability.extra.rank
+                            else
+                                scored_card.Greatest_Man = 0
+                            end
+                        end
                     end
                 end
 
-                if next(changed_cards) then
-                    return {
-                        message = localize('k_evolved'),
-                        colour = G.C.EXTRA,
-                        func = function()
-                            G.E_MANAGER:add_event(Event({
-                                trigger = 'immediate',
-                                func = function()
-                                    for _, scored_card in ipairs(changed_cards) do
-                                        if not scored_card.REMOVED then
-                                            SMODS.modify_rank(
-                                                scored_card, card.ability.extra.rank, true
-                                            )
-                                            scored_card:set_sprites(nil, scored_card.config.card)
-                                            scored_card:juice_up()
-                                        end
-                                    end
-                                    return true
-                                end
-                            }))
+                if #changed_cards > 0 then
+                    local message = false
+                    for _, scored_card in ipairs(changed_cards) do
+                        if scored_card.Greatest_Man ~= 0 then
+                            message = true
+                            break
                         end
-                    }
+                    end
+                    if message then
+                        return {
+                            message = localize('k_evolved'),
+                            colour = G.C.EXTRA,
+                            func = function()
+                                G.E_MANAGER:add_event(Event({
+                                    trigger = 'immediate',
+                                    func = function()
+                                        for _, scored_card in ipairs(changed_cards) do
+                                            if not scored_card.REMOVED and not scored_card.debuff
+                                            and qualify(scored_card) then
+                                                SMODS.modify_rank(
+                                                    scored_card, card.ability.extra.rank, true
+                                                )
+                                                scored_card:set_sprites(nil, scored_card.config.card)
+                                                scored_card:juice_up()
+                                                message = true
+                                            end
+                                        end
+                                        return true
+                                    end
+                                }))
+                            end
+                        }
+                    end
+                end
+            end
+
+            if context.end_of_round then
+                for _, playing_card in ipairs(G.playing_cards) do
+                    playing_card.Greatest_Man = nil
                 end
             end
         end
@@ -1898,12 +1928,12 @@ local XPC = {
 
                 if context.destroy_card and (context.cardarea == G.play or context.cardarea == 'unscored')
                 and context.destroy_card == card.ability.extra.destroy_card then
-                    card_eval_status_text(
-                        card, 'extra', nil, nil, nil,
-                        {message = localize('k_slain')}
-                    )
                     card.ability.extra.destroy_card = nil
-                    return {remove = true}
+                    return {
+                        message = localize('k_slain'),
+                        colour = G.C.RED,
+                        remove = true
+                    }
                 end
 
                 if context.selling_self then
@@ -2002,16 +2032,11 @@ local XPC = {
                     restore(card)
                 end
 
-                if context.initial_scoring_step
-                and G.GAME.current_round.hands_played == 0 then
+                if context.initial_scoring_step and G.GAME.current_round.hands_played == 0 then
                     local rank = context.scoring_hand[1]:get_id()
                     local point = 1
-                    if rank >= 2 and rank <= 10 then
-                        point = rank
-                    elseif rank >= 11 and rank <= 13 then
-                        point = 10
-                    elseif rank == 14 then
-                        point = 11
+                    if rank >= 1 then
+                        point = context.scoring_hand[1].base.nominal
                     end
                     card.ability.extra.x_mult = 1 + point / 4
                 end
@@ -2602,14 +2627,10 @@ local XPC = {
                 end
             end
 
-            if context.before and context.scoring_hand
-                and #context.scoring_hand > 0
-                and G.GAME.current_round.hands_played == 0 then
-
+            if context.before and context.scoring_hand and #context.scoring_hand > 0 then
                 local message = false
-                
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.edition == nil then
+                    if not scored_card.debuff and scored_card.edition == nil then
                         if SMODS.pseudorandom_probability(
                             card, 'Shallow Blue',
                             card.ability.extra.numerator,
@@ -2697,7 +2718,7 @@ local XPC = {
     C8 = {
         key = '8c',
         pos = {x=6,y=1},
-        config = {extra = {numerator = 1, denominator = 24}},
+        config = {extra = {numerator = 1, denominator = 32}},
 
         loc_vars = function(self,info_queue,card)
             XPC_tooltips(info_queue, card)
@@ -2720,14 +2741,10 @@ local XPC = {
                 end
             end
 
-            if context.before and context.scoring_hand
-                and #context.scoring_hand > 0
-                and G.GAME.current_round.hands_played == 0 then
-
+            if context.before and context.scoring_hand and #context.scoring_hand > 0 then
                 local message = false
-                
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.edition == nil then
+                    if not scored_card.debuff and scored_card.edition == nil then
                         if SMODS.pseudorandom_probability(
                             card, 'Sinking Shadow',
                             card.ability.extra.numerator,
@@ -2763,7 +2780,7 @@ local XPC = {
     C9 = {
         key = '9c',
         pos ={x=7,y=1},
-        config = {extra = {numerator = 1, denominator = 12}},
+        config = {extra = {numerator = 1, denominator = 18}},
 
         loc_vars = function(self,info_queue,card)
             XPC_tooltips(info_queue, card)
@@ -2786,14 +2803,10 @@ local XPC = {
                 end
             end
 
-            if context.before and context.scoring_hand
-                and #context.scoring_hand > 0
-                and G.GAME.current_round.hands_played == 0 then
-
+            if context.before and context.scoring_hand and #context.scoring_hand > 0 then
                 local message = false
-                
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.edition == nil then
+                    if not scored_card.debuff and scored_card.edition == nil then
                         if SMODS.pseudorandom_probability(
                             card, 'Rising Light',
                             card.ability.extra.numerator,
@@ -2829,7 +2842,7 @@ local XPC = {
     CT = {
         key = 'Tc',
         pos = {x=8,y=1},
-        config = {extra = {numerator = 1, denominator = 8}},
+        config = {extra = {numerator = 1, denominator = 10}},
 
         loc_vars = function(self,info_queue,card)
             XPC_tooltips(info_queue, card)
@@ -2852,14 +2865,10 @@ local XPC = {
                 end
             end
 
-            if context.before and context.scoring_hand
-                and #context.scoring_hand > 0
-                and G.GAME.current_round.hands_played == 0 then
-
+            if context.before and context.scoring_hand and #context.scoring_hand > 0 then
                 local message = false
-                
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if scored_card.edition == nil then
+                    if not scored_card.debuff and scored_card.edition == nil then
                         if SMODS.pseudorandom_probability(
                             card, 'Million Volt',
                             card.ability.extra.numerator,
@@ -3171,15 +3180,13 @@ local XPC = {
         end
     },
 
-    JR = {key = '0x',name = 'Red Joker',unlocked = false},
-    JB = {key = '1x',name = 'Black Joker',unlocked = false}
+    JR = {key = '0x', unlocked = false},
+    JB = {key = '1x', unlocked = false}
 }
 
 for key, card in pairs(XPC) do
     card.rarity = HIGH_CARD_prefix ..'_XPC'
     card.cost = 1
-    card.enhancment = nil
-    card.seal = nil
     card.undiscovered = {
         atlas = HIGH_CARD_prefix ..'_XPC_undiscovered',
         pos = card.pos
@@ -3217,26 +3224,12 @@ for _, key in ipairs(keys) do
         update = joker.update
     })
 end
-
 ---
-
 local last_triggered_game, last_triggered_hand
 
 local XPC_Back = SMODS.Back({
     key = XPC_deck_key,
     atlas = 'XPCB',
-    loc_txt = {
-        name = localize({
-            type = 'name_text',
-            set = 'Back',
-            key = XPC_deck_key
-        }),
-        text = localize({
-            type = 'raw_descriptions',
-            set = 'Back',
-            key = XPC_deck_key
-        })
-    },
     calculate = function(self, back, context)
         if context.context ~= 'final_scoring_step'
         then return end
@@ -3265,13 +3258,9 @@ local XPC_Back = SMODS.Back({
         then return end
 
         local rank = x.base.value
-        local suit = x.base.suit
-
         if rank == '10' then rank = 'T'
-        else rank = string.sub(rank, 1, 1)
-        end
-
-        suit = string.lower(string.sub(suit, 1, 1))
+        else rank = rank:sub(1, 1) end
+        local suit = string.lower(string.sub(x.base.suit, 1, 1))
 
         local key = 'j_'.. HIGH_CARD_prefix ..'_'.. rank .. suit
 
@@ -3310,7 +3299,6 @@ local XPC_Back = SMODS.Back({
                     silent = true,
                     immediate = true
                 })
-
                 if joker then
                     joker.ability.original = {
                         enhancement = enhancement,
@@ -3318,7 +3306,6 @@ local XPC_Back = SMODS.Back({
                     }
                     joker:start_materialize()
                 end
-
                 return true
             end
         }))

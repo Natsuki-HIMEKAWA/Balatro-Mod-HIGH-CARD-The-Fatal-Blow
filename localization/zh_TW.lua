@@ -84,10 +84,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = '阻擊者',
             text = {
-                '將每回合{C:attention}第一手{}',
-                '打出的{C:attention}牌型{}等級',
-                '提升{C:attention}#1#{}級，且有',
-                '{C:green}#2#/#3#{}機率為提升{C:attention}#4#{}級'
+                '每回合{C:attention}第一手{}打出',
+                '的{C:attention}牌型{}有{C:green}#1#/#2#{}機率',
+                '提升{C:attention}#3#{}級牌型等級'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
@@ -101,10 +100,10 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_9s'] = {
             name = '墨家',
             text = {
-                '若最終{C:blue}籌碼{}分數達到所需',
-                '的{C:attention}#1#%{}，則免於{C:red}失敗{}；',
-                '面對{C:attention}Boss盲注{}時，有{C:green}#2#/#3#{}',
-                '機率使其限制條件消失'
+                '若最終分數達到所需',
+                '的{C:attention}#1#%{}則免於{C:red}失敗{}；',
+                '每個{C:attention}Boss盲注{}的限制',
+                '條件都有{C:green}#2#/#3#{}機率消失'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
@@ -119,9 +118,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_Js'] = {
             name = '方舟之械',
             text = {
-                '所有得分的{C:attention}#1#{}',
-                '和{C:attention}#2#{}給予',
-                '{C:white,X:mult}X#3#{}倍數'
+                '所有得分的',
+                '{C:attention}#1#{}和{C:attention}#2#{}',
+                '給予{C:white,X:mult}X#3#{}倍數'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Qs'] = {
@@ -232,7 +231,7 @@ local descriptions = {
             text = {
                 '使用{C:planet}行星牌{}之後',
                 '額外提升{C:attention}#1#{}級',
-                '相應牌型的等級'
+                '相應{C:attention}牌型{}的等級'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Qh'] = {
@@ -271,9 +270,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3d'] = {
             name = '滾滾彈珠',
             text = {
-                '每回合{C:attention}第一次{}出牌',
-                '中的所有得分牌',
-                '變為{C:attention}#1#{}'
+                '每張打出的牌',
+                '都有{C:green}#1#/#2#{}機率在',
+                '得分時變為{C:attention}#3#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4d'] = {
@@ -400,9 +399,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6c'] = {
             name = '淡藍波濤',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每張沒有版本的牌得分時',
-                '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}銀箔{}'
+                '每張無版本的牌',
+                '都有{C:green}#1#/#2#{}機率在',
+                '得分時獲得{C:dark_edition}銀箔{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7c'] = {
@@ -416,25 +415,25 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_8c'] = {
             name = '沈淪暗影',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每張沒有版本的牌得分時',
-                '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}負片{}'
+                '每張無版本的牌',
+                '都有{C:green}#1#/#2#{}機率在',
+                '得分時獲得{C:dark_edition}負片{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_9c'] = {
             name = '初升光明',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每張沒有版本的牌得分時',
-                '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}彩色{}'
+                '每張無版本的牌',
+                '都有{C:green}#1#/#2#{}機率在',
+                '得分時獲得{C:dark_edition}彩色{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Tc'] = {
             name = '百萬伏特',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每張沒有版本的牌得分時',
-                '都有{C:green}#1#/#2#{}機率獲得{C:dark_edition}全像{}'
+                '每張無版本的牌',
+                '都有{C:green}#1#/#2#{}機率在',
+                '得分時獲得{C:dark_edition}全像{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Jc'] = {

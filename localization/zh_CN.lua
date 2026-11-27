@@ -84,10 +84,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = '拦截者',
             text = {
-                '将每回合{C:attention}第一手{}',
-                '打出的{C:attention}牌型{}等级',
-                '提升{C:attention}#1#{}级，且有',
-                '{C:green}#2#/#3#{}概率为提升{C:attention}#4#{}级'
+                '每回合{C:attention}第一手{}打出',
+                '的{C:attention}牌型{}有{C:green}#1#/#2#{}概率',
+                '提升{C:attention}#3#{}级牌型等级'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
@@ -101,10 +100,10 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_9s'] = {
             name = '墨家',
             text = {
-                '若最终{C:blue}筹码{}分数达到所需',
-                '的{C:attention}#1#%{}，则免于{C:red}失败{}；',
-                '面对{C:attention}Boss盲注{}时，有{C:green}#2#/#3#{}',
-                '概率使其限制条件消失'
+                '若最终分数达到所需',
+                '的{C:attention}#1#%{}则免于{C:red}失败{}；',
+                '每个{C:attention}Boss盲注{}的限制',
+                '条件都有{C:green}#2#/#3#{}概率消失'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Ts'] = {
@@ -232,7 +231,7 @@ local descriptions = {
             text = {
                 '使用{C:planet}星球牌{}之后',
                 '额外提升{C:attention}#1#{}级',
-                '相应牌型的等级'
+                '相应{C:attention}牌型{}的等级'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Qh'] = {
@@ -272,16 +271,17 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3d'] = {
             name = '滚滚弹珠',
             text = {
-                '每回合{C:attention}第一次{}出牌',
-                '中的所有计分牌',
-                '变为{C:attention}#1#{}'
+                '每张打出的牌',
+                '都有{C:green}#1#/#2#{}概率在',
+                '计分时变为{C:attention}#3#{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4d'] = {
             name = '时间哑剧',
             text = {
-                '打出的{C:attention}第一手牌{}中所有',
-                '计分牌额外触发{C:attention}#1#{}次，',
+                '每回合{C:attention}第一次{}出牌',
+                '中的所有计分牌',
+                '额外触发{C:attention}#1#{}次，',
                 '计分后将其摧毁'
             }
         },
@@ -400,9 +400,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6c'] = {
             name = '淡蓝波涛',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}闪箔{}'
+                '每张无版本的牌',
+                '都有{C:green}#1#/#2#{}概率在',
+                '计分时获得{C:dark_edition}闪箔{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7c'] = {
@@ -416,25 +416,25 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_8c'] = {
             name = '沉沦暗影',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}负片{}'
+                '每张无版本的牌',
+                '都有{C:green}#1#/#2#{}概率在',
+                '计分时获得{C:dark_edition}负片{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_9c'] = {
             name = '初升光明',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}多彩{}'
+                '每张无版本的牌',
+                '都有{C:green}#1#/#2#{}概率在',
+                '计分时获得{C:dark_edition}多彩{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Tc'] = {
             name = '百万伏特',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
-                '每张没有版本的{C:attention}计分牌{}',
-                '都有{C:green}#1#/#2#{}概率获得{C:dark_edition}全息{}'
+                '每张无版本的牌',
+                '都有{C:green}#1#/#2#{}概率在',
+                '计分时获得{C:dark_edition}全息{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_Jc'] = {
