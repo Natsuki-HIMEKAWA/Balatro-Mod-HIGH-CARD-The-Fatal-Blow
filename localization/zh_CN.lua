@@ -8,7 +8,7 @@ local descriptions = {
         XPC = {
             name = 'X-扑克牌',
             text = {
-            '出售此牌以将其{C:green}停用{}，',
+            '出售此牌以将其{C:green}停用{}',
             '随后向牌组中{C:attention}洗入{}一张',
             '同{C:dark_edition}版本{}、带有原{C:dark_edition}增强{}',
             '及{C:attention}蜡封{}的相应扑克牌'
@@ -30,8 +30,9 @@ local descriptions = {
         ['b_'.. HIGH_CARD_prefix ..'_'.. XPC_deck_key] = {
             name = 'X-扑克牌组',
             text = {
-                '使用{C:attention}单张牌{}打败任一',
-                '{C:attention}盲注{}以{C:green}激发{}该牌的潜能'
+                '使用{C:attention}单张牌{}',
+                '打败任一{C:attention}盲注{}',
+                '以{C:green}激发{}该牌的潜能'
             }
         }
     },
@@ -40,8 +41,8 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_2s'] = {
             name = '新·新南部',
             text = {
-                '抽取{C:attention}第一手牌{}后，',
-                '将{C:attention}出牌{}设为{C:blue}#1#{}次；',
+                '抽取{C:attention}第一手牌{}后',
+                '将{C:attention}出牌{}设为{C:blue}#1#{}次',
                 '每张{C:attention}牌堆{}中剩余的',
                 '牌给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
@@ -50,8 +51,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_3s'] = {
             name = '无限棒',
             text = {
-                '每张打出的{C:attention}#1#{}在',
-                '计分时给予{C:white,X:mult}X#2#{}倍率'
+                '每张打出的{C:attention}#1#{}',
+                '在计分时',
+                '给予{C:white,X:mult}X#2#{}倍率'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4s'] = {
@@ -75,7 +77,7 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6s'] = {
             name = '杂耍火铳',
             text = {
-                '每摧毁一张{C:attention}#2#{}，',
+                '每摧毁一张{C:attention}#2#{}',
                 '{C:B4883C}杂耍火铳{}获得',
                 '{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
@@ -84,16 +86,17 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = '拦截者',
             text = {
-                '每回合{C:attention}第一手{}打出',
-                '的{C:attention}牌型{}有{C:green}#1#/#2#{}概率',
-                '提升{C:attention}#3#{}级牌型等级'
+                '将每回合{C:attention}最后一次{}',
+                '出牌的{C:attention}牌型{}等级',
+                '提升{C:attention}#1#{}级，且有',
+                '{C:green}#2#/#3#{}概率为提升{C:attention}#4#{}级'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
             name = '爆轰',
             text = {
                 '每张打出的{C:attention}#1#{}在',
-                '计分时给予{C:white,X:mult}X#2#{}倍率，',
+                '计分时给予{C:white,X:mult}X#2#{}倍率',
                 '计分后将其摧毁'
             }
         },
@@ -101,7 +104,7 @@ local descriptions = {
             name = '墨家',
             text = {
                 '若最终分数达到所需',
-                '的{C:attention}#1#%{}则免于{C:red}失败{}；',
+                '的{C:attention}#1#%{}则免于{C:red}失败{}',
                 '每个{C:attention}Boss盲注{}的限制',
                 '条件都有{C:green}#2#/#3#{}概率消失'
             }
@@ -142,18 +145,19 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_As'] = {
             name = '爱与和平',
             text = {
-                '{C:attention}完整牌组{}中的每张{C:attention}#1#{}给予',
-                '{C:white,X:mult}X#2#{}倍率；每回合{C:attention}第一次{}',
-                '出牌前，迫使{C:attention}1{}张牌被选中，',
-                '若该牌为计分牌则将其摧毁',
+                '{C:attention}完整牌组{}中的每张{C:attention}#1#{}',
+                '给予{C:white,X:mult}X#2#{}倍率',
+                '每回合{C:attention}第一次{}出牌前',
+                '迫使{C:attention}1{}张牌被选中',
+                '若该牌计分则将其摧毁',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_2h'] = {
             name = '软体蠕虫',
             text = {
-                '每拥有{C:money}$#1#{}，',
-                '手牌上限{C:attention}+1{}，',
+                '每拥有{C:money}$#1#{}',
+                '手牌上限{C:attention}+1{}',
                 '至多{C:attention}+#2#{}'
             }
         },
@@ -161,31 +165,32 @@ local descriptions = {
             name = '坚如磐石',
             text = {
                 '每次出牌中{C:attention}第一张{}',
-                '计分牌变为{C:attention}#1#{}；',
-                '计分时每张{C:attention}#1#{}',
-                '给予{C:white,X:mult}X#2#{}倍率'
+                '计分牌变为{C:attention}#1#{}',
+                '每张打出的{C:attention}#1#{}在',
+                '计分时给予{C:white,X:mult}X#2#{}倍率'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_4h'] = {
             name = '超级特工',
             text = {
-                '若回合的{C:attention}第一次出牌{}',
-                '只有{C:attention}1{}张牌，则向手牌',
-                '中加入该牌的{C:attention}#1#{}个{C:attention}克隆{}'
+                '若回合的{C:attention}第一次{}',
+                '出牌只有{C:attention}1{}张牌',
+                '则向手牌中加入',
+                '该牌的{C:attention}#1#{}个{C:attention}克隆{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_5h'] = {
             name = '高热量',
             text = {
-                '剩余的每次{C:blue}出牌{}',
-                '和{C:red}弃牌{}给予{C:white,X:mult}X#1#{}倍率',
+                '剩余的每次{C:blue}出牌{}和',
+                '{C:red}弃牌{}给予{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（下次出牌时{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_6h'] = {
             name = '动物园',
             text = {
-                '每回合{C:attention}第一次{}出牌中，',
+                '每回合{C:attention}第一次{}出牌中',
                 '每张无增强的{C:attention}计分牌{}在',
                 '计分时随机获得一种{C:dark_edition}增强{}'
             }
@@ -194,7 +199,7 @@ local descriptions = {
             name = '变色龙',
             text = {
                 '每回合{C:attention}第一次{}出牌中',
-                '所有计分牌变为{C:attention}#1#{}；',
+                '所有计分牌变为{C:attention}#1#{}',
                 '{C:attention}完整牌组{}中的每张',
                 '{C:attention}#1#{}给予{C:white,X:mult}X#2#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
@@ -281,7 +286,7 @@ local descriptions = {
             text = {
                 '每回合{C:attention}第一次{}出牌',
                 '中的所有计分牌',
-                '额外触发{C:attention}#1#{}次，',
+                '额外触发{C:attention}#1#{}次',
                 '计分后将其摧毁'
             }
         },
@@ -296,16 +301,16 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_6d'] = {
             name = '13级阶梯',
             text = {
-                '每打出{C:attention}13{}{C:inactive}(#2#){}张牌，',
-                '{C:B4883C}13级阶梯{}获得{C:white,X:mult}X#1#{}倍率，',
-                '且摧毁每第{C:attention}13{}张打出的牌',
+                '每打出{C:attention}13{}{C:inactive}(#2#){}张牌',
+                '{C:B4883C}13级阶梯{}获得{C:white,X:mult}X#1#{}倍率',
+                '摧毁每第{C:attention}13{}张打出的牌',
                 '{C:inactive}（当前为{C:white,X:mult}X#3#{C:inactive}倍率）{}'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_7d'] = {
             name = '等价交换',
             text = {
-                '每花费或失去{C:money}$1{}，',
+                '每花费或失去{C:money}$1{}',
                 '{C:B4883C}等价交换{}获得',
                 '{C:white,X:mult}X#1#{}倍率',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
@@ -333,7 +338,7 @@ local descriptions = {
             name = '倒霉蛋',
             text = {
                 '所有计分的{C:attention}#1#{}',
-                '其两种效果必然触发，',
+                '其两种效果必然触发',
                 '计分后将其摧毁'
             }
         },
@@ -359,9 +364,9 @@ local descriptions = {
             name = '动态念力',
             text = {
                 '回合内出售的{C:B4883C}X-扑克牌{}',
-                '进入{C:attention}手牌{}而非洗入牌堆；',
-                '每出售一张{C:B4883C}X-扑克牌{}，',
-                '{C:B4883C}动态念力{}获得{C:white,X:mult}X#1#{}倍率，',
+                '进入{C:attention}手牌{}而非洗入牌堆',
+                '每出售一张{C:B4883C}X-扑克牌{}',
+                '{C:B4883C}动态念力{}获得{C:white,X:mult}X#1#{}倍率',
                 '击败{C:attention}Boss{}盲注后重置',
                 '{C:inactive}（当前为{C:white,X:mult}X#2#{C:inactive}倍率）{}'
             }
@@ -384,8 +389,9 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4c'] = {
             name = '振翼疾风',
             text = {
-                '每手牌计分后，将剩余',
-                '除{C:attention}#1#{}和{C:attention}#2#{}之外',
+                '每手牌计分后',
+                '将剩余除{C:attention}#1#{}',
+                '和{C:attention}#2#{}之外的',
                 '所有手牌{C:attention}洗入{}牌堆'
             }
         },
@@ -393,7 +399,7 @@ local descriptions = {
             name = '飞扬尘土',
             text = {
                 '每张打出的{C:attention}#1#{}在',
-                '计分时给予{C:white,X:mult}X#2#{}倍率，',
+                '计分时给予{C:white,X:mult}X#2#{}倍率',
                 '计分后将其摧毁'
             }
         },
@@ -409,7 +415,7 @@ local descriptions = {
             name = '致命辣度',
             text = {
                 '每张打出的{C:attention}#1#{}在',
-                '计分时给予{C:white,X:mult}X#2#{}倍率，',
+                '计分时给予{C:white,X:mult}X#2#{}倍率',
                 '计分后将其摧毁'
             }
         },
@@ -552,16 +558,16 @@ local misc = {
         k_deactivated = '停用！'
     },
     challenge_names = {
-        ['c_'.. HIGH_CARD_prefix ..'_RF'] = '皇家同花顺',
-        ['c_'.. HIGH_CARD_prefix ..'_SF'] = '同花顺',
-        ['c_'.. HIGH_CARD_prefix ..'_4K'] = '四条',
-        ['c_'.. HIGH_CARD_prefix ..'_FH'] = '葫芦',
-        ['c_'.. HIGH_CARD_prefix ..'_FL'] = '同花',
-        ['c_'.. HIGH_CARD_prefix ..'_ST'] = '顺子',
-        ['c_'.. HIGH_CARD_prefix ..'_3K'] = '三条',
-        ['c_'.. HIGH_CARD_prefix ..'_2P'] = '两对',
-        ['c_'.. HIGH_CARD_prefix ..'_1P'] = '一对',
-        ['c_'.. HIGH_CARD_prefix ..'_HC'] = '高牌',
+        ['c_'.. HIGH_CARD_prefix ..'_RF'] = 'X-皇家同花顺',
+        ['c_'.. HIGH_CARD_prefix ..'_SF'] = 'X-同花顺',
+        ['c_'.. HIGH_CARD_prefix ..'_4K'] = 'X-四条',
+        ['c_'.. HIGH_CARD_prefix ..'_FH'] = 'X-葫芦',
+        ['c_'.. HIGH_CARD_prefix ..'_FL'] = 'X-同花',
+        ['c_'.. HIGH_CARD_prefix ..'_ST'] = 'X-顺子',
+        ['c_'.. HIGH_CARD_prefix ..'_3K'] = 'X-三条',
+        ['c_'.. HIGH_CARD_prefix ..'_2P'] = 'X-两对',
+        ['c_'.. HIGH_CARD_prefix ..'_1P'] = 'X-一对',
+        ['c_'.. HIGH_CARD_prefix ..'_HC'] = 'X-高牌',
 
         ['c_'.. HIGH_CARD_prefix ..'_Finn'] = "芬恩的左轮手枪",
         ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "维杰的藤蔓",
@@ -576,7 +582,7 @@ local misc = {
     },
     v_text = {
         ['ch_c_'..'Vijay'] = {'所有{C:attention}Boss盲注{}均为{C:attention}植物{}'},
-        ['ch_c_'..'Chelsea'] = {'所有{C:attention}Boss盲注{}均为{C:attention}钩子{}'}
+        ['ch_c_'..'Chelsea'] = {'所有{C:attention}Boss盲注{}均为{C:attention}镣铐{}'}
     }
 }
 

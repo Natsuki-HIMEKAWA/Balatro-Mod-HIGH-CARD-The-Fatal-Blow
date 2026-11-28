@@ -73,8 +73,8 @@ do
         end,
         deck = {type = 'Challenge Deck'},
         rules = {
-            custom = {{id = 'inflation'}},
-            modifiers = {{id = 'dollars', value = 20}}
+            custom = {{id = 'inflation'}, {id = 'chips_dollar_cap'}},
+            modifiers = {{id = 'dollars', value = 100}}
         },
         jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_7d', eternal = true}},
     }
@@ -112,7 +112,7 @@ do
         },
         jokers = {{id = 'j_'.. HIGH_CARD_prefix ..'_2d', eternal = true}},
         apply = function(self)
-            G.GAME.forced_boss = 'bl_hook'
+            G.GAME.forced_boss = 'bl_manacle'
         end
     }
 

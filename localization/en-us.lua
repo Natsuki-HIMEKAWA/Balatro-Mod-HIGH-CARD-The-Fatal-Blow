@@ -36,8 +36,7 @@ local descriptions = {
             text = {
                 'Defeat any {C:attention}Blind{} by',
                 'a {C:attention}single{} card to',
-                "{C:green}activate{} that card's",
-                'unique ability!'
+                '{C:green}activate{} its potential'
             }
         }
     },
@@ -91,10 +90,11 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_7s'] = {
             name = 'Interceptor',
             text = {
-                '{C:green}#1# in #2#{} chance to',
-                'upgrade the {C:attention}first{}',
-                '{C:attention}poker hand{} played',
-                'each round by {C:attention}#3#{} levels'
+                'Upgrade the {C:attention}final{}',
+                '{C:attention}poker hand{} played each',
+                'round by {C:attention}#1#{} level, with',
+                'a {C:green}#2# in #3#{} chance to',
+                'upgrade it by {C:attention}#4#{} levels'
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_8s'] = {
@@ -426,10 +426,12 @@ local descriptions = {
         ['j_'.. HIGH_CARD_prefix ..'_4c'] = {
             name = 'Wing Wind',
             text = {
-                'After each hand is scored,',
-                '{C:attention}shuffle{} all remaining cards',
-                'in hand except {C:attention}#1#s{}',
-                'and {C:attention}#2#s{} into the deck'
+                '{C:attention}Shuffle{} all remaining',
+                'cards in hand except',
+                'for {C:attention}#1#s{} and',
+                '{C:attention}#2#s{} into the',
+                'deck after each',
+                'played hand scores', 
             }
         },
         ['j_'.. HIGH_CARD_prefix ..'_5c'] = {
@@ -604,16 +606,16 @@ local misc = {
         k_deactivated = 'Deactivated!'
     },
     challenge_names = {
-        ['c_'.. HIGH_CARD_prefix ..'_RF'] = 'Royal Flush',
-        ['c_'.. HIGH_CARD_prefix ..'_SF'] = 'Straight Flush',
-        ['c_'.. HIGH_CARD_prefix ..'_4K'] = 'Four of a Kind',
-        ['c_'.. HIGH_CARD_prefix ..'_FH'] = 'Full House',
-        ['c_'.. HIGH_CARD_prefix ..'_FL'] = 'Flush',
-        ['c_'.. HIGH_CARD_prefix ..'_ST'] = 'Straight',
-        ['c_'.. HIGH_CARD_prefix ..'_3K'] = 'Three of a Kind',
-        ['c_'.. HIGH_CARD_prefix ..'_2P'] = 'Two Pair',
-        ['c_'.. HIGH_CARD_prefix ..'_1P'] = 'One Pair',
-        ['c_'.. HIGH_CARD_prefix ..'_HC'] = 'High Card',
+        ['c_'.. HIGH_CARD_prefix ..'_RF'] = 'X-Royal Flush',
+        ['c_'.. HIGH_CARD_prefix ..'_SF'] = 'X-Straight Flush',
+        ['c_'.. HIGH_CARD_prefix ..'_4K'] = 'X-Four of a Kind',
+        ['c_'.. HIGH_CARD_prefix ..'_FH'] = 'X-Full House',
+        ['c_'.. HIGH_CARD_prefix ..'_FL'] = 'X-Flush',
+        ['c_'.. HIGH_CARD_prefix ..'_ST'] = 'X-Straight',
+        ['c_'.. HIGH_CARD_prefix ..'_3K'] = 'X-Three of a Kind',
+        ['c_'.. HIGH_CARD_prefix ..'_2P'] = 'X-Two Pair',
+        ['c_'.. HIGH_CARD_prefix ..'_1P'] = 'X-One Pair',
+        ['c_'.. HIGH_CARD_prefix ..'_HC'] = 'X-High Card',
 
         ['c_'.. HIGH_CARD_prefix ..'_Finn'] = "Finn's Revolver",
         ['c_'.. HIGH_CARD_prefix ..'_Vijay'] = "Vijay's Vine",
@@ -628,7 +630,7 @@ local misc = {
     },
     v_text = {
         ['ch_c_'..'Vijay'] = {'All {C:attention}Boss Blinds{} are {C:attention}The Plant{}'},
-        ['ch_c_'..'Chelsea'] = {'All {C:attention}Boss Blinds{} are {C:attention}The Hook{}'}
+        ['ch_c_'..'Chelsea'] = {'All {C:attention}Boss Blinds{} are {C:attention}The Manacle{}'}
     }
 }
 

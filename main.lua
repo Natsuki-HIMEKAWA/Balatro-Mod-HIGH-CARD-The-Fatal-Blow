@@ -429,8 +429,9 @@ local XPC = {
         pos = {x=5,y=3},
         config = {extra = {
             numerator = 1,
-            denominator = 3,
-            level = 2
+            denominator = 7,
+            basic_level = 1,
+            bonus_level = 2
         }},
 
         loc_vars = function(self, info_queue, card)
@@ -442,9 +443,10 @@ local XPC = {
                 'Interceptor'
             )
             return {vars = {
+                card.ability.extra.basic_level,
                 numerator,
                 denominator,
-                card.ability.extra.level
+                card.ability.extra.bonus_level
             }}
         end,
 
@@ -456,7 +458,7 @@ local XPC = {
             end
 
             if context.cardarea == G.jokers and context.before and context.scoring_name 
-            and G.GAME.current_round.hands_played == 0 then
+            and G.GAME.current_round.hands_left == 0 then
                 if SMODS.pseudorandom_probability(
                     card, 'Interceptor',
                     card.ability.extra.numerator,
@@ -464,8 +466,15 @@ local XPC = {
                 ) then
                     return {
                         card = card,
-                        level_up = card.ability.extra.level,
+                        level_up = card.ability.extra.bonus_level,
                         message = localize('k_level_up_ex'),
+                        colour = G.C.RED
+                    }
+                else
+                    return {
+                        card = card,
+                        level_up = card.ability.extra.basic_level,
+                        message = localize('k_level_up_ex')
                     }
                 end
             end
@@ -732,15 +741,13 @@ local XPC = {
                                     trigger = 'immediate',
                                     func = function()
                                         for _, scored_card in ipairs(changed_cards) do
-                                            if not scored_card.debuff then
-                                                local petrify = scored_card:set_ability(
+                                            if not (scored_card.REMOVED or scored_card.debuff) then
+                                                scored_card:set_ability(
                                                     G.P_CENTERS[card.ability.extra.enhancement],
                                                     nil, true
                                                 )
-                                                if petrify then
-                                                    scored_card:set_sprites(nil, scored_card.config.card)
-                                                    scored_card:juice_up()
-                                                end
+                                                scored_card:set_sprites(nil, scored_card.config.card)
+                                                scored_card:juice_up()
                                             end
                                         end
                                         return true
@@ -793,8 +800,7 @@ local XPC = {
                 local enhancing_cards = {}
 
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if not scored_card.debuff
-                    and scored_card:get_id() == card.ability.extra.rank
+                    if not scored_card.debuff and scored_card:get_id() == card.ability.extra.rank
                     then
                         scored_card:set_ability(
                             G.P_CENTERS[card.ability.extra.enhancement],
@@ -1166,8 +1172,7 @@ local XPC = {
             if context.before and G.GAME.current_round.hands_played == 0 then
                 local message = false
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if not scored_card.debuff
-                    and scored_card.config.center.key == 'c_base' then
+                    if not scored_card.debuff and scored_card.config.center.key == 'c_base' then
                         message = true
                         local enhancement = pseudorandom_element(
                             G.P_CENTER_POOLS['Enhanced'],
@@ -1512,9 +1517,9 @@ local XPC = {
 
             if context.initial_scoring_step and context.cardarea == G.jokers then
                 for _, scored_card in ipairs(context.scoring_hand) do
-                    if contains(
+                    if not scored_card.debuff and contains(
                         scored_card:get_id(), card.ability.extra.ranks
-                    ) and not scored_card.debuff then
+                    ) then
                         scored_card:set_seal('Red', true, true)
                         G.E_MANAGER:add_event(Event({
                             func = function()
@@ -1611,7 +1616,7 @@ local XPC = {
                                 trigger = 'immediate',
                                 func = function()
                                     for _, scored_card in ipairs(changed_cards) do
-                                        if not scored_card.REMOVED or scored_card.debuff then
+                                        if not scored_card.REMOVED and not scored_card.debuff then
                                             SMODS.change_base(
                                                 scored_card,
                                                 card.ability.extra.suit,
@@ -1653,7 +1658,6 @@ local XPC = {
 
                 if context.before then
                     local seals = {}
-
                     for _, scored_card in ipairs(context.scoring_hand or {}) do
                         if not scored_card.debuff then
                             local seal = scored_card.seal
@@ -1810,7 +1814,6 @@ local XPC = {
             end
             if context.after then
                 local changed_cards = {}
-
                 for _, scored_card in ipairs(context.scoring_hand) do
                     if not scored_card.REMOVED and not scored_card.debuff and qualify(scored_card)
                     then
